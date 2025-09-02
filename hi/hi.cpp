@@ -129,6 +129,8 @@ printf 문을 이용해서 아래와 같은 모양 찍어보기
 	printf(" ***\n");
 	printf("******\n\n");
 
+//feedback : 그냥 printf하면 됨
+
 /*
 실습2
 특수문자를 이용해서 미로 모양 출력해보기
@@ -141,6 +143,9 @@ printf 문을 이용해서 아래와 같은 모양 찍어보기
 	printf("□  □      □  □\n");
 	printf("□      □      □\n");
 	printf("□□□□□□□□□\n\n");
+
+//feedback : 이것도 모양그대로 찍으면 됨 
+		
 /*
 실습3
 두 수를 입력받아 스왑하기
@@ -154,6 +159,16 @@ printf 문을 이용해서 아래와 같은 모양 찍어보기
 	std::cin >> number4;
 	printf("%d", number4);
 	printf("%d\n\n", number5);
+
+//feedback : 문제를 잘 이해못함 ex) 12 -> 21 로 바꾸라는 문제였음
+/* 
+int a = 10;
+int b = 20;
+int c;
+c = b;
+b = a;
+c = c;
+*/
 
 /*
 실습4
@@ -170,6 +185,7 @@ printf 문을 이용해서 아래와 같은 모양 찍어보기
 	int number3 = number1*number2;
 	printf("해당 사각형의 넓이는 %d입니다.\n\n", number3);
 
+//feedback : 잘품
 
 /*
 실습5
@@ -183,11 +199,14 @@ printf 문을 이용해서 아래와 같은 모양 찍어보기
 	printf("두번째 숫자를 입력하시오 : \n");
 	std::cin >> number7;
 
-	int number8 = number6 / number7;
-	int number9 = number8 * number7;
-	int number10 = number6 - number9;
+	int number8 = number6 / number7; // 몫
+	int number9 = number8 * number7; 
+	int number10 = number6 - number9; // 나머지
 
 	printf("%d\n\n", number6 - number9);
+
+//feedback : 잘품
+// 넘버 10까지 갈필요 없이 number9 = number6 - number8 * number7 로 만들어 버리면 끝남 한줄 아낄 수 있음
 
 /*
 실습6
@@ -199,9 +218,9 @@ printf 문을 이용해서 아래와 같은 모양 찍어보기
 	printf("초를 입력하시오 : \n");
 	std::cin >> number11;
 
-	int number12 = number11 / 720;
-	int number13 = number12 % 720 / 60;
-	int number14 = number12 % 720 % 60;
+	int number12 = number11 / 3600;
+	int number13 = number12 % 3600 / 60;
+	int number14 = number12 % 3600 % 60;
 
 	printf("%d 시", number12);
 	printf("%d 분", number13);
