@@ -106,17 +106,17 @@ int : 정수형(소수점이 없는 숫자 / 소수점 뒤 숫자는 버림)
    a++;  // a에다가 1을 더해라
    a--;  // a에다가 1을 빼라
 */
-	int number1 = 0;
-	int number2 = 0;
+	//int number1 = 0;
+	//int number2 = 0;
 	// 변수를 지정할땐 반드시 먼저 숫자를 빼먹지 않고 넣어줘라
 	
-	printf("숫자1을 입력하시오 : ");
-	std::cin >> number1;
-	printf("숫자2을 입력하시오 : ");
-	std::cin >> number2;
+	//printf("숫자1을 입력하시오 : ");
+	//std::cin >> number1;
+	//printf("숫자2을 입력하시오 : ");
+	//std::cin >> number2;
 
-	int number3 = number1 + number2;
-	printf("두 숫자의 합은 %d입니다.", number3);
+	//int number3 = number1 + number2;
+	//printf("두 숫자의 합은 %d입니다.", number3);
 
 	return 0;
 }
