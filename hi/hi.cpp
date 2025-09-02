@@ -55,7 +55,7 @@ int main() // 앤트리 포인트(코드가 시작되는곳) / main함수는 반
 - \r : 캐리지 리턴(윈도우에서는 중요하지 않음. 리눅수에서는 중요함 / 커서를 다음 줄 맨 앞으로 가게하는것)
 */
 
-//	std::cout << "hi\n"; // c++ 출력 방ㅠ법 / cout은 iostream에 속해있음 그래서 cout을 쓰려면 iostream을 incloud해야하는거임
+//	std::cout << "hi\n"; // c++ 출력 방법 / cout은 iostream에 속해있음 그래서 cout을 쓰려면 iostream을 incloud해야하는거임
 
 	int number = 0;
 	scanf("%d", &number); // 숫자를 하나 입력받기(c언어)
