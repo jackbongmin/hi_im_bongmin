@@ -118,5 +118,133 @@ int : 정수형(소수점이 없는 숫자 / 소수점 뒤 숫자는 버림)
 	//int number3 = number1 + number2;
 	//printf("두 숫자의 합은 %d입니다.", number3);
 
+///* 
+//실습1
+//printf 문을 이용해서 아래와 같은 모양 찍어보기
+//	  *
+//	 ***
+//	*****
+//*/
+//	printf("  *\n");
+//	printf(" ***\n");
+//	printf("******\n\n");
+//
+///*
+//실습2
+//특수문자를 이용해서 미로 모양 출력해보기
+//□□□□□□□□
+//□  □      □  □
+//□       □      □
+//□□□□□□□□
+//*/
+//	printf("□□□□□□□□□\n");
+//	printf("□  □      □  □\n");
+//	printf("□      □      □\n");
+//	printf("□□□□□□□□□\n\n");
+///*
+//실습3
+//두 수를 입력받아 스왑하기
+//*/
+//	int number4 = 0;
+//	int number5 = 0;
+//	
+//	printf("첫번째 숫자를 입력하시오 : \n");
+//	std::cin >> number5;
+//	printf("두번째 숫자를 입력하시오 : \n");
+//	std::cin >> number4;
+//	printf("%d", number4);
+//	printf("%d\n\n", number5);
+//
+///*
+//실습4
+//사각형의 가로, 세로를 입력 받아 넓이를 출력하기
+//*/
+//	int number1 = 0;
+//	int number2 = 0;
+//	
+//	printf("가로값을 입력하시오 : \n");
+//	std::cin >> number1;
+//	printf("세로값을 입력하시오 : \n");
+//	std::cin >> number2;
+//	
+//	int number3 = number1*number2;
+//	printf("해당 사각형의 넓이는 %d입니다.\n\n", number3);
+//
+//
+///*
+//실습5
+//두 수를 입력 받아 나머지를 출력하기(%연산자 사용 금지)
+//*/
+//	int number6 = 0;
+//	int number7 = 0;
+//
+//	printf("첫번째 숫자를 입력하시오 : \n");
+//	std::cin >> number6;
+//	printf("두번째 숫자를 입력하시오 : \n");
+//	std::cin >> number7;
+//
+//	int number8 = number6 / number7;
+//	int number9 = number8 * number7;
+//	int number10 = number6 - number9;
+//
+//	printf("%d\n\n", number6 - number9);
+
+/*
+실습6
+시간계산기
+- 초를 입력받아 시분초 출력하기
+*/
+	int number11 = 0;
+
+	printf("초를 입력하시오 : \n");
+	std::cin >> number11;
+
+	int number12 = number11 / 720;
+	int number13 = number12 % 720 / 60;
+	int number14 = number12 % 720 % 60;
+
+	printf("%d 시", number12);
+	printf("%d 분", number13);
+	printf("%d 초\n\n", number14);
+
+/*
+실습7 
+동전개수 계산하기
+- 금액을 입력받아 500원, 100원, 50원, 10원 동전이 각각 몇개 필요한지 계산하는 프로그램
+- 금액이 큰 동전을 최대한 많이 받아야한다.
+*/
+	int number15 = 0;
+
+	printf("금액을 입력하시오 : \n");
+	std::cin >> number15;
+
+	int number16 = number15 / 500;
+	int number17 = number15 % 500 / 100;
+	int number18 = number15 % 500 % 100 / 50;
+	int number19 = number15 % 500 % 100 % 50 / 10;
+
+	printf("500원 : %d개\n", number16);
+	printf("100원 : %d개\n", number17);
+	printf("50원 : %d개\n", number18);
+	printf("10원 : %d개\n\n", number19);
+
+/*
+실습8
+자리수 분리하기(입력은 항상 세자리라고 가정)
+- 수를 입력하고 100의자리, 10의자리, 1의자리를 각각 출력하기
+*/
+	int number20 = 0;
+
+	printf("세자리 숫자를 입력하시오 : \n");
+	std::cin >> number20;
+	
+	int number21 = number20 / 100;
+	int number22 = number20 % 100 / 10;
+	int number23 = number20 % 100 % 10;
+
+	printf("100의 자리 숫지 : %d\n", number21);
+	printf("10의 자리 숫지 : %d\n", number22);
+	printf("1의 자리 숫지 : %d\n", number23);
+
 	return 0;
 }
