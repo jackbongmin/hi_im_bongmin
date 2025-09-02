@@ -118,76 +118,76 @@ int : 정수형(소수점이 없는 숫자 / 소수점 뒤 숫자는 버림)
 	//int number3 = number1 + number2;
 	//printf("두 숫자의 합은 %d입니다.", number3);
 
-///* 
-//실습1
-//printf 문을 이용해서 아래와 같은 모양 찍어보기
-//	  *
-//	 ***
-//	*****
-//*/
-//	printf("  *\n");
-//	printf(" ***\n");
-//	printf("******\n\n");
-//
-///*
-//실습2
-//특수문자를 이용해서 미로 모양 출력해보기
-//□□□□□□□□
-//□  □      □  □
-//□       □      □
-//□□□□□□□□
-//*/
-//	printf("□□□□□□□□□\n");
-//	printf("□  □      □  □\n");
-//	printf("□      □      □\n");
-//	printf("□□□□□□□□□\n\n");
-///*
-//실습3
-//두 수를 입력받아 스왑하기
-//*/
-//	int number4 = 0;
-//	int number5 = 0;
-//	
-//	printf("첫번째 숫자를 입력하시오 : \n");
-//	std::cin >> number5;
-//	printf("두번째 숫자를 입력하시오 : \n");
-//	std::cin >> number4;
-//	printf("%d", number4);
-//	printf("%d\n\n", number5);
-//
-///*
-//실습4
-//사각형의 가로, 세로를 입력 받아 넓이를 출력하기
-//*/
-//	int number1 = 0;
-//	int number2 = 0;
-//	
-//	printf("가로값을 입력하시오 : \n");
-//	std::cin >> number1;
-//	printf("세로값을 입력하시오 : \n");
-//	std::cin >> number2;
-//	
-//	int number3 = number1*number2;
-//	printf("해당 사각형의 넓이는 %d입니다.\n\n", number3);
-//
-//
-///*
-//실습5
-//두 수를 입력 받아 나머지를 출력하기(%연산자 사용 금지)
-//*/
-//	int number6 = 0;
-//	int number7 = 0;
-//
-//	printf("첫번째 숫자를 입력하시오 : \n");
-//	std::cin >> number6;
-//	printf("두번째 숫자를 입력하시오 : \n");
-//	std::cin >> number7;
-//
-//	int number8 = number6 / number7;
-//	int number9 = number8 * number7;
-//	int number10 = number6 - number9;
-//
-//	printf("%d\n\n", number6 - number9);
+/* 
+실습1
+printf 문을 이용해서 아래와 같은 모양 찍어보기
+	  *
+	 ***
+	*****
+*/
+	printf("  *\n");
+	printf(" ***\n");
+	printf("******\n\n");
+
+/*
+실습2
+특수문자를 이용해서 미로 모양 출력해보기
+□□□□□□□□
+□  □      □  □
+□       □      □
+□□□□□□□□
+*/
+	printf("□□□□□□□□□\n");
+	printf("□  □      □  □\n");
+	printf("□      □      □\n");
+	printf("□□□□□□□□□\n\n");
+/*
+실습3
+두 수를 입력받아 스왑하기
+*/
+	int number4 = 0;
+	int number5 = 0;
+	
+	printf("첫번째 숫자를 입력하시오 : \n");
+	std::cin >> number5;
+	printf("두번째 숫자를 입력하시오 : \n");
+	std::cin >> number4;
+	printf("%d", number4);
+	printf("%d\n\n", number5);
+
+/*
+실습4
+사각형의 가로, 세로를 입력 받아 넓이를 출력하기
+*/
+	int number1 = 0;
+	int number2 = 0;
+	
+	printf("가로값을 입력하시오 : \n");
+	std::cin >> number1;
+	printf("세로값을 입력하시오 : \n");
+	std::cin >> number2;
+	
+	int number3 = number1*number2;
+	printf("해당 사각형의 넓이는 %d입니다.\n\n", number3);
+
+
+/*
+실습5
+두 수를 입력 받아 나머지를 출력하기(%연산자 사용 금지)
+*/
+	int number6 = 0;
+	int number7 = 0;
+
+	printf("첫번째 숫자를 입력하시오 : \n");
+	std::cin >> number6;
+	printf("두번째 숫자를 입력하시오 : \n");
+	std::cin >> number7;
+
+	int number8 = number6 / number7;
+	int number9 = number8 * number7;
+	int number10 = number6 - number9;
+
+	printf("%d\n\n", number6 - number9);
 
 /*
 실습6
