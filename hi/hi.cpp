@@ -1,5 +1,5 @@
 ﻿
-#define _CRT_SECURE_NO_WARNINGS
+#define _CRT_SECURE_NO_WARNINGS // ← 보라색 글씨는 매크로?
 
 //소스파일
 
@@ -118,5 +118,168 @@ int : 정수형(소수점이 없는 숫자 / 소수점 뒤 숫자는 버림)
 	//int number3 = number1 + number2;
 	//printf("두 숫자의 합은 %d입니다.", number3);
 
+
+
+
+	//ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+
+
+
+	// 25년 09월 03일 (수요일) 
+
+
+	//float number1 = 10.0f; // 10이라는 float 타입의 값을 float인 number2에 넣기
+	//					   // 실수타입은 f를 보통 넣어준다.
+	//float number2 = 15.0;  // 15라는 double 타입의 값을 float인 number2에 넣기
+	//					   // f를 안넣은건 double임
+	//std::cin >> number1 >> number2;
+	//printf("number1 : %f\nnumber2 : %f", number1, number2); //정수형은 %d / 실수형은 %f
+	//														//%f에 %.2f로 치면 소수점 2자리까지 출력됨
+
+	//간단 실습 : 원의 반지름을 입력받고 넓이 구하기
+
+	//const float number2 = 3.141592f; // 상수를 설정하려면 앞에 "const"를 붙히면 된다.
+	//float number1 = 0.0f;
+
+	//printf("반지름을 입력하시오.\n");
+	//std::cin >> number1;
+	//printf("원의 넓이는 :%.2f입니다.\n", number1 * number1 * number2);
+	
+//(단축키) ctrl + r + r : 전체 이름바꾸기 
+	
+
+
+	//비교 연산자
+	
+
+	//float a = 123.0f;
+	//float b = 0.0f;
+
+	//std::cin >> b;
+	//b = b * 123.0f;
+
+	//bool result = a == b;       // f9 : 브레이크 포인트 설정/ 헤제
+
+	//float 타입을 ==로 비교할 때 반드시 아래와 같이 진행해야함. 
+	
+	//float epsilon = 0.001f;     
+	//a > (b + epsilon);
+ 	//a < (b + epsilon);              // 이정도의 오차범위는 맞았다고 치자! 라는거
+	
+
+	// 제어문
+
+	// 조건문
+
+	// if : 소괄호 안이 true면 중괄호 안의 코드를 실행하라.
+	//		내가 특정 조건을 만족할 때만 어떤 코드를 실행하고 싶을 때 사용.
+
+	//int a = 10;
+	//int b = 0;
+	//printf("a는 10\nb를 입력하시오 : ");
+	//std::cin >> b;
+
+	//if (a > b)
+	//{
+	//	printf("b가 %d라서 a가 더 크다\n", b);
+	//}
+
+	//if (a <= b)
+	//{
+	//	printf("b가 %d라서 a가 더 작거나 같다\n", b);
+	//}
+
+
+	//// if-else
+
+	//if (a > b)
+	//{
+	//	printf("a가 b보다 크다.\n");
+	//}
+	//else
+	//{
+	//	printf("a가 b보다 크다/\n");
+	//}
+
+
+	//if (b < 60)
+	//{
+	//	//F
+	//}
+	//else if (b < 70)
+	//{
+	//	//D
+	//}
+	//else if (b < 80)
+	//{
+	//	//C
+	//}
+	//else if (b < 90)
+	//{
+	//	//B
+	//}
+	//else 
+	//{
+	//	//A
+	//}
+
+
+	// switch
+
+	//int a = 0;
+	//std::cin >> a;
+	//switch (a)
+	//{
+	//case 1 :
+	//	printf("1이다.\n");
+	//	break;
+	//case 3 :
+	//	printf("3이다.\n");
+	//	break;
+	//case 5 :
+	//	printf("5이다.\n");
+	//	break;
+	//default :
+	//	printf("1,3,5가 아니다.\n");
+	//	break;
+	//}
+
+	
+	// 삼항연산자
+
+	//int a = 10;
+	//int b = 20;
+	//int c = 0;
+
+
+	//if (a > b)
+	//{
+	//	c = a * 2 + b;
+	//}
+	//else
+	//{
+	//	c = a + b * 2;
+	//}
+	//c = (a > b) ? (a * 2 + b) : (a + b * 2); // 삼향 연산자 / 위 if-else를 미관상 예쁘게 만드는거
+
+
+
+
+	// 논리 연산자
+
+	//int a = 10;
+	//if (a > 5 && !(10 > a))
+	//{
+	//	// 성공
+	//}
+	//else
+	//{
+	//	// 실패
+	//}
+	
+
+
+	//ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 	return 0;
 }
