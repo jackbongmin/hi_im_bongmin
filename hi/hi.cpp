@@ -37,6 +37,8 @@
 //#include <cstdio> // iostream이 아니더라도 사용 가능
 #include <stdio.h> // stdio.h에 네임스페이스 추가한 래퍼
 #include "header.h" //헤더를 선언하면 헤더에 있는 내용이 전부 선언됨
+#include <time.h> // c 스타일 랜덤 시드값 설정할때
+#include <random> // c++ 스타일 랜덤 쓸때 
 
 // 명령어에 빨간줄이 생기면 잘못됐다는 뜻
 // 명령어에 녹색줄이 생기면 지금은 괜찮은데 문제될 수 있어라는 경고
@@ -280,6 +282,328 @@ int : 정수형(소수점이 없는 숫자 / 소수점 뒤 숫자는 버림)
 	
 
 
-	//ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+//ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+
+
+
+// 25년 9월 4일 (목요일)	
+
+
+	// 비트연산자
+	
+	//// &
+	//int flag = 0b1010;    
+	//// 0b0001 = 왼쪽 키가 눌려졌다.
+	//// 0b0010 = 오른쪽 키가 눌려졌다.
+	//// 0b0100 = 위쪽 키가 눌려졌다.
+	//// 0b1000 = 아래쪽 키가 눌려졌다.
+	//
+	//if ((flag & 0b0010) != 0b0000)
+	//{
+	//	// 오른쪽 키가 눌려져 있다.
+	//}
+	//else
+	//{
+	//	// 오른쪽 키가 눌려져 있지 않다.
+	//}
+
+	//// |
+	////int flag = 0b1010;
+	//flag = flag | 0b0001;	// 결과는 flag = 0b1011;
+
+	//// ^
+	////int flag =        0b1010;
+	//int result = flag ^ 0b0001;    // 결과 = 0b1011;
+	//result = 0b1011 ^ 0b0001;      // 결과 = 0b1010;
+
+	//// ~
+	////int flag =        0b1010;
+	//int test = 0b0001;
+	//test = ~test;	// 왼쪽키를 제외한 나머지 모두 세팅
+
+	//// enum : 상수들에게 사람이 알아보기 좋은 이름을 붙여 놓은것
+	//enum Key
+	//{
+	//	Up    = 1 << 0,  // 0b0001
+	//	Down  = 1 << 1,  // 0b0010
+	//	Left  = 1 << 2,  // 0b0100
+	//	Right = 1 << 3   // 0b1000
+	//};
+
+	//if ((flag & Up) != 0) 
+	//{
+
+	//}
+
+//// 간단실습 : 양수를 하나 입력받고 홀수인지 짝수인지 출력하기(%사용금지)
+//
+//	int InputNumber = 0;
+//	printf("테스트할 수를 입력하시오 : ");
+//	std::cin >> InputNumber;
+//
+//	if ((InputNumber & 0b0001) != 0b0000)   // = if ((InputNumber & 1) != 0) 같은 내용임
+//	{
+//		printf("입력하신 수는 홀수입니다.\n");
+//	}
+//	else
+//	{
+//		printf("입력하신 수는 짝수입니다.\n");
+//	}
+
+
+	//// 반복문
+	//// for
+
+	//// 헬로 월드 10번 찍기
+	//for (int i = 0; i < 10; i++)    // 복습) ++ = 1씩 더하기   / 2씩 더하고 싶을땐 +=2 라고 쓰면됨
+	//{
+	//	printf("Hello World : %d\n", i);
+	//}
+
+
+	//// while
+	//int Count = 1;
+	//while ((Count % 3) != 0)        // while()의 조건이 참이면 코드 블럭 실행 // 3의 배수라는 뜻
+	//{
+	//	printf("Hello World while : %d\n", Count);
+	//	Count++;
+	//}
+
+
+	////do-while
+
+	//int Count = 1;
+	//do
+	//{
+	//	printf("Hello World while : %d\n", Count);
+	//	Count++;
+	//} while ((Count % 3) != 0);
+
+
+//
+///*
+//간단 실습1
+//0을 입력받을때까지 입력을 계속 받고 0이 입력되면 입력받은 숫자의 합을 출력하기
+//*/
+//
+//	printf("실습1. 0을 입력받을때까지 입력을 계속 받고 0이 입력되면 입력받은 숫자의 합을 출력합니다.\n\n");
+//	printf("숫자를 입력하시오 : ");
+//
+//	// while 버전
+//
+//	int InputNumber1 = -1;           // 0부터 시작할시 바로 끝나버리기 때문에 -1로 선언 시작
+//	int Sum = 0;
+//
+//	while (InputNumber1 != 0)
+//	{
+//		std::cin >> InputNumber1;
+//		Sum += InputNumber1;
+//	}
+//
+//	printf("입력받은 숫자의 합은 : %d입니다.\n\n", Sum);
+//
+//
+//	// do-while 버전
+//
+//	int InputNumber2 = 0;
+//	int Sum1 = 0;
+//
+//	do
+//	{
+//		std::cin >> InputNumber2;
+//		Sum1 += InputNumber2;
+//	} while (InputNumber2 != 0);
+//	
+//
+//	printf("입력받은 숫자의 합은 : %d입니다.", Sum);
+//	
+///*
+//간단 실습2
+//입력받은 숫자의 구구단 출력해보기
+//*/
+//
+//	int InputNumber3 = 0;
+//
+//	printf("실습2. 입력받은 숫자의 구구단을 출력합니다.\n\n");
+//	printf("숫자를 입력하시오 : ");
+//	std::cin >> InputNumber3;
+//
+//	for (int X = 1; X < 10; X++)
+//	{
+//		int Share = InputNumber3 * X;
+//		printf("%d", InputNumber3);
+//		printf(" X %d = ", X);
+//		printf("%d\n\n", Share);	// printf("%d x %d = %d\n", Inputnumber, X, Share) 이렇게 쳐도 됨
+//	}
+//
+//
+///*
+//간단 실습3
+//숫자를 하나 입력 받고 입력받은 수까지 있는 숫자 중 홀수만 출력하기
+//*/ 
+//
+//	int InputNumber4 = 0;
+//
+//	printf("실습3. 입력받은 숫까지 있는 숫자 중 홀수만 출력합니다.\n\n");
+//	printf("숫자를 입력하시오 : ");
+//	std::cin >> InputNumber4;
+//
+//	for (int OddNumber = 1; OddNumber <= InputNumber4; OddNumber++)
+//	{
+//		if (OddNumber % 2 == 1)
+//		{
+//			printf("%d\n\n", OddNumber);
+//		}
+//	}
+//
+///*
+//간단 실습4
+//1 ~ 100사이의 숫자 중 7의 배수만 출력하기
+//*/ 
+//
+//	printf("실습4. 1 ~ 100사이의 숫자 중에서 7의 배수만 출력하기.\n\n");
+//
+//	const int MinNumber = 1;
+//	const int MaxNumber = 100;
+//	for (int Multiple = MinNumber; Multiple <= MaxNumber; Multiple++)
+//	{
+//		if ((Multiple % 7) == 0)
+//		{
+//			printf("%d \n\n", Multiple);
+//		}
+//	}
+//
+//
+///*
+//간단 실습5
+//입력받은 숫자 만큼의 층을 가진 피라미드 그리기
+//ex) 3 =
+//   *
+//  ***
+// *****
+//*/ 
+//
+//	int InputNumber5 = 0;
+//	printf("실습5. 입력받은 숫자 만큼의 층을 가진 피라미드 그리기.\n\n");
+//	printf("숫자를 입력하시오 : ");
+//	std::cin >> InputNumber5;
+//
+//	// 줄 : line
+//	// 간격 : space
+//	// * : star
+//	for (int Line = 0; Line <= InputNumber5; Line++)
+//	{
+//		for (int Space = 0; Space < (InputNumber5 - Line); Space++)
+//		{
+//			printf(" ");
+//		}
+//		for (int Star = 0; Star < (2 * Line) - 1; Star++)
+//		{
+//			printf("*");
+//		}
+//		printf("\n");
+//	}
+
+
+	//// 제어문
+
+	//// continue
+
+
+	//int InputNumber4 = 0;
+
+	//printf("실습3. 입력받은 숫까지 있는 숫자 중 홀수만 출력합니다.\n\n");
+	//printf("숫자를 입력하시오 : ");
+	//std::cin >> InputNumber4;
+
+	//for (int OddNumber = 1; OddNumber <= InputNumber4; OddNumber++)
+	//{
+	//	if (OddNumber % 2 == 0)
+	//	{
+	//		continue;
+	//	}
+	//	printf("%d\n\n", OddNumber);
+	//}
+
+
+	//// break
+
+	//printf("실습1. 0을 입력받을때까지 입력을 계속 받고 0이 입력되면 입력받은 숫자의 합을 출력합니다.\n\n");
+	//printf("숫자를 입력하시오 : ");
+
+
+	//int InputNumber1 = -1;           // 0부터 시작할시 바로 끝나버리기 때문에 -1로 선언 시작
+	//int Sum = 0;
+
+	//while (true)
+	//{
+	//	std::cin >> InputNumber1;
+	//	Sum += InputNumber1;
+	//
+	//	if (InputNumber1 == 0)
+	//		break;
+	//}
+	//printf("입력받은 숫자의 합은 : %d입니다.\n\n", Sum);
+
+
+
+	//// 랜덤
+
+	//// C 스타일의 랜덤 사용법
+	//
+	//srand(time(0));		// 시간에 따라 시드값을 설청하는것
+	////srand(0);			// 이걸 쓰면 시드값 고정
+	//for (int i = 0; i < 3; i++)
+	//{
+	//	int RandomNumber = rand();
+	//	printf("랜덤한 숫자 : %d\n", RandomNumber);
+	//}
+
+	//// 0 ~ 5 까지의 숫자를 랜덤으로 구하고 싶다.
+	//int RandomNumber1 = rand() % 6;
+
+	//// 1 ~ 6 까지의 숫자를 랜덤으로 구하고 싶다.
+	//int RandomNumber1 = rand() % 6 + 1;
+
+
+	// C++ 스타일
+
+	std::random_device RandomDivece;		//랜덤장치를 만듬
+	std::mt19937 Generate(RandomDivece());
+
+	printf("균등분포 : ");
+	std::uniform_int_distribution<> uniformDis(1, 100);
+	for (int i = 0; i < 10; i++)
+	{
+		int Number = uniformDis(Generate);
+		printf("%d", Number);
+		if (i < 9)
+		{
+			printf(", ");
+		}
+	}
+	printf("\n");
+
+	
+	printf("정규분포 : ");
+	std::normal_distribution<> nomalDis(80, 10);
+	for (int i = 0; i < 10; i++)
+	{
+		float fNumber = uniformDis(Generate);
+		printf("%.2f", fNumber);
+		if (i < 9)
+		{
+			printf(", ");
+		}
+	}
+	printf("\n");
+
+
+
+
+
+//ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 	return 0;
 }
