@@ -51,7 +51,7 @@ int main() // 앤트리 포인트(코드가 시작되는곳) / main함수는 반
 	//printf("\"백종민\"\t"); //""안에 \n이 있으면 줄을 바꾸라는 의미(이스케이프 시퀀스)
 	//printf("96년생입니다.\n");
 
-/* 
+/*
 이스케이프 시퀀스 \ : 백슬래시
 - \n : 줄바꾸기(개행문자)
 - \t : 탭 넣기
@@ -108,52 +108,52 @@ int : 정수형(소수점이 없는 숫자 / 소수점 뒤 숫자는 버림)
    a++;  // a에다가 1을 더해라
    a--;  // a에다가 1을 빼라
 */
-	//int number1 = 0;
-	//int number2 = 0;
-	// 변수를 지정할땐 반드시 먼저 숫자를 빼먹지 않고 넣어줘라
-	
-	//printf("숫자1을 입력하시오 : ");
-	//std::cin >> number1;
-	//printf("숫자2을 입력하시오 : ");
-	//std::cin >> number2;
+//int number1 = 0;
+//int number2 = 0;
+// 변수를 지정할땐 반드시 먼저 숫자를 빼먹지 않고 넣어줘라
 
-	//int number3 = number1 + number2;
-	//printf("두 숫자의 합은 %d입니다.", number3);
+//printf("숫자1을 입력하시오 : ");
+//std::cin >> number1;
+//printf("숫자2을 입력하시오 : ");
+//std::cin >> number2;
 
-
-
-
-	//ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+//int number3 = number1 + number2;
+//printf("두 숫자의 합은 %d입니다.", number3);
 
 
 
 
-	// 25년 09월 03일 (수요일) 
+//ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 
 
-	//float number1 = 10.0f; // 10이라는 float 타입의 값을 float인 number2에 넣기
-	//					   // 실수타입은 f를 보통 넣어준다.
-	//float number2 = 15.0;  // 15라는 double 타입의 값을 float인 number2에 넣기
-	//					   // f를 안넣은건 double임
-	//std::cin >> number1 >> number2;
-	//printf("number1 : %f\nnumber2 : %f", number1, number2); //정수형은 %d / 실수형은 %f
-	//														//%f에 %.2f로 치면 소수점 2자리까지 출력됨
 
-	//간단 실습 : 원의 반지름을 입력받고 넓이 구하기
 
-	//const float number2 = 3.141592f; // 상수를 설정하려면 앞에 "const"를 붙히면 된다.
-	//float number1 = 0.0f;
+// 25년 09월 03일 (수요일) 
 
-	//printf("반지름을 입력하시오.\n");
-	//std::cin >> number1;
-	//printf("원의 넓이는 :%.2f입니다.\n", number1 * number1 * number2);
-	
+
+//float number1 = 10.0f; // 10이라는 float 타입의 값을 float인 number2에 넣기
+//					   // 실수타입은 f를 보통 넣어준다.
+//float number2 = 15.0;  // 15라는 double 타입의 값을 float인 number2에 넣기
+//					   // f를 안넣은건 double임
+//std::cin >> number1 >> number2;
+//printf("number1 : %f\nnumber2 : %f", number1, number2); //정수형은 %d / 실수형은 %f
+//														//%f에 %.2f로 치면 소수점 2자리까지 출력됨
+
+//간단 실습 : 원의 반지름을 입력받고 넓이 구하기
+
+//const float number2 = 3.141592f; // 상수를 설정하려면 앞에 "const"를 붙히면 된다.
+//float number1 = 0.0f;
+
+//printf("반지름을 입력하시오.\n");
+//std::cin >> number1;
+//printf("원의 넓이는 :%.2f입니다.\n", number1 * number1 * number2);
+
 //(단축키) ctrl + r + r : 전체 이름바꾸기 
-	
+
 
 
 	//비교 연산자
-	
+
 
 	//float a = 123.0f;
 	//float b = 0.0f;
@@ -164,11 +164,11 @@ int : 정수형(소수점이 없는 숫자 / 소수점 뒤 숫자는 버림)
 	//bool result = a == b;       // f9 : 브레이크 포인트 설정/ 헤제
 
 	//float 타입을 ==로 비교할 때 반드시 아래와 같이 진행해야함. 
-	
+
 	//float epsilon = 0.001f;     
 	//a > (b + epsilon);
- 	//a < (b + epsilon);              // 이정도의 오차범위는 맞았다고 치자! 라는거
-	
+	//a < (b + epsilon);              // 이정도의 오차범위는 맞았다고 치자! 라는거
+
 
 	// 제어문
 
@@ -247,7 +247,7 @@ int : 정수형(소수점이 없는 숫자 / 소수점 뒤 숫자는 버림)
 	//	break;
 	//}
 
-	
+
 	// 삼항연산자
 
 	//int a = 10;
@@ -279,7 +279,7 @@ int : 정수형(소수점이 없는 숫자 / 소수점 뒤 숫자는 버림)
 	//{
 	//	// 실패
 	//}
-	
+
 
 
 
@@ -292,7 +292,7 @@ int : 정수형(소수점이 없는 숫자 / 소수점 뒤 숫자는 버림)
 
 
 	// 비트연산자
-	
+
 	//// &
 	//int flag = 0b1010;    
 	//// 0b0001 = 왼쪽 키가 눌려졌다.
@@ -568,42 +568,364 @@ int : 정수형(소수점이 없는 숫자 / 소수점 뒤 숫자는 버림)
 	//int RandomNumber1 = rand() % 6 + 1;
 
 
-	// C++ 스타일
+	//// C++ 스타일
 
-	std::random_device RandomDivece;		//랜덤장치를 만듬
-	std::mt19937 Generate(RandomDivece());
+	//std::random_device RandomDivece;		//랜덤장치를 만듬
+	//std::mt19937 Generate(RandomDivece());
 
-	printf("균등분포 : ");
-	std::uniform_int_distribution<> uniformDis(1, 100);
-	for (int i = 0; i < 10; i++)
+	//printf("균등분포 : ");
+	//std::uniform_int_distribution<> uniformDis(1, 100);
+	//for (int i = 0; i < 10; i++)
+	//{
+	//	int Number = uniformDis(Generate);
+	//	printf("%d", Number);
+	//	if (i < 9)
+	//	{
+	//		printf(", ");
+	//	}
+	//}
+	//printf("\n");
+
+	//
+	//printf("정규분포 : ");
+	//std::normal_distribution<> nomalDis(80, 10);
+	//for (int i = 0; i < 10; i++)
+	//{
+	//	float fNumber = uniformDis(Generate);
+	//	printf("%.2f", fNumber);
+	//	if (i < 9)
+	//	{
+	//		printf(", ");
+	//	}
+	//}
+	//printf("\n");
+
+
+
+
+/*
+실습1
+주사위를 100만번 돌려서 6이 몇번 나왔는지 카운팅해서 출력하기
+*/
+
+	printf("실습1 주사위를 100만번 돌려서 6이 몇번 나왔는지 카운팅해서 출력하시오. \n\n");
+
+	int count6 = 0;
+
+	srand(time(0));
+	for (int i = 0; i < 1000000; i++)
 	{
-		int Number = uniformDis(Generate);
-		printf("%d", Number);
-		if (i < 9)
+		int RandomNumber = rand() % 6 + 1;
+		if (RandomNumber == 6)
 		{
-			printf(", ");
+			count6++;
 		}
+
 	}
-	printf("\n");
+	printf("6은 총 %d번 나왔습니다.\n\n", count6);
+
+
+/*
+실습2
+가위, 바위, 보 게임 만들기
+- 3선 승제
+- enum 활용
+*/
+
+
+	printf("실습2 가위바위보 게임 만들기 / 3선승제. \n\n");
+
+	int RPS = 0;
+	int Score1 = 0;
+	int Score2 = 0;
 
 	
-	printf("정규분포 : ");
-	std::normal_distribution<> nomalDis(80, 10);
-	for (int i = 0; i < 10; i++)
+	enum RPS
 	{
-		float fNumber = uniformDis(Generate);
-		printf("%.2f", fNumber);
-		if (i < 9)
+		Scissor = 0,
+		Rock = 1,
+		Paper = 2,
+	};
+
+	while ((Score1 <3 ) && (Score2 < 3))
+	{
+		printf("가위 바위 보 중 선택하시오.\n");
+		printf("(가위 : 0, 바위 : 1, 보 : 2)\n");
+
+		std::cin >> RPS;
+
+		srand(time(0));
+
+		int RandomNumber1 = rand() & 3;
+
+
+		if (RPS == 0)
 		{
-			printf(", ");
+			if (RandomNumber1 == 2)
+			{
+				printf("승리하였습니다.\n\n");
+				Score1++;
+				printf("나 : 컴퓨터 -> %d : %d\n", Score1, Score2);
+			}
+			else if (RandomNumber1 == 1)
+			{
+				printf("패배하였습니다.\n\n");
+				Score2++;
+				printf("나 : 컴퓨터 -> %d : %d\n", Score1, Score2);
+			}
+			else
+			{
+				printf("비겼습니다.\n\n");
+				printf("나 : 컴퓨터 -> %d : %d\n", Score1, Score2);
+			}
+		}
+
+		if (RPS == 1)
+		{
+			if (RandomNumber1 == 0)
+			{
+				printf("승리하였습니다.\n\n");
+				Score1++;
+				printf("나 : 컴퓨터 -> %d : %d\n", Score1, Score2);
+			}
+			else if (RandomNumber1 == 2)
+			{
+				printf("패배하였습니다.\n\n");
+				Score2++;
+				printf("나 : 컴퓨터 -> %d : %d\n", Score1, Score2);
+			}
+			else
+			{
+				printf("비겼습니다.\n\n");
+				printf("나 : 컴퓨터 -> %d : %d\n", Score1, Score2);
+			}
+		}
+
+		if (RPS == 2)
+		{
+			if (RandomNumber1 == 1)
+			{
+				printf("승리하였습니다.\n\n");
+				Score1++;
+				printf("나 : 컴퓨터 -> %d : %d\n", Score1, Score2);
+			}
+			else if (RandomNumber1 == 0)
+			{
+				printf("패배하였습니다.\n\n");
+				Score2++;
+				printf("나 : 컴퓨터 -> %d : %d\n", Score1, Score2);
+			}
+			else
+			{
+				printf("비겼습니다.\n\n");
+				printf("나 : 컴퓨터 -> %d : %d\n", Score1, Score2);
+			}
 		}
 	}
-	printf("\n");
+	
+	
+
+	/*
+	실습3
+	하이 로우
+	- 컴퓨터가 1~100 사이의 임의의 숫자를 선택하고, 사용자가 맞출 때까지 입력을 받아 "더 높게", "더 낮게"등의 힌트를 제공하는 게임
+	- 5번안에 맞춰야 승리
+	*/
+
+	printf("실습3 하이로우. \n\n");
+	printf("1 ~ 100 사이의 숫자를 맞추시오. \n");
+
+	int InputNumber3 = 0;
+	int Count3 = 0;
+
+	srand(time(0));
+	int RandomNumber3 = rand() % 100 +1;
+	
+	while (InputNumber3 != RandomNumber3)
+	{
+		printf("숫자를 입력하시오 :");
+		std::cin >> InputNumber3;
+		if (InputNumber3 > RandomNumber3)
+		{
+			printf("DOWN\n\n");
+			Count3++;
+		}
+		else if (InputNumber3 < RandomNumber3)
+		{
+			printf("UP\n\n");
+			Count3++;
+		}
+		else
+		{
+			printf("정답입니다.\n\n");
+		}
+	}
+	
+	if (Count3 <= 5)
+	{
+		printf("승리하였습니다.\n\n");
+	}
+	else
+	{
+		printf("승리하지 못했습니다.\n\n");
+	}
+
+	/*
+	실습4
+	공포게임의 인벤토리를 비트플래그로 표현하기
+	- 아이템 종류를 나타내는 enum을 만들고
+	- 특정 아이템을 추가하고 삭제하는 예시보여주기
+	*/
+
+	printf("실습4 공포게임의 인벤토리를 비트플래그로 표현하기. \n\n");
+
+
+	int Select = 0;
+	int Item = 0;
+	
+
+	printf("ㅡㅡㅡㅡ인벤토리ㅡㅡㅡㅡ\n");
+	printf("- 손전등\n");
+	printf("- 열쇠\n");
+	printf("- 몽둥이\n\n");
+	printf("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ\n");
+
+
+	enum Select
+	{
+		추가 = 0b0001,
+		삭제 = 0b0010,
+		종료 = 0b0011
+	};
+
+	enum Item
+	{
+		손전등 = 0b0001,
+		열쇠 = 0b0010,
+		몽둥이 = 0b0011,
+	};
+	
+	
+	while (Select < 3)
+	{
+		printf("아이템을 추가하시겠습니까? 삭제하시겠습니까?\n");
+
+		printf("추가 : 1\n삭제 : 2\n종료 : 3\n\n");
+		std::cin >> Select;
+		printf("\n");
+		if (Select == 1)
+		{
+			printf("무엇을 추가하시겠습니까?\n");
+			printf("손전등 : 1\n열쇠 : 2\n몽둥이 : 3\n\n");
+			std::cin >> Item;
+			printf("\n");
+			if (Item == 1)
+			{
+				printf("ㅡㅡㅡㅡ인벤토리ㅡㅡㅡㅡ\n");
+				printf("- 손전등\n");
+				printf("- 열쇠\n");
+				printf("- 몽둥이\n");
+				printf("- 손전등\n\n");
+				printf("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ\n");
+			}
+			else if (Item == 2)
+			{
+				printf("ㅡㅡㅡㅡ인벤토리ㅡㅡㅡㅡ\n");
+				printf("- 손전등\n");
+				printf("- 열쇠\n");
+				printf("- 몽둥이\n");
+				printf("- 열쇠\n\n");
+				printf("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ\n");
+			}
+			else
+			{
+				printf("ㅡㅡㅡㅡ인벤토리ㅡㅡㅡㅡ\n");
+				printf("- 손전등\n");
+				printf("- 열쇠\n");
+				printf("- 몽둥이\n");
+				printf("- 몽둥이\n\n");
+				printf("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ\n");
+			}
+		}
+		else if(Select == 2)
+		{
+			printf("무엇을 삭제하시겠습니까?\n");
+			printf("손전등 : 1\n열쇠 : 2\n몽둥이 : 3\n\n");
+			std::cin >> Item;
+			printf("\n");
+			if (Item == 1)
+			{
+				printf("ㅡㅡㅡㅡ인벤토리ㅡㅡㅡㅡ\n");
+				printf("- 열쇠\n");
+				printf("- 몽둥이\n");
+				printf("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ\n");
+			}
+			else if (Item == 2)
+			{
+				printf("ㅡㅡㅡㅡ인벤토리ㅡㅡㅡㅡ\n");
+				printf("- 손전등\n");
+				printf("- 몽둥이\n");
+				printf("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ\n");
+			}
+			else
+			{
+				printf("ㅡㅡㅡㅡ인벤토리ㅡㅡㅡㅡ\n");
+				printf("- 손전등\n");
+				printf("- 열쇠\n");
+				printf("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ\n");
+			}
+		}
+		else
+		{
+			printf("종료합니다.\n");
+			break;
+
+		}
+	}
+
+	/*
+	실습6
+	주사위 게임 만들기
+	1. 초기 세팅
+	   플레이어와 컴퓨터 모두 일정 금액(예: 10000원)으로 시작한다.
+	2. 1차 주사위 굴리기
+	   게임 시작 시, 플레이어와 컴퓨터가 각각 주사위(1~6)를 한 번 굴린다.
+	   각자 주사위 결과를 공개한다.
+	3. 배팅
+	   이전 판에서 진 쪽이 배팅 금액을 제시한다.
+	   제시한 배팅 금액은 두 사람 모두의 현재 소지 금액 이하이어야 한다.
+	   배팅 금액은 두 사람 모두에게서 차감된다.
+	4. 2차 주사위 굴리기
+	   다시 플레이어와 컴퓨터가 각각 주사위를 한 번씩 굴린다.
+	5. (1차+2차) 주사위의 합을 계산한다.
+	   승패 판정 및 금액 증감
+	   합이 더 큰 쪽이 배팅 금액의 총합(즉, 2×배팅금액)을 모두 가져간다.
+	   동점일 경우 배팅 금액은 그대로 반환한다.
+	6. 다음 판 진행
+	   소지금이 0 이하인 쪽이 나오면 게임 종료.
+	*/
+	
+
+	/*
+	실습7
+	홀짝 게임
+	1. 초기 금액 및 배팅
+	   플레이어는 기본금 100원으로 베팅을 시작한다.
+	2. 홀짝 선택
+	   플레이어가 1(홀) 또는 2(짝)을 선택한다.
+	3. 결과 결정
+	   컴퓨터가 랜덤으로 1(홀) 또는 2(짝)을 선택한다.
+	   플레이어의 선택과 결과가 일치하면 승리(이기면 배팅금의 2배 획득), 다르면 패배(배팅금 전액 잃음).
+	4. 연속 배팅 선택
+	   승리 시 플레이어는 두 가지 중 하나를 선택:
+	   (A) 이긴 금액을 모두 다시 한 번에 배팅 (연승 도전)
+	   (B) 이긴 금액을 얻고, 다시 100원부터 새로 배팅 시작
+	5. 게임 종료 조건
+	   플레이어가 소지금이 100원 미만일 경우 게임 종료.
+	*/
 
 
 
-
-
-//ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+	//ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 	return 0;
 }
