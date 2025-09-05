@@ -601,174 +601,485 @@ int : 정수형(소수점이 없는 숫자 / 소수점 뒤 숫자는 버림)
 	//printf("\n");
 
 
+//
+//
+///*
+//실습1
+//주사위를 100만번 돌려서 6이 몇번 나왔는지 카운팅해서 출력하기
+//*/
+//
+//	printf("실습1 주사위를 100만번 돌려서 6이 몇번 나왔는지 카운팅해서 출력하시오. \n\n");
+//
+//	int count6 = 0;
+//
+//	srand(time(0));
+//	for (int i = 0; i < 1000000; i++)
+//	{
+//		int RandomNumber = rand() % 6 + 1;
+//		if (RandomNumber == 6)
+//		{
+//			count6++;
+//		}
+//
+//	}
+//	printf("6은 총 %d번 나왔습니다.\n\n", count6);
+//
+//
+///*
+//실습2
+//가위, 바위, 보 게임 만들기
+//- 3선 승제
+//- enum 활용
+//*/
+//
+//
+//	printf("실습2 가위바위보 게임 만들기 / 3선승제. \n\n");
+//
+//	int RPS = 0;
+//	int Score1 = 0;
+//	int Score2 = 0;
+//
+//	
+//	enum RPS
+//	{
+//		Scissor = 0,
+//		Rock = 1,
+//		Paper = 2,
+//	};
+//
+//	while ((Score1 <3 ) && (Score2 < 3))
+//	{
+//		printf("가위 바위 보 중 선택하시오.\n");
+//		printf("(가위 : 0, 바위 : 1, 보 : 2)\n");
+//
+//		std::cin >> RPS;
+//
+//		srand(time(0));
+//
+//		int RandomNumber1 = rand() & 3;
+//
+//
+//		if (RPS == 0)
+//		{
+//			if (RandomNumber1 == 2)
+//			{
+//				printf("승리하였습니다.\n\n");
+//				Score1++;
+//				printf("나 : 컴퓨터 -> %d : %d\n", Score1, Score2);
+//			}
+//			else if (RandomNumber1 == 1)
+//			{
+//				printf("패배하였습니다.\n\n");
+//				Score2++;
+//				printf("나 : 컴퓨터 -> %d : %d\n", Score1, Score2);
+//			}
+//			else
+//			{
+//				printf("비겼습니다.\n\n");
+//				printf("나 : 컴퓨터 -> %d : %d\n", Score1, Score2);
+//			}
+//		}
+//
+//		if (RPS == 1)
+//		{
+//			if (RandomNumber1 == 0)
+//			{
+//				printf("승리하였습니다.\n\n");
+//				Score1++;
+//				printf("나 : 컴퓨터 -> %d : %d\n", Score1, Score2);
+//			}
+//			else if (RandomNumber1 == 2)
+//			{
+//				printf("패배하였습니다.\n\n");
+//				Score2++;
+//				printf("나 : 컴퓨터 -> %d : %d\n", Score1, Score2);
+//			}
+//			else
+//			{
+//				printf("비겼습니다.\n\n");
+//				printf("나 : 컴퓨터 -> %d : %d\n", Score1, Score2);
+//			}
+//		}
+//
+//		if (RPS == 2)
+//		{
+//			if (RandomNumber1 == 1)
+//			{
+//				printf("승리하였습니다.\n\n");
+//				Score1++;
+//				printf("나 : 컴퓨터 -> %d : %d\n", Score1, Score2);
+//			}
+//			else if (RandomNumber1 == 0)
+//			{
+//				printf("패배하였습니다.\n\n");
+//				Score2++;
+//				printf("나 : 컴퓨터 -> %d : %d\n", Score1, Score2);
+//			}
+//			else
+//			{
+//				printf("비겼습니다.\n\n");
+//				printf("나 : 컴퓨터 -> %d : %d\n", Score1, Score2);
+//			}
+//		}
+//	}
+//	
+//	
+//
+//	/*
+//	실습3
+//	하이 로우
+//	- 컴퓨터가 1~100 사이의 임의의 숫자를 선택하고, 사용자가 맞출 때까지 입력을 받아 "더 높게", "더 낮게"등의 힌트를 제공하는 게임
+//	- 5번안에 맞춰야 승리
+//	*/
+//
+//	printf("실습3 하이로우. \n\n");
+//	printf("1 ~ 100 사이의 숫자를 맞추시오. \n");
+//
+//	int InputNumber3 = 0;
+//	int Count3 = 0;
+//
+//	srand(time(0));
+//	int RandomNumber3 = rand() % 100 +1;
+//	
+//	while (InputNumber3 != RandomNumber3)
+//	{
+//		printf("숫자를 입력하시오 :");
+//		std::cin >> InputNumber3;
+//		if (InputNumber3 > RandomNumber3)
+//		{
+//			printf("DOWN\n\n");
+//			Count3++;
+//		}
+//		else if (InputNumber3 < RandomNumber3)
+//		{
+//			printf("UP\n\n");
+//			Count3++;
+//		}
+//		else
+//		{
+//			printf("정답입니다.\n\n");
+//		}
+//	}
+//	
+//	if (Count3 <= 5)
+//	{
+//		printf("승리하였습니다.\n\n");
+//	}
+//	else
+//	{
+//		printf("승리하지 못했습니다.\n\n");
+//	}
+//
+//	/*
+//	실습4
+//	공포게임의 인벤토리를 비트플래그로 표현하기
+//	- 아이템 종류를 나타내는 enum을 만들고
+//	- 특정 아이템을 추가하고 삭제하는 예시보여주기
+//	*/
+//
+//	printf("실습4 공포게임의 인벤토리를 비트플래그로 표현하기. \n\n");
+//
+//
+//	int Select = 0;
+//	int Item = 0;
+//	
+//
+//	printf("ㅡㅡㅡㅡ인벤토리ㅡㅡㅡㅡ\n");
+//	printf("- 손전등\n");
+//	printf("- 열쇠\n");
+//	printf("- 몽둥이\n\n");
+//	printf("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ\n");
+//
+//
+//	enum Select
+//	{
+//		추가 = 0b0001,
+//		삭제 = 0b0010,
+//		종료 = 0b0011
+//	};
+//
+//	enum Item
+//	{
+//		손전등 = 0b0001,
+//		열쇠 = 0b0010,
+//		몽둥이 = 0b0011,
+//	};
+//	
+//	
+//	while (Select < 3)
+//	{
+//		printf("아이템을 추가하시겠습니까? 삭제하시겠습니까?\n");
+//
+//		printf("추가 : 1\n삭제 : 2\n종료 : 3\n\n");
+//		std::cin >> Select;
+//		printf("\n");
+//		if (Select == 1)
+//		{
+//			printf("무엇을 추가하시겠습니까?\n");
+//			printf("손전등 : 1\n열쇠 : 2\n몽둥이 : 3\n\n");
+//			std::cin >> Item;
+//			printf("\n");
+//			if (Item == 1)
+//			{
+//				printf("ㅡㅡㅡㅡ인벤토리ㅡㅡㅡㅡ\n");
+//				printf("- 손전등\n");
+//				printf("- 열쇠\n");
+//				printf("- 몽둥이\n");
+//				printf("- 손전등\n\n");
+//				printf("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ\n");
+//			}
+//			else if (Item == 2)
+//			{
+//				printf("ㅡㅡㅡㅡ인벤토리ㅡㅡㅡㅡ\n");
+//				printf("- 손전등\n");
+//				printf("- 열쇠\n");
+//				printf("- 몽둥이\n");
+//				printf("- 열쇠\n\n");
+//				printf("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ\n");
+//			}
+//			else
+//			{
+//				printf("ㅡㅡㅡㅡ인벤토리ㅡㅡㅡㅡ\n");
+//				printf("- 손전등\n");
+//				printf("- 열쇠\n");
+//				printf("- 몽둥이\n");
+//				printf("- 몽둥이\n\n");
+//				printf("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ\n");
+//			}
+//		}
+//		else if(Select == 2)
+//		{
+//			printf("무엇을 삭제하시겠습니까?\n");
+//			printf("손전등 : 1\n열쇠 : 2\n몽둥이 : 3\n\n");
+//			std::cin >> Item;
+//			printf("\n");
+//			if (Item == 1)
+//			{
+//				printf("ㅡㅡㅡㅡ인벤토리ㅡㅡㅡㅡ\n");
+//				printf("- 열쇠\n");
+//				printf("- 몽둥이\n");
+//				printf("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ\n");
+//			}
+//			else if (Item == 2)
+//			{
+//				printf("ㅡㅡㅡㅡ인벤토리ㅡㅡㅡㅡ\n");
+//				printf("- 손전등\n");
+//				printf("- 몽둥이\n");
+//				printf("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ\n");
+//			}
+//			else
+//			{
+//				printf("ㅡㅡㅡㅡ인벤토리ㅡㅡㅡㅡ\n");
+//				printf("- 손전등\n");
+//				printf("- 열쇠\n");
+//				printf("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ\n");
+//			}
+//		}
+//		else
+//		{
+//			printf("종료합니다.\n");
+//			break;
+//
+//		}
+//	}
 
 
-/*
-실습1
-주사위를 100만번 돌려서 6이 몇번 나왔는지 카운팅해서 출력하기
-*/
-
-	printf("실습1 주사위를 100만번 돌려서 6이 몇번 나왔는지 카운팅해서 출력하시오. \n\n");
-
-	int count6 = 0;
-
-	srand(time(0));
-	for (int i = 0; i < 1000000; i++)
-	{
-		int RandomNumber = rand() % 6 + 1;
-		if (RandomNumber == 6)
-		{
-			count6++;
-		}
-
-	}
-	printf("6은 총 %d번 나왔습니다.\n\n", count6);
 
 
-/*
-실습2
-가위, 바위, 보 게임 만들기
-- 3선 승제
-- enum 활용
-*/
 
+// 실습 풀이 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ(09.05)
 
-	printf("실습2 가위바위보 게임 만들기 / 3선승제. \n\n");
+//
+//
+///*
+//실습1
+//주사위(1 ~ 6)를 100만번 돌려서 6이 몇번 나왔는지 카운팅해서 출력하기
+//*/
+//	const int TestCount = 1000000;
+//	int HitCount = 0;
+//	for (int i = 0; i < TestCount; i++)		// 100만번 돌려서
+//	{
+//		int dice = rand() % 6 + 1;  			 // 주사위 결과 ( 1 ~ 6 )를
+//		if (dice == 6)							// 6이 몇번 나왔는지
+//		{
+//			HitCount++;							// 카운팅해서
+//		}
+//
+//	}
+//	printf("6이 나온 회수 = %d\n", HitCount);	// 출력하기
+//
+//
+//	/*
+//	실습2
+//	가위, 바위, 보 게임 만들기
+//	- 3선 승제
+//	- enum 활용
+//	*/
+//
+//	enum RockPaperScissors
+//	{
+//		Scissors,
+//		Rock,
+//		Paper,
+//		NumOfRPS
+//	};
+//
+//	const int WinGoal = 3;
+//	int PlayerWinCount = 0;
+//	int ComWinCount = 0;
+//
+//	while (PlayerWinCount < WinGoal && ComWinCount < WinGoal)
+//	{
+//		int PlayerSelect = -1;
+//
+//		while (true)
+//		{
+//			printf("선택하세요. [0:가위, 1:바위, 2:보] :");		// 플레이어가 제대로된 값을 작성할때까지 계속 뜨게 하기
+//			std::cin >> PlayerSelect;
+//
+//			if (PlayerSelect == Scissors
+//				|| PlayerSelect == Rock
+//				|| PlayerSelect == Paper)
+//			{
+//				break;
+//			}
+//			printf("잘못된 입력입니다. 다시 입력하세요\n");
+//		}
+//		int ComSelect = rand() % NumOfRPS;		// 컴퓨터 선택
+//		// 3대신 NumOfRPS를 쓴이유는 나중에 저기에 숫자를 추가하게 될 경우 편하게 적용되기때문
+//
+//		switch (PlayerSelect)					// 승패 결정
+//		{
+//		case Scissors:
+//			if (ComSelect == Scissors)
+//			{
+//				printf("당신은 [가위]를 선택했고 컴퓨터는 [가위]를 선택했습니다.\n");
+//				printf("비겼습니다.\n");
+//			}
+//			else if (ComSelect == Rock)
+//			{
+//				printf("당신은 [가위]를 선택했고 컴퓨터는 [바위]를 선택했습니다.\n");
+//				printf("패배했습니다.\n");
+//				ComWinCount++;
+//			}
+//			else if (ComSelect == Paper)
+//			{
+//				printf("당신은 [가위]를 선택했고 컴퓨터는 [보]를 선택했습니다.\n");
+//				printf("승리했습니다.\n");
+//				PlayerWinCount++;
+//			}
+//			else
+//			{
+//				printf("ERROR!!!!!\n");
+//			}
+//			break;
+//		case Rock:
+//			if (ComSelect == Scissors)
+//			{
+//				printf("당신은 [바위]를 선택했고 컴퓨터는 [가위]를 선택했습니다.\n");
+//				printf("승리했습니다.\n");
+//				PlayerWinCount++;
+//			}
+//			else if (ComSelect == Rock)
+//			{
+//				printf("당신은 [바위]를 선택했고 컴퓨터는 [바위]를 선택했습니다.\n");
+//				printf("비겼습니다.\n");
+//			}
+//			else if (ComSelect == Paper)
+//			{
+//				printf("당신은 [바위]를 선택했고 컴퓨터는 [보]를 선택했습니다.\n");
+//				printf("패배했습니다.\n");
+//				ComWinCount++;
+//			}
+//			else
+//			{
+//				printf("ERROR!!!!!\n");
+//			}
+//			break;
+//		case Paper:
+//			if (ComSelect == Scissors)
+//			{
+//				printf("당신은 [보]를 선택했고 컴퓨터는 [가위]를 선택했습니다.\n");
+//				printf("패배했습니다.\n");
+//				ComWinCount++;
+//			}
+//			else if (ComSelect == Rock)
+//			{
+//				printf("당신은 [보]를 선택했고 컴퓨터는 [바위]를 선택했습니다.\n");
+//				printf("승리했습니다.\n");
+//				PlayerWinCount++;
+//			}
+//			else if (ComSelect == Paper)
+//			{
+//				printf("당신은 [보]를 선택했고 컴퓨터는 [보]를 선택했습니다.\n");
+//				printf("비겼습니다.\n");
+//			}
+//			else
+//			{
+//				printf("ERROR!!!!!\n");
+//			}
+//			break;
+//		default:								// 예상외의 사건이 발생함 / 내가 잘못 짰다는 뜻
+//			printf("ERROR!!!!!\n");
+//			break;
+//		}
+//
+//		printf("Player = [%d], Com : [%d]\n", PlayerWinCount, ComWinCount);
+//	}
+//
+//	if (PlayerWinCount >= WinGoal)
+//	{
+//		printf("당신이 컴퓨터를 이겼습니다!\n");
+//	}
+//	else
+//	{
+//		printf("당신이 컴퓨터에게 졌습니다.\n");
+//	}
+//
+//
+///*
+//실습3
+//하이 로우
+//- 컴퓨터가 1~100 사이의 임의의 숫자를 선택하고, 사용자가 맞출 때까지 입력을 받아 "더 높게", "더 낮게"등의 힌트를 제공하는 게임
+//- 5번안에 맞춰야 승리
+//*/
+//
+//	int RandomNumber = rand() % 100 +1;
+//	int PlayerNumber = 0;
+//	int CountDown = 5;
+//	
+//
+//	while (CountDown > 0)
+//	{
+//		printf("1 ~ 100 사이의 숫자를 예상해 보세요 : ");
+//		std::cin >> PlayerNumber;
+//
+//		if (PlayerNumber < RandomNumber)
+//		{
+//			printf("더 큰 수를 찍어보세요.\n");
+//		}
+//		else if (PlayerNumber > RandomNumber)
+//		{
+//			printf("더 작은 수를 찍어보세요.\n");
+//		}
+//		else
+//		{
+//			printf("정답입니다.\n찾는 수는 %d였습니다.\n", RandomNumber);
+//			break;
+//		}
+//		CountDown--;
+//		printf("남은 횟수는 %d번 입니다.\n", CountDown);
+//	}
+//	if (CountDown <= 0)
+//	{
+//		printf("패배하였습니다.");
+//	}
+//	else
+//	{
+//		printf("승리하였습니다.");
+//	}
+//
 
-	int RPS = 0;
-	int Score1 = 0;
-	int Score2 = 0;
-
-	
-	enum RPS
-	{
-		Scissor = 0,
-		Rock = 1,
-		Paper = 2,
-	};
-
-	while ((Score1 <3 ) && (Score2 < 3))
-	{
-		printf("가위 바위 보 중 선택하시오.\n");
-		printf("(가위 : 0, 바위 : 1, 보 : 2)\n");
-
-		std::cin >> RPS;
-
-		srand(time(0));
-
-		int RandomNumber1 = rand() & 3;
-
-
-		if (RPS == 0)
-		{
-			if (RandomNumber1 == 2)
-			{
-				printf("승리하였습니다.\n\n");
-				Score1++;
-				printf("나 : 컴퓨터 -> %d : %d\n", Score1, Score2);
-			}
-			else if (RandomNumber1 == 1)
-			{
-				printf("패배하였습니다.\n\n");
-				Score2++;
-				printf("나 : 컴퓨터 -> %d : %d\n", Score1, Score2);
-			}
-			else
-			{
-				printf("비겼습니다.\n\n");
-				printf("나 : 컴퓨터 -> %d : %d\n", Score1, Score2);
-			}
-		}
-
-		if (RPS == 1)
-		{
-			if (RandomNumber1 == 0)
-			{
-				printf("승리하였습니다.\n\n");
-				Score1++;
-				printf("나 : 컴퓨터 -> %d : %d\n", Score1, Score2);
-			}
-			else if (RandomNumber1 == 2)
-			{
-				printf("패배하였습니다.\n\n");
-				Score2++;
-				printf("나 : 컴퓨터 -> %d : %d\n", Score1, Score2);
-			}
-			else
-			{
-				printf("비겼습니다.\n\n");
-				printf("나 : 컴퓨터 -> %d : %d\n", Score1, Score2);
-			}
-		}
-
-		if (RPS == 2)
-		{
-			if (RandomNumber1 == 1)
-			{
-				printf("승리하였습니다.\n\n");
-				Score1++;
-				printf("나 : 컴퓨터 -> %d : %d\n", Score1, Score2);
-			}
-			else if (RandomNumber1 == 0)
-			{
-				printf("패배하였습니다.\n\n");
-				Score2++;
-				printf("나 : 컴퓨터 -> %d : %d\n", Score1, Score2);
-			}
-			else
-			{
-				printf("비겼습니다.\n\n");
-				printf("나 : 컴퓨터 -> %d : %d\n", Score1, Score2);
-			}
-		}
-	}
-	
-	
-
-	/*
-	실습3
-	하이 로우
-	- 컴퓨터가 1~100 사이의 임의의 숫자를 선택하고, 사용자가 맞출 때까지 입력을 받아 "더 높게", "더 낮게"등의 힌트를 제공하는 게임
-	- 5번안에 맞춰야 승리
-	*/
-
-	printf("실습3 하이로우. \n\n");
-	printf("1 ~ 100 사이의 숫자를 맞추시오. \n");
-
-	int InputNumber3 = 0;
-	int Count3 = 0;
-
-	srand(time(0));
-	int RandomNumber3 = rand() % 100 +1;
-	
-	while (InputNumber3 != RandomNumber3)
-	{
-		printf("숫자를 입력하시오 :");
-		std::cin >> InputNumber3;
-		if (InputNumber3 > RandomNumber3)
-		{
-			printf("DOWN\n\n");
-			Count3++;
-		}
-		else if (InputNumber3 < RandomNumber3)
-		{
-			printf("UP\n\n");
-			Count3++;
-		}
-		else
-		{
-			printf("정답입니다.\n\n");
-		}
-	}
-	
-	if (Count3 <= 5)
-	{
-		printf("승리하였습니다.\n\n");
-	}
-	else
-	{
-		printf("승리하지 못했습니다.\n\n");
-	}
 
 	/*
 	실습4
@@ -777,114 +1088,75 @@ int : 정수형(소수점이 없는 숫자 / 소수점 뒤 숫자는 버림)
 	- 특정 아이템을 추가하고 삭제하는 예시보여주기
 	*/
 
-	printf("실습4 공포게임의 인벤토리를 비트플래그로 표현하기. \n\n");
-
-
-	int Select = 0;
-	int Item = 0;
-	
-
-	printf("ㅡㅡㅡㅡ인벤토리ㅡㅡㅡㅡ\n");
-	printf("- 손전등\n");
-	printf("- 열쇠\n");
-	printf("- 몽둥이\n\n");
-	printf("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ\n");
-
-
-	enum Select
+	enum
 	{
-		추가 = 0b0001,
-		삭제 = 0b0010,
-		종료 = 0b0011
+		Key  = 1 << 0,
+		Fuse = 1 << 1,
+		Book = 1 << 2,
+		Note = 1 << 3,
 	};
 
-	enum Item
-	{
-		손전등 = 0b0001,
-		열쇠 = 0b0010,
-		몽둥이 = 0b0011,
-	};
-	
-	
-	while (Select < 3)
-	{
-		printf("아이템을 추가하시겠습니까? 삭제하시겠습니까?\n");
+	const int ItemCount = 4;
+	int Inventory = 0;
 
-		printf("추가 : 1\n삭제 : 2\n종료 : 3\n\n");
-		std::cin >> Select;
-		printf("\n");
-		if (Select == 1)
+	Inventory = 0b1111;					// 테스트 코드
+
+	int PlayerSelect = -1;
+
+	while (PlayerSelect != 3)
+	{
+
+		printf("어떤 일을 할까요 [ 1 : 아이템추가, 2 : 아이템삭제, 3 : 종료 ]");
+		std::cin >> PlayerSelect;
+
+		switch (PlayerSelect)
 		{
-			printf("무엇을 추가하시겠습니까?\n");
-			printf("손전등 : 1\n열쇠 : 2\n몽둥이 : 3\n\n");
-			std::cin >> Item;
-			printf("\n");
-			if (Item == 1)
+			case 1:
 			{
-				printf("ㅡㅡㅡㅡ인벤토리ㅡㅡㅡㅡ\n");
-				printf("- 손전등\n");
-				printf("- 열쇠\n");
-				printf("- 몽둥이\n");
-				printf("- 손전등\n\n");
-				printf("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ\n");
+				printf("어떤 아이템을 추가할까요?\n [0:열쇠, 1:퓨즈, 2:책, 3:쪽지] : ");
+				int AddItem = 0;
+				std::cin >> AddItem;
+				Inventory |= (1 << AddItem);
 			}
-			else if (Item == 2)
+			break;
+			case 2:
 			{
-				printf("ㅡㅡㅡㅡ인벤토리ㅡㅡㅡㅡ\n");
-				printf("- 손전등\n");
-				printf("- 열쇠\n");
-				printf("- 몽둥이\n");
-				printf("- 열쇠\n\n");
-				printf("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ\n");
+				printf("어떤 아이템을 제거할까요?\n [0:열쇠, 1:퓨즈, 2:책, 3:쪽지] : ");
+				int RemoveItem = 0;
+				std::cin >> RemoveItem;
+				Inventory &= (~(1 << RemoveItem));
 			}
-			else
-			{
-				printf("ㅡㅡㅡㅡ인벤토리ㅡㅡㅡㅡ\n");
-				printf("- 손전등\n");
-				printf("- 열쇠\n");
-				printf("- 몽둥이\n");
-				printf("- 몽둥이\n\n");
-				printf("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ\n");
-			}
-		}
-		else if(Select == 2)
-		{
-			printf("무엇을 삭제하시겠습니까?\n");
-			printf("손전등 : 1\n열쇠 : 2\n몽둥이 : 3\n\n");
-			std::cin >> Item;
-			printf("\n");
-			if (Item == 1)
-			{
-				printf("ㅡㅡㅡㅡ인벤토리ㅡㅡㅡㅡ\n");
-				printf("- 열쇠\n");
-				printf("- 몽둥이\n");
-				printf("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ\n");
-			}
-			else if (Item == 2)
-			{
-				printf("ㅡㅡㅡㅡ인벤토리ㅡㅡㅡㅡ\n");
-				printf("- 손전등\n");
-				printf("- 몽둥이\n");
-				printf("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ\n");
-			}
-			else
-			{
-				printf("ㅡㅡㅡㅡ인벤토리ㅡㅡㅡㅡ\n");
-				printf("- 손전등\n");
-				printf("- 열쇠\n");
-				printf("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ\n");
-			}
-		}
-		else
-		{
-			printf("종료합니다.\n");
 			break;
 
+			case 3:
+			{
+				continue;
+			}
+
 		}
+
+			printf("인벤토리 : ");
+			if ((Inventory & Key) != 0)			// 인벤토리 출력 코드
+			{
+				printf("열쇠 \n");
+			}
+			if ((Inventory & Fuse) != 0)
+			{
+				printf("퓨즈 \n");
+			}
+			if ((Inventory & Book) != 0)
+			{
+				printf("책 \n");
+			}
+			if ((Inventory & Note) != 0)
+			{
+				printf("노트 \n");
+			}
 	}
 
+
 	/*
-	실습6
+	실습5
 	주사위 게임 만들기
 	1. 초기 세팅
 	   플레이어와 컴퓨터 모두 일정 금액(예: 10000원)으로 시작한다.
@@ -907,7 +1179,7 @@ int : 정수형(소수점이 없는 숫자 / 소수점 뒤 숫자는 버림)
 	
 
 	/*
-	실습7
+	실습6
 	홀짝 게임
 	1. 초기 금액 및 배팅
 	   플레이어는 기본금 100원으로 베팅을 시작한다.
