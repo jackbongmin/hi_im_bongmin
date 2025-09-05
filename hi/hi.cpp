@@ -568,37 +568,58 @@ int : 정수형(소수점이 없는 숫자 / 소수점 뒤 숫자는 버림)
 	//int RandomNumber1 = rand() % 6 + 1;
 
 
-	// C++ 스타일
+	//// C++ 스타일
 
-	std::random_device RandomDivece;		//랜덤장치를 만듬
-	std::mt19937 Generate(RandomDivece());
+	//std::random_device RandomDivece;		//랜덤장치를 만듬
+	//std::mt19937 Generate(RandomDivece());
 
-	printf("균등분포 : ");
-	std::uniform_int_distribution<> uniformDis(1, 100);
-	for (int i = 0; i < 10; i++)
-	{
-		int Number = uniformDis(Generate);
-		printf("%d", Number);
-		if (i < 9)
-		{
-			printf(", ");
-		}
-	}
-	printf("\n");
+	//printf("균등분포 : ");
+	//std::uniform_int_distribution<> uniformDis(1, 100);
+	//for (int i = 0; i < 10; i++)
+	//{
+	//	int Number = uniformDis(Generate);
+	//	printf("%d", Number);
+	//	if (i < 9)
+	//	{
+	//		printf(", ");
+	//	}
+	//}
+	//printf("\n");
+
+	//
+	//printf("정규분포 : ");
+	//std::normal_distribution<> nomalDis(80, 10);
+	//for (int i = 0; i < 10; i++)
+	//{
+	//	float fNumber = uniformDis(Generate);
+	//	printf("%.2f", fNumber);
+	//	if (i < 9)
+	//	{
+	//		printf(", ");
+	//	}
+	//}
+	//printf("\n");
+
+
+
+
+
+//ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+
+
+
+// 25년 9월 5일 (금요일)
+
+
+
 
 	
-	printf("정규분포 : ");
-	std::normal_distribution<> nomalDis(80, 10);
-	for (int i = 0; i < 10; i++)
-	{
-		float fNumber = uniformDis(Generate);
-		printf("%.2f", fNumber);
-		if (i < 9)
-		{
-			printf(", ");
-		}
-	}
-	printf("\n");
+
+
+
+
+
 
 
 
