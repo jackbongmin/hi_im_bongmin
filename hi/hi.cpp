@@ -621,7 +621,7 @@ int : 정수형(소수점이 없는 숫자 / 소수점 뒤 숫자는 버림)
 	//Number = Multiply(7);				// Number2를 TestMath.h(헤더파일)에서 =2 로 선언했기때문에 7*2로 입력됨
 
 
-	//// 재기 호출(Recurcive Call)
+	//// 재귀 호출(Recurcive Call)
 
 	////TestRecurcive(5);
 
@@ -676,7 +676,7 @@ int : 정수형(소수점이 없는 숫자 / 소수점 뒤 숫자는 버림)
 
 //// 실습 5
 	
-	//printf("실습4\n점수 측정하기 \n");
+	//printf("실습5\n점수 측정하기 \n");
 	//printf("점수를 입력하시오. \n");
 	//
 	//int InputNumber5 = 0;
@@ -686,9 +686,91 @@ int : 정수형(소수점이 없는 숫자 / 소수점 뒤 숫자는 버림)
 
 // 실습 6
 
+int myInventory = 0;
+
+SetItem(myInventory, Sword);
+SetItem(myInventory, Shield);
+
+printf("현재 인벤토리 : %d", myInventory);
+
+ToggleItem(myInventory, Sword);
+printf("소드 토글 후 : %d", myInventory);
+
+UnSetItem(myInventory, Shield);
+printf("쉴드 해제 후 : %d", myInventory);
+
 	
 	
+//// 실습 7
+//
+//	printf("실습7\n피라미드 만들기 \n");
+//	printf("층수를 입력하시오. \n");
+//
+//	int InputNumber7 = 0;
+//	std::cin >> InputNumber7;
+//
+//	Pyramid(InputNumber7);
 	
+//
+//// 실습 8
+//
+//	printf("실습8\n작은 수 구하기 \n");
+//	printf("두 수를 입력하시오. \n");
+//	
+//	int InputNumber8_1 = 0;
+//	int InputNumber8_2 = 0;
+//	std::cin >> InputNumber8_1;
+//	std::cin >> InputNumber8_2;
+//
+//	Min(InputNumber8_1, InputNumber8_2);
+//
+//// 실습 9
+//
+//	printf("실습9\n큰 수 구하기 \n");
+//	printf("두 수를 입력하시오. \n");
+//	
+//	int InputNumber9_1 = 0;
+//	int InputNumber9_2 = 0;
+//	std::cin >> InputNumber9_1;
+//	std::cin >> InputNumber9_2;
+//
+//	Max(InputNumber9_1, InputNumber9_2);
+//
+//
+//// 실습 10
+//
+//	printf("실습10\nClamp 구하기 \n");
+//
+//	int InputNumber10_1 = 0;
+//	int InputNumber10_2 = 0;
+//	int InputNumber10_3 = 0;
+//
+//	printf("숫자를 입력하시오. \n");
+//	std::cin >> InputNumber10_1;
+//	
+//
+//	printf("작은수와 큰수를 순서대로 입력하시오. \n");
+//	
+//	std::cin >> InputNumber10_2;
+//	std::cin >> InputNumber10_3;
+//
+//	Clamp(InputNumber10_1, InputNumber10_2, InputNumber10_3);
+
+//// 실습 11
+//
+//	printf("실습11\n팩토리오 구하기 \n");
+//	printf("숫자를 입력하시오\n");
+//
+//	int InputNumber11 = 0;
+//	std::cin >> InputNumber11;
+//
+//	printf("%d!의 값은 %d 입니다.\n", InputNumber11, Factorial(InputNumber11));
+
+
+
+
+
+
 
 //ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 	return 0;

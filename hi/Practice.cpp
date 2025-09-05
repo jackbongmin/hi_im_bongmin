@@ -57,33 +57,26 @@
 
 */
 
-
+//실습 1
 	int RandomNumber1(int Number1, int Number2)
 	{
 		return rand() % (Number2 - Number1) + Number1;
 	}
 
+//실습 2
 	void Age(int Number1)
 	{
 		printf("당신은 %d살 입니다.\n", Number1);
 	}
 
+//실습 3
 	float Radius(float Number1)
 	{
 		const float Pie = 3.141592f;
 		return Number1 * Number1 * Pie;
 	}
 
-	int Number4(int Number1)
-	{
-		bool result = Number1 % 2 == 1;
-		if (result)
-		{
-			printf("입력하신 숫자는 홀수 입니다.\n");
-		}
-		else
-		return 0;
-	}
+//실습 4
 
 	bool Number4_1(int Number1)
 	{
@@ -99,6 +92,7 @@
 		}
 	}
 
+//실습 5
 	int Score(int Number1)
 	{
 		enum score
@@ -135,4 +129,65 @@
 			return 0;
 		}
 	}
+
+//실습 6
+
+	void SetItem(int Inventory, ItemList Item)
+	{
+		Inventory |= Item;
+	}
+
+	void UnSetItem(int Inventory, ItemList Item)
+	{
+		Inventory &= ~Item;
+	}
+
+	void ToggleItem(int Inventory, ItemList Item)
+	{
+		Inventory ^= Item;
+	}
+
+	//실습 7
+	int Pyramid(int Number1)
+	{
+		for (int Line = 0; Line <= Number1; Line++)
+
+		{
+
+			for (int Space = 0; Space < (Number1 - Line); Space++)
+
+			{
+
+				printf(" ");
+
+			}
+
+			for (int Star = 0; Star < (2 * Line) - 1; Star++)
+
+			{
+
+				printf("*");
+
+			}
+
+			printf("\n");
+
+		}
+		return 0;
+	}
+
+//실습 11
+	
+	int Factorial(int Number1)
+	{
+		if (Number1 <= 1)
+		{
+			return 1;
+		}
+		else
+		{
+			return Number1 * (Number1 - 1);
+		}		
+	}
+
 
