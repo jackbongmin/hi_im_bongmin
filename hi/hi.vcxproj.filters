@@ -21,12 +21,24 @@
     <ClCompile Include="hi.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="header.cpp">
+    <ClCompile Include="TestMath.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="SaveData.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Practice.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="header.h">
+    <ClInclude Include="TestMath.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="SaveData.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Practice.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
