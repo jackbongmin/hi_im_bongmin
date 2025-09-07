@@ -113,12 +113,12 @@
 			printf("당신의 점수는 B입니다.\n");
 			return 0;
 		}
-		else if (Number1 >= 80)
+		else if (Number1 >= 70)
 		{
 			printf("당신의 점수는 C입니다.\n");
 			return 0;
 		}
-		else if (Number1 >= 80)
+		else if (Number1 >= 60)
 		{
 			printf("당신의 점수는 D입니다.\n");
 			return 0;
@@ -189,5 +189,170 @@
 			return Number1 * (Number1 - 1);
 		}		
 	}
+
+
+
+// 주말실습 1
+	float Average(float Number1, float Number2, float Number3)
+	{
+		return (Number1 + Number2 + Number3) / 3.0f;
+	}
+
+// 주말실습 2
+	float SalePrice(float Number1, float Number2)
+	{
+		return Number1 - (Number1 * Number2 * 0.01);
+	}
+
+// 주말실습 3
+	int Dice(int Number1)
+	{
+		return rand() % 6 +1;
+	}
+
+// 주말실습 4
+	int Score1(int Number1)
+	{
+		enum score
+		{
+			A,
+			B,
+			C,
+			D,
+			F
+		};
+		if (Number1 >= 90)
+		{
+			printf("당신의 점수는 A입니다.\n");
+			return 0;
+		}
+		else if (Number1 >= 80)
+		{
+			printf("당신의 점수는 B입니다.\n");
+			return 0;
+		}
+		else if (Number1 >= 70)
+		{
+			printf("당신의 점수는 C입니다.\n");
+			return 0;
+		}
+		else if (Number1 >= 60)
+		{
+			printf("당신의 점수는 D입니다.\n");
+			return 0;
+		}
+		else
+		{
+			printf("당신의 점수는 F입니다.\n");
+			return 0;
+		}
+	}
+
+// 주말실습(심화) 1
+	int TotalSum(int Number1)
+	{
+		int Sum = 0;
+		while (Number1 > 0)
+		{
+			Sum += Number1 % 10;
+			Number1 = Number1 / 10;
+		}
+		return Sum;
+	}
+
+
+// 주말실습(심화) 2
+	void DecToBin(int Number1)
+	{
+		if (Number1 > 1)
+		{
+			DecToBin(Number1 / 2);
+		}
+		printf("%d", Number1 % 2);
+	}
+
+// 주말실습(심화) 3
+	void Spin(int Number1, int Number2, int Number3)
+	{
+		Number1 = rand() % 10 + 1;
+		Number2 = rand() % 10 + 1;
+		Number3 = rand() % 10 + 1;
+		
+	}
+
+	int Result(int Numberone, int Numbertwo, int Numberthree, int Number4)
+	{
+		return 0;
+	}
+
+
+// 주말실습(심화) 4
+
+	int PlayerAttack(int Number1)
+	{
+		int Damage = rand() % 11 + 5;
+		if (rand() % 10 == 0)
+		{
+			Damage *= 2;
+			printf("크리티컬 히트!\n");
+		}
+			return Damage;
+	}
+
+
+	int ComputerAttack(int Number1)
+	{
+		int Damage = rand() % 11 + 5;
+		if (rand() % 10 == 0)
+		{
+			Damage *= 2;
+			printf("크리티컬 히트!\n");
+		}
+		return Damage;
+	}
+
+	//주말 실습(심화) 5
+
+	const int Jocker = 14;
+
+	// 카드 종류
+	void Card(int Number1)                 
+	{
+		if (Number1 == Jocker)
+		{
+			printf("조커");
+		}
+		else
+		{
+			switch (Number1)
+			{
+				case 1 : printf("A");
+					break;
+				case 11: printf("J");
+					break;
+				case 12: printf("Q");
+					break;
+				case 13: printf("K");
+					break;
+				default: printf("%d", Number1);
+			
+			}
+		}
+			
+	}
+
+	//// 카드 섞기
+	//void Shuffle(int Number1, int Number2)      
+	//{
+	//	for(int a = Number2 - 1; a > 0; a--)
+	//	{
+	//		int b = rand() % (a + 1);
+	//		int c = (Number1 + a);
+	//		(Number1 + a) = (Number1 + b);
+	//		(Number1 + b) = c;
+	//	}
+	//}
+
+
 
 

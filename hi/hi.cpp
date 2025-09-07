@@ -675,30 +675,30 @@ int : 정수형(소수점이 없는 숫자 / 소수점 뒤 숫자는 버림)
 	//Number4_1(InputNumber4);
 
 //// 실습 5
-	
-	//printf("실습5\n점수 측정하기 \n");
-	//printf("점수를 입력하시오. \n");
-	//
-	//int InputNumber5 = 0;
-	//std::cin >> InputNumber5;
-
-	//Score(InputNumber5);
-
-// 실습 6
-
-int myInventory = 0;
-
-SetItem(myInventory, Sword);
-SetItem(myInventory, Shield);
-
-printf("현재 인벤토리 : %d", myInventory);
-
-ToggleItem(myInventory, Sword);
-printf("소드 토글 후 : %d", myInventory);
-
-UnSetItem(myInventory, Shield);
-printf("쉴드 해제 후 : %d", myInventory);
-
+//	
+//	printf("실습5\n점수 측정하기 \n");
+//	printf("점수를 입력하시오. \n");
+//	
+//	int InputNumber5 = 0;
+//	std::cin >> InputNumber5;
+//
+//	Score(InputNumber5);
+//
+//// 실습 6
+//
+//int myInventory = 0;
+//
+//SetItem(myInventory, Sword);
+//SetItem(myInventory, Shield);
+//
+//printf("현재 인벤토리 : %d", myInventory);
+//
+//ToggleItem(myInventory, Sword);
+//printf("소드 토글 후 : %d", myInventory);
+//
+//UnSetItem(myInventory, Shield);
+//printf("쉴드 해제 후 : %d", myInventory);
+//
 	
 	
 //// 실습 7
@@ -754,7 +754,7 @@ printf("쉴드 해제 후 : %d", myInventory);
 //	std::cin >> InputNumber10_2;
 //	std::cin >> InputNumber10_3;
 //
-//	Clamp(InputNumber10_1, InputNumber10_2, InputNumber10_3);
+//	Clamp1(InputNumber10_1, InputNumber10_2, InputNumber10_3);
 
 //// 실습 11
 //
@@ -767,10 +767,237 @@ printf("쉴드 해제 후 : %d", myInventory);
 //	printf("%d!의 값은 %d 입니다.\n", InputNumber11, Factorial(InputNumber11));
 
 
+// 주말 실습1
+	printf("주말 실습1\n");
+	printf("3개의 수 평균 구하기\n\n");
+
+	printf("3개의 수를 입력하시오.\n");
+	float InputNumber1_1 = 0;
+	float InputNumber1_2 = 0;
+	float InputNumber1_3 = 0;
+	
+	std::cin >> InputNumber1_1 >> InputNumber1_2 >> InputNumber1_3;
+
+	printf(" 3개의 수의 평균은 %.1f입니다.\n\n", Average(InputNumber1_1, InputNumber1_2, InputNumber1_3));
+
+// 주말 실습2
+	printf("주말 실습2\n");
+	printf("할인가 구하기\n\n");
+
+	float InputNumber2_1 = 0;
+	float InputNumber2_2 = 0;
+	
+	printf("정가를 입력하시오 : ");
+	std::cin >> InputNumber2_1;
+	printf("할인율을 입력하시오 : ");
+	std::cin >> InputNumber2_2;
+
+	printf("해당 상품의 할인가격은 %.2f입니다.\n\n", SalePrice(InputNumber2_1, InputNumber2_2));
+
+
+// 주말 실습3
+	printf("주말 실습3\n");
+	printf("주사위 값 구하기\n\n");
+
+	srand(time(0));
+
+	printf("주사위 값 : %d\n\n", Dice(0));
+
+
+// 주말 실습4
+
+	printf("주말 실습4\n점수 측정하기 \n\n");
+	printf("점수를 입력하시오. \n");
+	
+	int InputNumber4 = 0;
+	std::cin >> InputNumber4;
+
+	Score1(InputNumber4);
+
+// 주말 실습5
+
+	printf("주말 실습5\nClamp 측정하기 \n\n");
+	
+		int InputNumber5_1 = 0;
+		int InputNumber5_2 = 0;
+		int InputNumber5_3 = 0;
+	
+		printf("숫자를 입력하시오. \n");
+		std::cin >> InputNumber5_1;
+		
+	
+		printf("작은수와 큰수를 순서대로 입력하시오. \n");
+		
+		std::cin >> InputNumber5_2;
+		std::cin >> InputNumber5_3;
+	
+		Clamp(InputNumber5_1, InputNumber5_2, InputNumber5_3);
+
+
+// 주말 실습(심화) 1
+
+	printf("주말 실습(심화)1\n");
+	printf("자리수별 합 구하기\n\n");
+
+	printf("숫자를 입력하시오 : ");
+	int InputNumberOne = 0;
+	std::cin >> InputNumberOne;
+	printf("자리수별 합은 %d입니다.\n\n", TotalSum(InputNumberOne));
 
 
 
+// 주말 실습(심화) 2
 
+	printf("주말 실습(심화)2\n");
+	printf("10진수 2진수로 변환하기\n\n");
+	printf("10진수를 입력하세요 : ");
+	int InputNumberTwo = 0;
+	std::cin >> InputNumberTwo;
+
+	printf("입력하신 숫자 %d의 2진수는 ", InputNumberTwo);
+	DecToBin(InputNumberTwo);
+	printf("입니다.\n\n");
+
+// 주말 실습(심화) 3
+	
+	printf("주말 실습(심화)3\n");
+	printf("슬롯머신 만들기\n\n");
+	printf("※보유 금액이 100원이하가 되면 게임 오버입니다※\n");
+
+	srand(time(0));
+	int Money = 10000;
+
+	while (Money >= 100)
+	{
+		printf("현재 금액 : %d입니다.\n", Money);
+		printf("베팅할 금액을 입력하시오(최소 100원) : ");
+		int Betting = 0;
+		std::cin >> Betting;
+		if (Betting > Money)
+		{
+			printf("베팅 금액이 현재 금액보다 많습니다. 다시 입력해주세요.\n\n");
+			continue;
+		}
+		if (Betting < 100)
+		{
+			printf("최소 베팅 금액은 100원입니다. 다시 입력해주세요.\n\n");
+			continue;
+		}
+		Money -= Betting;
+		int SlotNumber1 = rand() % 10;
+		int SlotNumber2 = rand() % 10;
+		int SlotNumber3 = rand() % 10;
+
+		printf("슬롯머신 결과 : %d %d %d\n", SlotNumber1, SlotNumber2, SlotNumber3);
+		const int LuckyNumber = 7;
+
+		if (SlotNumber1 == LuckyNumber && SlotNumber2 == LuckyNumber && SlotNumber3 == LuckyNumber)
+		{
+			printf("축하합니다! 777입니다!! 베팅 금액의 10,000배를 획득합니다!\n\n");
+			Money += Betting * 10000;
+			printf("현재 금액 : %d입니다.\n\n", Money);
+		}
+		else if (SlotNumber1 == SlotNumber2 && SlotNumber2 == SlotNumber3)
+		{
+			printf("축하합니다! 3개가 모두 일치합니다! 베팅 금액의 50배를 획득합니다!\n");
+			Money += Betting * 50;
+			printf("현재 금액 : %d입니다.\n\n", Money);
+		}
+		else
+		{
+			printf("모두 불일치입니다.\n\n");
+		}
+	}
+	printf("※ 게 임 오 버 ※\n현재 잔액이 100원이하 입니다.\n\n");
+
+
+	// 주말 실습(심화) 4
+
+
+	printf("주말 실습(심화)4\n");
+	printf("턴제 전투 만들기\n\n");
+
+	srand(time(0));
+	int PlayerHP = 100;
+	int ComputerHP = 100;
+
+	printf("숲속에서 몬스터를 만났습니다.\n");
+	printf("전투를 시작합니다.\n\n");
+
+	while (PlayerHP > 0 && ComputerHP > 0)
+	{
+
+		printf("플레이어가 선제 공격합니다.\n\n");
+		int Damage1 = PlayerAttack(0);
+		printf("%d 데미지!\n", Damage1);
+		ComputerHP -= Damage1;
+		printf("플레이어 HP : [%d] / 몬스터 HP : [%d]\n\n", PlayerHP, ComputerHP);
+		if (ComputerHP <= 0)
+		{
+			printf("※ 승   리 ※\n몬스터를 처치했습니다!\n\n");
+			break;
+		}
+		printf("몬스터가 반격합니다.\n\n");
+		int Damage2 = ComputerAttack(0);
+		printf("%d 데미지!\n", Damage2);
+		PlayerHP -= Damage2;
+		printf("플레이어 HP : [%d] / 몬스터 HP : [%d]\n\n", PlayerHP, ComputerHP);
+		if (PlayerHP <= 0)
+		{
+			printf("※ 게 임 오 버 ※\n플레이어가 사망했습니다.\n\n");
+			break;
+		}
+	}
+
+	/*
+주말 실습(심화)5
+도둑 잡기 만들기
+	- 시작 금액 10000
+	- 한판에 무조건 최소 100 배팅해야 함. 만약 소지금액이 100 이하일 경우 게임 종료.
+	- 딜러는 A~K까지의 트럼프 카드 중 2장을 중복없이 선택하고 조커 카드가 추가된다.
+	- 플레이어는 딜러의 카드 중 한장을 선택한다.
+	- 만약 플레이어가 조커를 뽑있다면 플레이어의 승리. 배팅 금액의 2배를 받는다.
+	- 플레이어가 조커를 뽑지 못했다면 다음 게임을 시작하거나 배팅 금액의 2배를 추가로 지불하고 한번 더 선택할 수 있다.
+*/
+
+	// 주말 실습(심화)5
+
+	printf("주말 실습(심화)4\n");
+	printf("도둑 잡기\n\n");
+	printf("※보유 금액이 100원이하가 되면 게임 오버입니다※\n");
+
+	srand(time(0));
+	int PlayerMoney = 10000;
+
+	while (PlayerMoney >= 100)
+	{
+		printf("현재 금액 : %d입니다.\n", PlayerMoney);
+		printf("베팅할 금액을 입력하시오(최소 100원) : ");
+		int Betting = 0;
+		std::cin >> Betting;
+		if (Betting > PlayerMoney)
+		{
+			printf("베팅 금액이 현재 금액보다 많습니다. 다시 입력해주세요.\n\n");
+			continue;
+		}
+		if (Betting < 100)
+		{
+			printf("최소 베팅 금액은 100원입니다. 다시 입력해주세요.\n\n");
+			continue;
+		}
+		PlayerMoney -= Betting;
+
+		int DealerCard1 = rand() % 13; +1;
+		int DealerCard2 = rand() % 13; +1;
+		do
+		{
+			DealerCard2 = rand() % 13 + 1;
+		} while (DealerCard1 == DealerCard2);
+
+	}
+	//11
+
+			
 
 //ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 	return 0;
