@@ -230,3 +230,7 @@ void Practice0905_02_05();
 void Shuffle(int Array[], int Length);
 
 void Day0908_Ref();
+
+void Swap(int Array[], int Size);
+
+void MazeMap(int Maze[10][20], int PlayerY, int PlayerX);

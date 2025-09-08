@@ -598,6 +598,50 @@
 		int i = 0;
 	}
 
+	void Swap(int Array[], int Size)
+	{
+		for (int i = 0; i < (Size / 2); i++)
+		{
+			int j = Size - 1 - i;
+			int Temp = Array[i];
+			Array[i] = Array[j];
+			Array[j] = Temp;
+		}
+	}
+
+	void MazeMap(int Maze[10][20], int PlayerY, int PlayerX)
+	{
+		for (int y = 0; y < 10; y++)
+		{
+			for (int x = 0; x < 20; x++)
+			{
+				if (PlayerY == y && PlayerX == x)
+				{
+					printf("P ");
+				}
+				else
+				{
+					switch(Maze[y][x])
+					{
+					case 0:
+						printf(". ");
+						break;
+					case 1:
+						printf("# ");
+						break;
+					case 2:
+						printf("S ");
+						break;
+					case 3:
+						printf("E ");
+						break;
+					}
+				}
+			}
+			printf("\n");
+		}
+	}
+
 
 	
 
