@@ -205,5 +205,23 @@ int ComputerAttack(int Number1);
 
 void Card(int Number1);
 
-void Shuffle(int Number1, int Number2);
+// void Shuffle(int Number1, int Number2);
 
+//ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+//주말실습5 풀이
+
+// 탬플릿
+template<typename T>
+T Clamp1(const T& Value, const T& Min, const T& Max)
+{
+	if (Value < Min)
+		return Min;
+	else if (Value > Max)
+		return Max;
+	else
+		return Value;
+}
+
+// 주말실습(심화)5 풀이
+
+void Practice0905_02_05();
