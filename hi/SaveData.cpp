@@ -592,6 +592,714 @@ void OldTales()
 
 
 
+//ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+// 25년 9월 5일 (금요일)
 
+
+
+
+
+	//// 함수
+	//
+	//
+
+	//
+	//int Number = Sum(1, 7);				// Sum 함수를 호출했다. 파라메터로 1과 7을 넘겼다. 그리고 8을 돌려받았다.
+
+	//Number = Multiply(2, 3);			// 6
+	//Number = Multiply(7);				// Number2를 TestMath.h(헤더파일)에서 =2 로 선언했기때문에 7*2로 입력됨
+
+
+	//// 재귀 호출(Recurcive Call)
+
+	////TestRecurcive(5);
+
+	//// 탬플릿(Template)
+
+	//float Number2 = Add(10.5f, 20.4f);	// 탬플릿을 사용함으로서 float로 인식해서 계산을 해줌
+
+	////인라인
+
+	//int Number3 = Square(3);
+
+//
+//// 실습1
+//
+//	printf("실습1\n특정 범위 안의 랜덤한 수를 리턴하는 함수\n\n");
+//	printf("범위를 설정하시오.");
+//	int Rage_1 = 0;
+//	int Rage_2 = 0;
+//	std::cin >> Rage_1;
+//	std::cin >> Rage_2;
+//
+//	int Rage = RandomNumber1(Rage_1, Rage_2);
+//	printf("%d와 %d사이 랜덤한 숫자는\n%d입니다.\n\n",Rage_1, Rage_2, Rage);
+//
+//// 실습2
+//
+//	printf("실습2\n\n당신의 나이를 입력해주세요 : \n");
+//	int Age_2 = 0;
+//	std::cin >> Age_2;
+//
+//	Age(Age_2);
+//	
+//// 실습3
+
+	//printf("실습3\n원의 넓이 구하기 \n");
+	//printf("원의 반지름을 입력하시오 : ");
+
+	//int Radius_1 = 0;
+	//std::cin >> Radius_1;
+
+	//printf("원의 넓이는 %f입니다.\n\n", Radius(Radius_1));
+
+//// 실습 4
+
+	//printf("실습4\n짝수 홀수 판단하기 \n");
+	//printf("숫자를 입력하시오. \n");
+
+	//int InputNumber4 = 0;
+	//std::cin >> InputNumber4;
+
+	//Number4_1(InputNumber4);
+
+//// 실습 5
+//	
+//	printf("실습5\n점수 측정하기 \n");
+//	printf("점수를 입력하시오. \n");
+//	
+//	int InputNumber5 = 0;
+//	std::cin >> InputNumber5;
+//
+//	Score(InputNumber5);
+//
+//// 실습 6
+//
+//int myInventory = 0;
+//
+//SetItem(myInventory, Sword);
+//SetItem(myInventory, Shield);
+//
+//printf("현재 인벤토리 : %d", myInventory);
+//
+//ToggleItem(myInventory, Sword);
+//printf("소드 토글 후 : %d", myInventory);
+//
+//UnSetItem(myInventory, Shield);
+//printf("쉴드 해제 후 : %d", myInventory);
+//
+
+
+//// 실습 7
+//
+//	printf("실습7\n피라미드 만들기 \n");
+//	printf("층수를 입력하시오. \n");
+//
+//	int InputNumber7 = 0;
+//	std::cin >> InputNumber7;
+//
+//	Pyramid(InputNumber7);
+
+//
+//// 실습 8
+//
+//	printf("실습8\n작은 수 구하기 \n");
+//	printf("두 수를 입력하시오. \n");
+//	
+//	int InputNumber8_1 = 0;
+//	int InputNumber8_2 = 0;
+//	std::cin >> InputNumber8_1;
+//	std::cin >> InputNumber8_2;
+//
+//	Min(InputNumber8_1, InputNumber8_2);
+//
+//// 실습 9
+//
+//	printf("실습9\n큰 수 구하기 \n");
+//	printf("두 수를 입력하시오. \n");
+//	
+//	int InputNumber9_1 = 0;
+//	int InputNumber9_2 = 0;
+//	std::cin >> InputNumber9_1;
+//	std::cin >> InputNumber9_2;
+//
+//	Max(InputNumber9_1, InputNumber9_2);
+//
+//
+//// 실습 10
+//
+//	printf("실습10\nClamp 구하기 \n");
+//
+//	int InputNumber10_1 = 0;
+//	int InputNumber10_2 = 0;
+//	int InputNumber10_3 = 0;
+//
+//	printf("숫자를 입력하시오. \n");
+//	std::cin >> InputNumber10_1;
+//	
+//
+//	printf("작은수와 큰수를 순서대로 입력하시오. \n");
+//	
+//	std::cin >> InputNumber10_2;
+//	std::cin >> InputNumber10_3;
+//
+//	Clamp1(InputNumber10_1, InputNumber10_2, InputNumber10_3);
+
+//// 실습 11
+//
+//	printf("실습11\n팩토리오 구하기 \n");
+//	printf("숫자를 입력하시오\n");
+//
+//	int InputNumber11 = 0;
+//	std::cin >> InputNumber11;
+//
+//	printf("%d!의 값은 %d 입니다.\n", InputNumber11, Factorial(InputNumber11));
+//
+//
+
+//ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+// 25년 9월 8일 (월요일)
+
+//// 주말 실습1
+//	printf("주말 실습1\n");
+//	printf("3개의 수 평균 구하기\n\n");
+//
+//	printf("3개의 수를 입력하시오.\n");
+//	float InputNumber1_1 = 0;
+//	float InputNumber1_2 = 0;
+//	float InputNumber1_3 = 0;
+//	
+//	std::cin >> InputNumber1_1 >> InputNumber1_2 >> InputNumber1_3;
+//
+//	printf(" 3개의 수의 평균은 %.1f입니다.\n\n", Average(InputNumber1_1, InputNumber1_2, InputNumber1_3));
+//
+//// 주말 실습2
+//	printf("주말 실습2\n");
+//	printf("할인가 구하기\n\n");
+//
+//	float InputNumber2_1 = 0;
+//	float InputNumber2_2 = 0;
+//	
+//	printf("정가를 입력하시오 : ");
+//	std::cin >> InputNumber2_1;
+//	printf("할인율을 입력하시오 : ");
+//	std::cin >> InputNumber2_2;
+//
+//	printf("해당 상품의 할인가격은 %.2f입니다.\n\n", SalePrice(InputNumber2_1, InputNumber2_2));
+//
+//
+//// 주말 실습3
+//	printf("주말 실습3\n");
+//	printf("주사위 값 구하기\n\n");
+//
+//	srand(time(0));
+//
+//	printf("주사위 값 : %d\n\n", Dice(0));
+//
+//
+//// 주말 실습4
+//
+//	printf("주말 실습4\n점수 측정하기 \n\n");
+//	printf("점수를 입력하시오. \n");
+//	
+//	int InputNumber4 = 0;
+//	std::cin >> InputNumber4;
+//
+//	Score1(InputNumber4);
+//
+//// 주말 실습5
+//
+//	printf("주말 실습5\nClamp 측정하기 \n\n");
+//	
+//		int InputNumber5_1 = 0;
+//		int InputNumber5_2 = 0;
+//		int InputNumber5_3 = 0;
+//	
+//		printf("숫자를 입력하시오. \n");
+//		std::cin >> InputNumber5_1;
+//		
+//	
+//		printf("작은수와 큰수를 순서대로 입력하시오. \n");
+//		
+//		std::cin >> InputNumber5_2;
+//		std::cin >> InputNumber5_3;
+//	
+//		Clamp(InputNumber5_1, InputNumber5_2, InputNumber5_3);
+//
+//
+//// 주말 실습(심화) 1
+//
+//	printf("주말 실습(심화)1\n");
+//	printf("자리수별 합 구하기\n\n");
+//
+//	printf("숫자를 입력하시오 : ");
+//	int InputNumberOne = 0;
+//	std::cin >> InputNumberOne;
+//	printf("자리수별 합은 %d입니다.\n\n", TotalSum(InputNumberOne));
+//
+//
+//
+//// 주말 실습(심화) 2
+//
+//	printf("주말 실습(심화)2\n");
+//	printf("10진수 2진수로 변환하기\n\n");
+//	printf("10진수를 입력하세요 : ");
+//	int InputNumberTwo = 0;
+//	std::cin >> InputNumberTwo;
+//
+//	printf("입력하신 숫자 %d의 2진수는 ", InputNumberTwo);
+//	DecToBin(InputNumberTwo);
+//	printf("입니다.\n\n");
+//
+//// 주말 실습(심화) 3
+//	
+//	printf("주말 실습(심화)3\n");
+//	printf("슬롯머신 만들기\n\n");
+//	printf("※보유 금액이 100원이하가 되면 게임 오버입니다※\n");
+//
+//	srand(time(0));
+//	int Money = 10000;
+//
+//	while (Money >= 100)
+//	{
+//		printf("현재 금액 : %d입니다.\n", Money);
+//		printf("베팅할 금액을 입력하시오(최소 100원) : ");
+//		int Betting = 0;
+//		std::cin >> Betting;
+//		if (Betting > Money)
+//		{
+//			printf("베팅 금액이 현재 금액보다 많습니다. 다시 입력해주세요.\n\n");
+//			continue;
+//		}
+//		if (Betting < 100)
+//		{
+//			printf("최소 베팅 금액은 100원입니다. 다시 입력해주세요.\n\n");
+//			continue;
+//		}
+//		Money -= Betting;
+//		int SlotNumber1 = rand() % 10;
+//		int SlotNumber2 = rand() % 10;
+//		int SlotNumber3 = rand() % 10;
+//
+//		printf("슬롯머신 결과 : %d %d %d\n", SlotNumber1, SlotNumber2, SlotNumber3);
+//		const int LuckyNumber = 7;
+//
+//		if (SlotNumber1 == SlotNumber2 && SlotNumber2 == SlotNumber3)
+//		{
+//			if (SlotNumber1 == 7)
+//			{
+//				printf("축하합니다! 777입니다!! 베팅 금액의 10,000배를 획득합니다!\n\n");
+//				Money += Betting * 10000;
+//				printf("현재 금액 : %d입니다.\n\n", Money);
+//			}
+//			else
+//			{
+//
+//				printf("축하합니다! 3개가 모두 일치합니다! 베팅 금액의 50배를 획득합니다!\n");
+//				Money += Betting * 50;
+//				printf("현재 금액 : %d입니다.\n\n", Money);
+//			}
+//		}
+//		else
+//		{
+//			printf("모두 불일치입니다.\n\n");
+//		}
+//	}
+//	printf("※ 게 임 오 버 ※\n현재 잔액이 100원이하 입니다.\n\n");
+//
+//
+//	// 주말 실습(심화) 4
+//
+//
+//	printf("주말 실습(심화)4\n");
+//	printf("턴제 전투 만들기\n\n");
+//
+//	srand(time(0));
+//	int PlayerHP = 100;
+//	int ComputerHP = 100;
+//
+//	printf("숲속에서 몬스터를 만났습니다.\n");
+//	printf("전투를 시작합니다.\n\n");
+//
+//	while (PlayerHP > 0 && ComputerHP > 0)
+//	{
+//
+//		printf("플레이어가 선제 공격합니다.\n\n");
+//		int Damage1 = PlayerAttack(0);
+//		printf("%d 데미지!\n", Damage1);
+//		ComputerHP -= Damage1;
+//		printf("플레이어 HP : [%d] / 몬스터 HP : [%d]\n\n", PlayerHP, ComputerHP);
+//		if (ComputerHP <= 0)
+//		{
+//			printf("※ 승   리 ※\n몬스터를 처치했습니다!\n\n");
+//			break;
+//		}
+//		printf("몬스터가 반격합니다.\n\n");
+//		int Damage2 = ComputerAttack(0);
+//		printf("%d 데미지!\n", Damage2);
+//		PlayerHP -= Damage2;
+//		printf("플레이어 HP : [%d] / 몬스터 HP : [%d]\n\n", PlayerHP, ComputerHP);
+//		if (PlayerHP <= 0)
+//		{
+//			printf("※ 게 임 오 버 ※\n플레이어가 사망했습니다.\n\n");
+//			break;
+//		}
+//	}
+//
+//	/*
+//	주말 실습(심화)5
+//	도둑 잡기 만들기
+//	- 시작 금액 10000
+//	- 한판에 무조건 최소 100 배팅해야 함. 만약 소지금액이 100 이하일 경우 게임 종료.
+//	- 딜러는 A~K까지의 트럼프 카드 중 2장을 중복없이 선택하고 조커 카드가 추가된다.
+//	- 플레이어는 딜러의 카드 중 한장을 선택한다.
+//	- 만약 플레이어가 조커를 뽑있다면 플레이어의 승리. 배팅 금액의 2배를 받는다.
+//	- 플레이어가 조커를 뽑지 못했다면 다음 게임을 시작하거나 배팅 금액의 2배를 추가로 지불하고 한번 더 선택할 수 있다.
+//*/
+//
+//	// 주말 실습(심화)5
+//
+//	printf("주말 실습(심화)4\n");
+//	printf("도둑 잡기\n\n");
+//	printf("※보유 금액이 100원이하가 되면 게임 오버입니다※\n");
+//
+//	srand(time(0));
+//	int PlayerMoney = 10000;
+//
+//	while (PlayerMoney >= 100)
+//	{
+//		printf("현재 금액 : %d입니다.\n", PlayerMoney);
+//		printf("베팅할 금액을 입력하시오(최소 100원) : ");
+//		int Betting = 0;
+//		std::cin >> Betting;
+//		if (Betting > PlayerMoney)
+//		{
+//			printf("베팅 금액이 현재 금액보다 많습니다. 다시 입력해주세요.\n\n");
+//			continue;
+//		}
+//		if (Betting < 100)
+//		{
+//			printf("최소 베팅 금액은 100원입니다. 다시 입력해주세요.\n\n");
+//			continue;
+//		}
+//		PlayerMoney -= Betting;
+//
+//		int DealerCard1 = rand() % 13; +1;
+//		int DealerCard2 = rand() % 13; +1;
+//		do
+//		{
+//			DealerCard2 = rand() % 13 + 1;
+//		} while (DealerCard1 == DealerCard2);
+//
+//	}
+//	
+
+//ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+// 25년 9월 08일(월요일)
+
+
+	//// 배열
+
+	//int a = 10;
+	//int Array[5];	// int 5개를 관리하는 배열
+	//Array[0] = 10;	// 배열의 첫번째 요소에 10을 대입한다.
+	//Array[3] = 40;	// 배열의 네번째 요소에 40을 대입한다.
+
+	//int Array2[5] = { 1,2,3,4,5 };
+	//int Array3[5] = { 1,2,3 };		// Array3[4] , [5] = 0으로 들어감
+
+	//int Array4[5] = { 0 };				// Array4를 0으로만 다 채우기
+
+	//const int Size = 5;
+	//int Array5[Size] = {};			// 배열 선언할때 상수 넣기 가능
+
+
+	//// 배열 개수 구하기
+	//sizeof(Array5);		// Array5의 전체 바이트 크기를 알 수 있다. // 20바이트 나옴
+	//sizeof(Array5[0]);	// Array5의 요소 하나의 크기를 알 수 있다. // 4바이트 나옴
+	//int ElementCount = sizeof(Array5) / sizeof(Array5[0]);	// Array5의 요소 개수
+
+	////int Size2 = 5;
+	////int Array6[Size2] = {};			// 이건 안됨 / 배열 선언할때 변수는 못들어감
+
+	//// Array[5] = 60;	// 버퍼오버런. 배열 영역 밖을 접근하려고 하기 때문에 에러가 발생
+
+
+	//// 캐스트(Cast)
+
+	//int a = 10;
+	//float b = 15.5f;
+
+	//a = (int)b;		// b를 int형으로 캐스팅해서 a에 대입힌다.(c스타일, 명시적 캐스팅)
+	//a = b;			// b를 a에 대입힌다. 그런데 a와 b는 타입이 다르니까 b를 a로 암시적으로 캐스팅해서 대입한다.(c스타일, 암시적 캐스팅)
+	//b = a;			// 암시적 캐스팅은 대체로 표현이 작은쪽에서 큰쪽으로는 문제없는 경우가 많다.
+	//
+	//// C++ 캐스팅
+	//// static_cast : c스타일 캐스팅을 안전하게 만든 것. 컴파일 타임에 결정됨
+	//// dynamic_cast : 다음시간에(클래스 이후에)
+	//// const_cast : const 속성을 제거하거나 추가하는데 사용. 사용하지 않는것이 권장.
+	//// reinterpret_cast : c스타일 캐스팅에서 위험한 부분. 원래 타입의 구조를 무시하고 새타입으로 해석하게 한다.
+
+	//a = static_cast<int>(b);	//b를 int형으로 캐스팅해서 a에 대입한다.(c++스타일, 명시적 캐스팅)
+
+
+
+	///*
+	//간단실습1
+	//- 배열 만들고 초기화해보기
+	//*/ 
+
+	//int Array1[5] = { 3,5,7,9,13 };
+
+	///*
+	//간단실습2
+	//- 배열의 모든요소 값을 더하고 평균 구하기
+	//*/ 
+
+	//int ElementCount = static_cast<int>(sizeof(Array1) / sizeof(Array1[0]));
+
+	//int Sum = 0;
+	//
+	//for (int i = 0; i < ElementCount; i++)
+	//{
+	//	Sum += Array1[i];
+	//}
+	//
+	//float Average = Sum / static_cast<float>(ElementCount);
+	//printf("Array1의 합의 평균은 %.2f입니다.\n", Average);
+
+
+	///*
+	//간단실습3
+	//배열의 모든 요소 중 최대값과 최소값 구하기
+	//*/ 
+
+	//int MaxNumber = INT_MIN;
+	//int MinNumber = INT_MAX;
+
+	//for (int i = 0; i < ElementCount; i++)
+	//{
+	//	if (MaxNumber < Array1[i])
+	//	{
+	//		MaxNumber = Array1[i];
+	//	}
+	//	if (MinNumber > Array1[i])
+	//	{
+	//		MinNumber = Array1[i];
+	//	}
+	//}
+	//printf("%d, %d\n", MaxNumber, MinNumber);
+
+
+	//// 이차원 배열
+
+	//int Array[4][3] = { { 1, 2, 3}, { 4, 5, 6 }, { 7, 8, 9 }, { 10, 11, 12 } };
+
+	//int test = Array[1][2];		// test = 6
+
+	//int Array2[12] = { 1,2,3,4,5,6,7,8,9,10,11,12 };	// = Array[4][3]
+
+	//Shuffle(Array2, 12);
+
+	//// 참조(Refernce)
+
+
+
+
+	// 중간 실습(0908)
+
+	/*
+	1. 6면체 주사위를 100만번 던져서 각 눈의 수가 몇번 나왔는지 카운팅하기
+	 - 6면체 주사위를 돌리는 함수 만들기
+	*/
+//
+//printf("중간실습1\n주사위를 1000000만번 던져서 각 눈의 수가 몇번 나왔는지 카운팅하기\n\n");
+//
+//srand(time(0));
+//int Dice[6] = { 0 };
+//for (int i = 0; i < 1000000; i++)
+//{
+//	int DiceNumber = rand() % 6 + 1;
+//	if (DiceNumber == 1)
+//	{
+//		Dice[DiceNumber - 1]++;
+//	}
+//	else if (DiceNumber == 2)
+//	{
+//		Dice[DiceNumber - 1]++;
+//	}
+//	else if (DiceNumber == 3)
+//	{
+//		Dice[DiceNumber - 1]++;
+//	}
+//	else if (DiceNumber == 4)
+//	{
+//		Dice[DiceNumber - 1]++;
+//	}
+//	else if (DiceNumber == 5)
+//	{
+//		Dice[DiceNumber - 1]++;
+//	}
+//	else
+//	{
+//		Dice[DiceNumber - 1]++;
+//	}
+//}
+//printf("주사위 값 결과\n");
+//printf("1 : %d번\n", Dice[0]);
+//printf("2 : %d번\n", Dice[1]);
+//printf("3 : %d번\n", Dice[2]);
+//printf("4 : %d번\n", Dice[3]);
+//printf("5 : %d번\n", Dice[4]);
+//printf("6 : %d번\n\n", Dice[5]);
+//
+//
+//
+//
+///*
+//2. 배열에 저장된 값을 거꾸로 뒤집는 함수 만들기
+// - 파라메터 int Array[], int Size
+//*/
+//
+//printf("중간실습2\n배열에 저장된 값을 거꾸로 뒤집는 함수 만들기\n\n");
+//
+//int Number2_1[5] = { 1, 2, 3, 4, 5 };
+//
+//printf("배열의 저장된 값\n{ 1 2 3 4 5 }\n\n");
+//printf("배열을 뒤집은 값\n{ ");
+//
+//Swap(Number2_1, 5);
+//for (int i = 0; i < 5; i++)
+//{
+//	printf("%d ", Number2_1[i]);
+//}
+//printf("}\n\n");
+//
+//
+//
+///*
+//3. 로또 번호 생성기
+// - 전체 숫자 범위 : 1번부터 45번까지.
+// - 맞춰야 하는 숫자 개수 : 6개.
+//*/
+//
+//printf("중간실습3\n로또 번호 생성기\n\n");
+//
+//int LottoNumber[6] = { 0 };
+//
+//for (int i = 0; i < 6; i++)
+//{
+//	int Num = rand() % 45 + 1;
+//	bool Something = false;
+//	for (int j = 0; j < i; j++)
+//	{
+//		if (LottoNumber[j] == Num)
+//		{
+//			Something = true;
+//			break;
+//		}
+//	}
+//	if (!Something)
+//	{
+//		LottoNumber[i] = Num;
+//	}
+//	else
+//	{
+//		i--;
+//	}
+//}
+//
+//printf("로또 번호 : { ");
+//for (int i = 0; i < 6; i++)
+//{
+//	printf("%d ", LottoNumber[i]);
+//}
+//printf("}\n\n");
+//
+///*
+//4.미로 탈출 게임 만들기
+// - 2차원 배열을 활용하여 텍스트 기반 미로 탈출 게임을 구현.
+// - 미로의 구성
+// - 10행 20열의 2차원 배열
+// - 저장 방식
+// - 길(0): '. '으로 표시
+// - 벽(1): '# '으로 표시
+// - 시작점(2): 'S '로 표시
+// - 출구(3): 'E '로 표시
+//*/
+//
+//printf("중간실습4\n미로탈출 게임 만들기\n\n");
+//
+//// 미로 크기
+//const int MazeHeight = 10;
+//const int MazeWidth = 20;
+//
+//// 미로 배열
+//int Maze[MazeHeight][MazeWidth] =
+//{
+//	{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
+//	{1,2,0,0,0,1,0,0,0,0,1,0,0,1,0,0,0,1,0,1},
+//	{1,1,1,1,0,1,0,1,1,0,1,0,1,1,0,1,0,1,0,1},
+//	{1,0,0,1,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,1},
+//	{1,0,1,1,1,1,0,1,1,1,0,1,1,1,0,1,1,1,0,1},
+//	{1,0,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0,1},
+//	{1,1,1,1,0,1,1,1,0,1,1,1,0,1,1,1,0,1,1,1},
+//	{1,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,3,1},
+//	{1,0,1,1,1,1,0,1,1,1,0,1,1,1,0,1,1,1,0,1},
+//	{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}
+//};
+//
+//int PlayerX = 1;
+//int PlayerY = 1;
+//
+//Maze[PlayerY][PlayerX];
+//
+//
+//while (Maze[PlayerY][PlayerX] != 3)
+//{
+//	MazeMap(Maze, PlayerY, PlayerX);
+//
+//
+//	char MoveBotten;
+//	printf("이동 방향을 입력하시오.(↑:w ↓:s ←:a →:d)");
+//	std::cin >> MoveBotten;
+//	printf("\n");
+//
+//	int PlayerNewX = PlayerX;
+//	int PlayerNewY = PlayerY;
+//
+//	if (MoveBotten == 'w' || MoveBotten == 'W')
+//	{
+//		PlayerNewY--;
+//	}
+//	else if (MoveBotten == 's' || MoveBotten == 'S')
+//	{
+//		PlayerNewY++;
+//	}
+//	else if (MoveBotten == 'a' || MoveBotten == 'A')
+//	{
+//		PlayerNewX--;
+//	}
+//	else if (MoveBotten == 'd' || MoveBotten == 'D')
+//	{
+//		PlayerNewX++;
+//	}
+//	else
+//	{
+//		printf("올바른 방향을 입력하시오.\n");
+//	}
+//
+//	if (Maze[PlayerNewY][PlayerNewX] != 1)
+//	{
+//		PlayerY = PlayerNewY;
+//		PlayerX = PlayerNewX;
+//	}
+//	else
+//	{
+//		printf("벽으로 막혀있습니다.\n");
+//	}
+//}
+//printf("미로를 통과하셨습니다.\n");
+//
 
 
