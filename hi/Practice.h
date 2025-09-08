@@ -225,3 +225,8 @@ T Clamp1(const T& Value, const T& Min, const T& Max)
 // 주말실습(심화)5 풀이
 
 void Practice0905_02_05();
+
+
+void Shuffle(int Array[], int Length);
+
+void Day0908_Ref();
