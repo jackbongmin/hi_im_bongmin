@@ -228,9 +228,24 @@ void Practice0905_02_05();
 
 
 void Shuffle(int Array[], int Length);
+// = void Shuffle(int* Array, int Length);	// 일반적으로 이렇게 사용하는것이 보통
+
 
 void Day0908_Ref();
 
 void Swap(int Array[], int Size);
 
 void MazeMap(int Maze[10][20], int PlayerY, int PlayerX);
+
+//ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+// 25.09.09
+
+
+// 간단실습3
+
+void TestPointer(int* pInt, float* pFloat);
+
+
+void d0909_2();
+
+void d0909_DynamicAllocation();

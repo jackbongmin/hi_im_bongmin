@@ -1,6 +1,8 @@
 ﻿
 #define _CRT_SECURE_NO_WARNINGS // ← 보라색 글씨는 매크로?
-
+#define _CRTDBG_MAP_ALLOC
+#define new new(_NORMAL_BLOCK, __FILE__, __LINE__)
+#include <crtdbg.h>
 //소스파일
 
 #include <iostream> //include : 포함시키다 / iostream을 포함시켜라 / iostream : 인풋 아웃풋 스트림 입출력 관련 정보가 담겨있는거
@@ -211,15 +213,38 @@ int main() // 앤트리 포인트(코드가 시작되는곳) / main함수는 반
 	printf("미로를 통과하셨습니다.\n");
 
 
+//ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+	// 25년 9월 9일 (화요일)
+
+	//// 포인터
+
+	//int* p = nullptr;
+	//int* p2 = nullptr;
+
+	//// 간단실습1
+	//// Number라는 변수를 하나 선언하고 포인터 변수 p에 Number의 주소를 저장하기
+
+	//int Number = 10;
+	//int* p = nullptr;	// p는 완전히 비어있다.
+	//p = &Number;		// p에 Number의 주소를 저장했다. / 타입이 같아야함 / Number이 float라면 성립이 안됨.
 
 
+	//// 간단실습2
+	//// p를 이용해서 Number의 값을 변경하기
+
+	//(*p) = 20;			// ()는 치는게 좋음 안쳐도 괜찮은데 일단 치셈
 
 
+	//int* test = p;
+	//test++;
 
+	//void d0909();
+	//
 
-	
+	void d0909_DynamicAllocation();
 
-
+	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 
 //ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 	return 0;
