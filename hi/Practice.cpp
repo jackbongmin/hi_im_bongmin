@@ -1061,196 +1061,196 @@ void d0909_p1()
 //	- 게임이 종료되었을 때 이때까지 플레이어가 입력한 모든 수를 출력해서 보여주기
 
 
-
-// 0909 실습3
-// 3. 미로탈출게임 수정하기
-//	- 이동했을 때 일정확률(20%)로 전투가 발생한다.
-//  - 이동했을 때 일정확률(10%)로 Player HP가 회복된다.
-//	- 두 이벤트는 중복으로 발생하지 않는다.
-
-	void d0909_p3()
-	{
-			int PlayerX = 0;
-		int PlayerY = 0;
-		FindStartPosition(PlayerX, PlayerY);
-
-		printf("~~ 미로 탈출 게임 ~~\n");
-
-		while (true)
-		{
-			PrintMaze(PlayerX, PlayerY);
-
-			if (IsEnd(PlayerX, PlayerY))
-			{
-				printf("축하합니다! 미로를 탈출했습니다!\n");
-				break;
-			}
-
-			int MoveFlags = PrintAvailableMoves(PlayerX, PlayerY);
-			MoveDirection Direction = GetMoveInput(MoveFlags);
-			switch (Direction)
-			{
-			case DirUp:
-				PlayerY--;
-				break;
-			case DirDown:
-				PlayerY++;
-				break;
-			case DirLeft:
-				PlayerX--;
-				break;
-			case DirRight:
-				PlayerX++;
-				break;
-			case DirNone:
-			default:
-				// 있을 수 없음
-				break;
-			}
-		}
-
-	}
-
-	void PrintMaze(int PlayerX, int PlayerY)
-	{
-		for (int y = 0; y < MazeHeight; y++)
-		{
-			for (int x = 0; x < MazeWidth; x++)
-			{
-				if (PlayerX == x && PlayerY == y)
-				{
-					printf("P ");
-				}
-				else if (Maze[y][x] == Wall)
-				{
-					printf("# ");
-				}
-				else if (Maze[y][x] == Path)
-				{
-					printf(". ");
-				}
-				else if (Maze[y][x] == Start)
-				{
-					printf("S ");
-				}
-				else if (Maze[y][x] == End)
-				{
-					printf("E ");
-				}
-				else
-				{
-					// 절대 들어오면 안되는 곳 == 맵 데이터가 잘못된 것
-				}
-			}
-			printf("\n");
-		}
-
-	}
-	
-	void FindStartPosition(int& OutStartX, int& OutStartY)
-	{
-		for (int y = 0; y < MazeHeight; y++)
-		{
-			for (int x = 0; x < MazeWidth; x++)
-			{
-				if (Maze[y][x] == Start)
-				{
-					OutStartX = x;
-					OutStartY = y;
-					return;
-				}
-			}
-		}
-		OutStartX = 0;
-		OutStartY = 0;
-	}
-	
-	int PrintAvailableMoves(int PlayerX, int PlayerY)
-	{
-		int MoveFlags = DirNone;
-
-		printf("이동할 수 있는 방향을 선택하세요 (w:위 a:왼쪽 s:아래쪽 d:오른쪽):\n");
-		if (!IsWall(PlayerX, PlayerY - 1))
-		{
-			printf("W(↑) ");
-			MoveFlags |= DirUp;
-		}
-		if (!IsWall(PlayerX, PlayerY + 1))
-		{
-			printf("S(↓) ");
-			MoveFlags |= DirDown;
-		}
-		if (!IsWall(PlayerX - 1, PlayerY))
-		{
-			printf("A(←) ");
-			MoveFlags |= DirLeft;
-		}
-		if (!IsWall(PlayerX + 1, PlayerY))
-		{
-			printf("D(→) ");
-			MoveFlags |= DirRight;
-		}
-		printf("\n");
-
-		return MoveFlags;
-
-	}
-	
-	bool IsWall(int X, int Y)
-	{
-		bool isWall = false;
-		if (Y < 0 || Y >= MazeHeight ||
-			X < 0 || X >= MazeWidth ||
-			Maze[Y][X] == Wall)
-			isWall = true;
-		return isWall;
-	}
-	
-	bool IsEnd(int X, int Y)
-	{
-		return Maze[Y][X] == End;
-	}
-	
-	MoveDirection GetMoveInput(int MoveFlags)
-	{
-		char InputChar = 0;
-		MoveDirection Direction = DirNone;
-
-		while (true)
-		{
-			printf("방향을 입력하세요 : ");
-			std::cin >> InputChar;
-
-			if ((InputChar == 'w' || InputChar == 'W')
-				&& (MoveFlags & DirUp) /*!= 0*/)
-			{
-				Direction = DirUp;
-				break;
-			}
-			if ((InputChar == 's' || InputChar == 'S')
-				&& (MoveFlags & DirDown) /*!= 0*/)
-			{
-				Direction = DirDown;
-				break;
-			}
-			if ((InputChar == 'a' || InputChar == 'A')
-				&& (MoveFlags & DirLeft) /*!= 0*/)
-			{
-				Direction = DirLeft;
-				break;
-			}
-			if ((InputChar == 'd' || InputChar == 'D')
-				&& (MoveFlags & DirRight) /*!= 0*/)
-			{
-				Direction = DirRight;
-				break;
-			}
-
-			printf("잘못된 입력입니다. 이동할 수 있는 방향 중에서 선택하세요.\n");
-		}
-
-		return Direction;
-
-	}
+//
+//// 0909 실습3
+//// 3. 미로탈출게임 수정하기
+////	- 이동했을 때 일정확률(20%)로 전투가 발생한다.
+////  - 이동했을 때 일정확률(10%)로 Player HP가 회복된다.
+////	- 두 이벤트는 중복으로 발생하지 않는다.
+//
+//	void d0909_p3()
+//	{
+//			int PlayerX = 0;
+//		int PlayerY = 0;
+//		FindStartPosition(PlayerX, PlayerY);
+//
+//		printf("~~ 미로 탈출 게임 ~~\n");
+//
+//		while (true)
+//		{
+//			PrintMaze(PlayerX, PlayerY);
+//
+//			if (IsEnd(PlayerX, PlayerY))
+//			{
+//				printf("축하합니다! 미로를 탈출했습니다!\n");
+//				break;
+//			}
+//
+//			int MoveFlags = PrintAvailableMoves(PlayerX, PlayerY);
+//			MoveDirection Direction = GetMoveInput(MoveFlags);
+//			switch (Direction)
+//			{
+//			case DirUp:
+//				PlayerY--;
+//				break;
+//			case DirDown:
+//				PlayerY++;
+//				break;
+//			case DirLeft:
+//				PlayerX--;
+//				break;
+//			case DirRight:
+//				PlayerX++;
+//				break;
+//			case DirNone:
+//			default:
+//				// 있을 수 없음
+//				break;
+//			}
+//		}
+//
+//	}
+//
+//	void PrintMaze(int PlayerX, int PlayerY)
+//	{
+//		for (int y = 0; y < MazeHeight; y++)
+//		{
+//			for (int x = 0; x < MazeWidth; x++)
+//			{
+//				if (PlayerX == x && PlayerY == y)
+//				{
+//					printf("P ");
+//				}
+//				else if (Maze[y][x] == Wall)
+//				{
+//					printf("# ");
+//				}
+//				else if (Maze[y][x] == Path)
+//				{
+//					printf(". ");
+//				}
+//				else if (Maze[y][x] == Start)
+//				{
+//					printf("S ");
+//				}
+//				else if (Maze[y][x] == End)
+//				{
+//					printf("E ");
+//				}
+//				else
+//				{
+//					// 절대 들어오면 안되는 곳 == 맵 데이터가 잘못된 것
+//				}
+//			}
+//			printf("\n");
+//		}
+//
+//	}
+//	
+//	void FindStartPosition(int& OutStartX, int& OutStartY)
+//	{
+//		for (int y = 0; y < MazeHeight; y++)
+//		{
+//			for (int x = 0; x < MazeWidth; x++)
+//			{
+//				if (Maze[y][x] == Start)
+//				{
+//					OutStartX = x;
+//					OutStartY = y;
+//					return;
+//				}
+//			}
+//		}
+//		OutStartX = 0;
+//		OutStartY = 0;
+//	}
+//	
+//	int PrintAvailableMoves(int PlayerX, int PlayerY)
+//	{
+//		int MoveFlags = DirNone;
+//
+//		printf("이동할 수 있는 방향을 선택하세요 (w:위 a:왼쪽 s:아래쪽 d:오른쪽):\n");
+//		if (!IsWall(PlayerX, PlayerY - 1))
+//		{
+//			printf("W(↑) ");
+//			MoveFlags |= DirUp;
+//		}
+//		if (!IsWall(PlayerX, PlayerY + 1))
+//		{
+//			printf("S(↓) ");
+//			MoveFlags |= DirDown;
+//		}
+//		if (!IsWall(PlayerX - 1, PlayerY))
+//		{
+//			printf("A(←) ");
+//			MoveFlags |= DirLeft;
+//		}
+//		if (!IsWall(PlayerX + 1, PlayerY))
+//		{
+//			printf("D(→) ");
+//			MoveFlags |= DirRight;
+//		}
+//		printf("\n");
+//
+//		return MoveFlags;
+//
+//	}
+//	
+//	bool IsWall(int X, int Y)
+//	{
+//		bool isWall = false;
+//		if (Y < 0 || Y >= MazeHeight ||
+//			X < 0 || X >= MazeWidth ||
+//			Maze[Y][X] == Wall)
+//			isWall = true;
+//		return isWall;
+//	}
+//	
+//	bool IsEnd(int X, int Y)
+//	{
+//		return Maze[Y][X] == End;
+//	}
+//	
+//	MoveDirection GetMoveInput(int MoveFlags)
+//	{
+//		char InputChar = 0;
+//		MoveDirection Direction = DirNone;
+//
+//		while (true)
+//		{
+//			printf("방향을 입력하세요 : ");
+//			std::cin >> InputChar;
+//
+//			if ((InputChar == 'w' || InputChar == 'W')
+//				&& (MoveFlags & DirUp) /*!= 0*/)
+//			{
+//				Direction = DirUp;
+//				break;
+//			}
+//			if ((InputChar == 's' || InputChar == 'S')
+//				&& (MoveFlags & DirDown) /*!= 0*/)
+//			{
+//				Direction = DirDown;
+//				break;
+//			}
+//			if ((InputChar == 'a' || InputChar == 'A')
+//				&& (MoveFlags & DirLeft) /*!= 0*/)
+//			{
+//				Direction = DirLeft;
+//				break;
+//			}
+//			if ((InputChar == 'd' || InputChar == 'D')
+//				&& (MoveFlags & DirRight) /*!= 0*/)
+//			{
+//				Direction = DirRight;
+//				break;
+//			}
+//
+//			printf("잘못된 입력입니다. 이동할 수 있는 방향 중에서 선택하세요.\n");
+//		}
+//
+//		return Direction;
+//
+//	}
 
 
