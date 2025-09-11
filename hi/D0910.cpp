@@ -6,6 +6,11 @@
 #include "fstream"
 #include <string>
 
+int MazeHeight = 20;
+int MazeWidth = 10;
+
+int** Maze = nullptr;
+
 void D0910_p4()
 {
 	int PlayerX = 0;
