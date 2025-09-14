@@ -15,6 +15,7 @@
 #include "D0910.h"
 #include "D0911.h"
 #include "D0912.h"
+#include "D0914.h"
 
 int main() // 앤트리 포인트(코드가 시작되는곳) / main함수는 반드시 하나만 있어야함
 {
@@ -29,6 +30,11 @@ int main() // 앤트리 포인트(코드가 시작되는곳) / main함수는 반
 	//D0912_OperatorOverLoading();
 
 	//D0912_P1();
-	D0912_P2_1();
+	//D0912_P2_1();
+
+	//D0914_P1();
+
+	D0914_P2();
+	
 	return 0;
 }

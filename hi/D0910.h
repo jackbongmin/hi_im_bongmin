@@ -5,22 +5,22 @@
 //미로 탈출 실행용 코드
 void D0910_p4();
 
-enum MazeTile
-{
-	Path = 0,
-	Wall = 1,
-	Start = 2,
-	End = 3
-};
-
-enum MoveDirection
-{
-	DirNone = 0,
-	DirUp = 1 << 0,
-	DirDown = 1 << 1,
-	DirLeft = 1 << 2,
-	DirRight = 1 << 3
-};
+//enum MazeTile
+//{
+//	Path = 0,
+//	Wall = 1,
+//	Start = 2,
+//	End = 3
+//};
+//
+//enum MoveDirection
+//{
+//	DirNone = 0,
+//	DirUp = 1 << 0,
+//	DirDown = 1 << 1,
+//	DirLeft = 1 << 2,
+//	DirRight = 1 << 3
+//};
 
 //
 //// 미로 크기가 고정이었을때의 코드
