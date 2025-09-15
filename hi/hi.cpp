@@ -16,6 +16,8 @@
 #include "D0911.h"
 #include "D0912.h"
 #include "D0914.h"
+#include "D0915.h"
+#include "Position.h"
 
 int main() // 앤트리 포인트(코드가 시작되는곳) / main함수는 반드시 하나만 있어야함
 {
@@ -32,9 +34,25 @@ int main() // 앤트리 포인트(코드가 시작되는곳) / main함수는 반
 	//D0912_P1();
 	//D0912_P2_1();
 
-	//D0914_P1();
+	D0914_P1();
 
 	D0914_P2();
+
+	//Position posA(1, 2);
+	//Position posB(3, -1);
+	//Position posC = posA + posB;
+	//Position posD = posA - posB;
+
+	//int i = 0;
+
+	//D0915_LastWeekP1();
+
+	//Position* pPos = new Position(2, 3);
+	//delete pPos;
+	//pPos = nullptr;
+
+	//D0915_LastWeekP2();
+
 	
 	return 0;
 }

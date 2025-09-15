@@ -9,17 +9,17 @@ void D0914_P1();
 
 // 주말실습2
 
-struct Card
+struct Card1
 {
 	int Number;
 };
 
 int CardValue(int Number);
 
-int CardScore(Card hand[], int HandCount);
+int CardScore(Card1 hand[], int HandCount);
 
-Card DrawCard();
+Card1 DrawCard();
 
-void PrintCard(Card x);
+void PrintCard(Card1 x);
 
 void D0914_P2();

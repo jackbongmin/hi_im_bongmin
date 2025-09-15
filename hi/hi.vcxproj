@@ -127,6 +127,7 @@
     <ClCompile Include="D0911.cpp" />
     <ClCompile Include="D0912.cpp" />
     <ClCompile Include="D0914.cpp" />
+    <ClCompile Include="D0915.cpp" />
     <ClCompile Include="hi.cpp" />
     <ClCompile Include="Practice.cpp" />
     <ClCompile Include="SaveData.cpp" />
@@ -137,6 +138,8 @@
     <ClInclude Include="D0911.h" />
     <ClInclude Include="D0912.h" />
     <ClInclude Include="D0914.h" />
+    <ClInclude Include="D0915.h" />
+    <ClInclude Include="Position.h" />
     <ClInclude Include="Practice.h" />
     <ClInclude Include="SaveData.h" />
     <ClInclude Include="TestMath.h" />

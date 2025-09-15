@@ -147,11 +147,11 @@ void PrintEnemy(const Enemy* pEnemy)
 
 void D0912_P1()
 {
-	Position p1(2, 3);
-	Position p2(5, 1);
+	Position1 p1(2, 3);
+	Position1 p2(5, 1);
 
-	Position sum = p1 + p2;
-	Position diff = p1 - p2;
+	Position1 sum = p1 + p2;
+	Position1 diff = p1 - p2;
 
 	printf("p1 = (2, 3)\n");
 	printf("p2 = (5, 1)\n");

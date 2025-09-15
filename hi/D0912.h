@@ -136,25 +136,25 @@ void PrintEnemy(const Enemy* pEnemy);	// pEnemy는 읽기 전용
 	연산자도 오버로딩하여 두 Position 객체를 뺐을 때, 각각의 멤버끼리 뺀 결과를 갖는 새로운 Position 객체가 생성되도록 한다.
 */
 
-struct Position
+struct Position1
 {
 	int x = 0;
 	int y = 0;
 
-	Position(int i, int j)
+	Position1(int i, int j)
 	{
 		x = i;
 		y = j;
 	}
 
-	Position operator+(const Position& other) const
+	Position1 operator+(const Position1& other) const
 	{
-		return Position(x + other.x, y + other.y);
+		return Position1(x + other.x, y + other.y);
 	}
 
-	Position operator-(const Position& other) const
+	Position1 operator-(const Position1& other) const
 	{
-		return Position(x - other.x, y - other.y);
+		return Position1(x - other.x, y - other.y);
 	}
 
 };

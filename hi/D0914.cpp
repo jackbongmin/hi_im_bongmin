@@ -14,11 +14,11 @@
 bool LeapYear(int year)
 {
 	if(year % 400 == 0)
-	return true;
+		return true;
 	if(year % 100 == 0)
-	return false;
+		return false;
 	if(year % 4 == 0)
-	return true;
+		return true;
 
 	return false;
 }
@@ -50,9 +50,9 @@ void D0914_P1()
 	// ¿ù
 	if(LeapYear(Year) == true)
 		MonthDays[1] = 29;
-	for (int month = 0; month < Month; month++)
+	for (int month = 1; month < Month; month++)
 	{
-		TotalDays += MonthDays[Month-1];
+		TotalDays += MonthDays[month -1];
 	}
 
 	// ÀÏ
@@ -79,14 +79,14 @@ int CardValue(int Number)
 	return 11;
 }
 
-int CardScore(Card hand[], int HandCount)
+int CardScore(Card1 hand[], int HandCount)
 {
 	int sum = 0;
 	int AceCount = 0;
 
 	for (int i = 0; i < HandCount; i++)
 	{
-		if (hand[1].Number == 1)
+		if (hand[i].Number == 1)
 		{
 			sum += 11;
 			AceCount++;
@@ -105,14 +105,14 @@ int CardScore(Card hand[], int HandCount)
 	return sum;
 }
 
-Card DrawCard()
+Card1 DrawCard()
 {
-	Card x;
+	Card1 x;
 	x.Number = rand() % 13 + 1;
 	return x;
 }
 
-void PrintCard(Card x)
+void PrintCard(Card1 x)
 {
 	if (x.Number == 1) printf("A ");
 	else if (x.Number == 11) printf("J ");
@@ -125,8 +125,8 @@ void D0914_P2()
 {
 	srand(time(0));
 
-	Card PlayerHand[10];
-	Card DealerHand[10];
+	Card1 PlayerHand[10];
+	Card1 DealerHand[10];
 	
 	int PlayerHandCount = 0;
 	int DealerHandCount = 0;
