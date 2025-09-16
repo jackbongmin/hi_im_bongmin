@@ -16,6 +16,12 @@
     <Filter Include="jongmin">
       <UniqueIdentifier>{c69cae9d-bf54-4aeb-9160-dd8a2f970750}</UniqueIdentifier>
     </Filter>
+    <Filter Include="리소스 파일\동물 시리즈">
+      <UniqueIdentifier>{2df7c73d-48d1-47b2-8861-56f42080cafc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="리소스 파일\몬스터 시리즈">
+      <UniqueIdentifier>{23914c1c-5a42-43d6-8970-fea71478f55e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="hi.cpp">
@@ -45,6 +51,39 @@
     <ClCompile Include="D0915.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="D0916.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Car.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Animal.cpp">
+      <Filter>리소스 파일\동물 시리즈</Filter>
+    </ClCompile>
+    <ClCompile Include="Elephant.cpp">
+      <Filter>리소스 파일\동물 시리즈</Filter>
+    </ClCompile>
+    <ClCompile Include="Eagle.cpp">
+      <Filter>리소스 파일\동물 시리즈</Filter>
+    </ClCompile>
+    <ClCompile Include="Dog.cpp">
+      <Filter>리소스 파일\동물 시리즈</Filter>
+    </ClCompile>
+    <ClCompile Include="Monster.cpp">
+      <Filter>리소스 파일\몬스터 시리즈</Filter>
+    </ClCompile>
+    <ClCompile Include="Skeleton.cpp">
+      <Filter>리소스 파일\몬스터 시리즈</Filter>
+    </ClCompile>
+    <ClCompile Include="Zombie.cpp">
+      <Filter>리소스 파일\몬스터 시리즈</Filter>
+    </ClCompile>
+    <ClCompile Include="Goblin.cpp">
+      <Filter>리소스 파일\몬스터 시리즈</Filter>
+    </ClCompile>
+    <ClCompile Include="Orc.cpp">
+      <Filter>리소스 파일\몬스터 시리즈</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TestMath.h">
@@ -73,6 +112,39 @@
     </ClInclude>
     <ClInclude Include="Position.h">
       <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="D0916.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Car.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Animal.h">
+      <Filter>리소스 파일\동물 시리즈</Filter>
+    </ClInclude>
+    <ClInclude Include="Elephant.h">
+      <Filter>리소스 파일\동물 시리즈</Filter>
+    </ClInclude>
+    <ClInclude Include="Eagle.h">
+      <Filter>리소스 파일\동물 시리즈</Filter>
+    </ClInclude>
+    <ClInclude Include="Dog.h">
+      <Filter>리소스 파일\동물 시리즈</Filter>
+    </ClInclude>
+    <ClInclude Include="Monster.h">
+      <Filter>리소스 파일\몬스터 시리즈</Filter>
+    </ClInclude>
+    <ClInclude Include="Orc.h">
+      <Filter>리소스 파일\몬스터 시리즈</Filter>
+    </ClInclude>
+    <ClInclude Include="Goblin.h">
+      <Filter>리소스 파일\몬스터 시리즈</Filter>
+    </ClInclude>
+    <ClInclude Include="Zombie.h">
+      <Filter>리소스 파일\몬스터 시리즈</Filter>
+    </ClInclude>
+    <ClInclude Include="Skeleton.h">
+      <Filter>리소스 파일\몬스터 시리즈</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -123,26 +123,48 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Animal.cpp" />
+    <ClCompile Include="Car.cpp" />
     <ClCompile Include="D0910.cpp" />
     <ClCompile Include="D0911.cpp" />
     <ClCompile Include="D0912.cpp" />
     <ClCompile Include="D0914.cpp" />
     <ClCompile Include="D0915.cpp" />
+    <ClCompile Include="D0916.cpp" />
+    <ClCompile Include="Dog.cpp" />
+    <ClCompile Include="Eagle.cpp" />
+    <ClCompile Include="Elephant.cpp" />
+    <ClCompile Include="Goblin.cpp" />
     <ClCompile Include="hi.cpp" />
+    <ClCompile Include="Monster.cpp" />
+    <ClCompile Include="Orc.cpp" />
     <ClCompile Include="Practice.cpp" />
     <ClCompile Include="SaveData.cpp" />
+    <ClCompile Include="Skeleton.cpp" />
     <ClCompile Include="TestMath.cpp" />
+    <ClCompile Include="Zombie.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Animal.h" />
+    <ClInclude Include="Car.h" />
     <ClInclude Include="D0910.h" />
     <ClInclude Include="D0911.h" />
     <ClInclude Include="D0912.h" />
     <ClInclude Include="D0914.h" />
     <ClInclude Include="D0915.h" />
+    <ClInclude Include="D0916.h" />
+    <ClInclude Include="Dog.h" />
+    <ClInclude Include="Eagle.h" />
+    <ClInclude Include="Elephant.h" />
+    <ClInclude Include="Goblin.h" />
+    <ClInclude Include="Monster.h" />
+    <ClInclude Include="Orc.h" />
     <ClInclude Include="Position.h" />
     <ClInclude Include="Practice.h" />
     <ClInclude Include="SaveData.h" />
+    <ClInclude Include="Skeleton.h" />
     <ClInclude Include="TestMath.h" />
+    <ClInclude Include="Zombie.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
