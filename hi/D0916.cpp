@@ -43,26 +43,26 @@ void Day0916::ClassInstance()
 	동물은 잠을 자면(Sleep) 나이가 증가하고 에너지가 완전 회복된다.
 	동물의 모든 정보를 출력할 수 있다.(ShoInfo)
 */
-
-void Day0916::TestAnimal()
-{
-	Animal animal;
-	animal.ShowInfo();
-	animal.MakeSound();
-	animal.Move();
-	animal.Move();
-	animal.Move();
-	animal.ShowInfo();
-	animal.Eat();
-	animal.ShowInfo();
-	animal.Move();
-	animal.Move();
-	animal.Move();
-	animal.ShowInfo();
-	animal.Sleep();
-	animal.ShowInfo();
-
-}
+//
+//void Day0916::TestAnimal()
+//{
+//	Animal animal;
+//	animal.ShowInfo();
+//	animal.MakeSound();
+//	animal.Move();
+//	animal.Move();
+//	animal.Move();
+//	animal.ShowInfo();
+//	animal.Eat();
+//	animal.ShowInfo();
+//	animal.Move();
+//	animal.Move();
+//	animal.Move();
+//	animal.ShowInfo();
+//	animal.Sleep();
+//	animal.ShowInfo();
+//
+//}
 
 
 
@@ -70,7 +70,7 @@ void Day0916::TesrElephant()
 {
 	Elephant elephant = Elephant("꼬끼리");
 	elephant.Move();
-	elephant.Attack();
+	elephant.Attack1();
 }
 
 

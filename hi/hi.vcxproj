@@ -131,6 +131,7 @@
     <ClCompile Include="D0914.cpp" />
     <ClCompile Include="D0915.cpp" />
     <ClCompile Include="D0916.cpp" />
+    <ClCompile Include="D0917.cpp" />
     <ClCompile Include="Dog.cpp" />
     <ClCompile Include="Eagle.cpp" />
     <ClCompile Include="Elephant.cpp" />
@@ -140,6 +141,7 @@
     <ClCompile Include="Orc.cpp" />
     <ClCompile Include="Practice.cpp" />
     <ClCompile Include="SaveData.cpp" />
+    <ClCompile Include="Shape.cpp" />
     <ClCompile Include="Skeleton.cpp" />
     <ClCompile Include="TestMath.cpp" />
     <ClCompile Include="Zombie.cpp" />
@@ -153,17 +155,24 @@
     <ClInclude Include="D0914.h" />
     <ClInclude Include="D0915.h" />
     <ClInclude Include="D0916.h" />
+    <ClInclude Include="D0917.h" />
     <ClInclude Include="Dog.h" />
     <ClInclude Include="Eagle.h" />
     <ClInclude Include="Elephant.h" />
     <ClInclude Include="Goblin.h" />
+    <ClInclude Include="IBattleable.h" />
+    <ClInclude Include="IcanBattle.h" />
+    <ClInclude Include="IFlyable.h" />
+    <ClInclude Include="ISwimable.h" />
     <ClInclude Include="Monster.h" />
     <ClInclude Include="Orc.h" />
     <ClInclude Include="Position.h" />
     <ClInclude Include="Practice.h" />
     <ClInclude Include="SaveData.h" />
+    <ClInclude Include="Shape.h" />
     <ClInclude Include="Skeleton.h" />
     <ClInclude Include="TestMath.h" />
+    <ClInclude Include="TestSample.h" />
     <ClInclude Include="Zombie.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

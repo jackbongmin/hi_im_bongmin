@@ -1,10 +1,15 @@
 #pragma once
 #include "Animal.h"
+#include "IFlyable.h"
 
-class Eagle : public Animal // Elephant는 Animal을 모두 상속받았다.
+class Eagle : public Animal, public IFlyable 
 {
 public:
-	void Fly();	
+	virtual void Move() override;	// 독수리는 Animal의 Move함수를 덮어쓸꺼다.
+
+	virtual void MakeSound() override;
+
+	virtual void Fly() override;
 
 public:
 	// 생성자, 소멸자는 상속의 대상이 아니다.
@@ -14,5 +19,6 @@ public:
 	{
 
 	}
+	virtual ~Eagle() {};
 };
 

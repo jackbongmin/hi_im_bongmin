@@ -31,9 +31,10 @@ public:
 	Animal(std::string InName)
 		: Name(InName)
 	{} // 짧은 경우는 함수의 구현이 헤더에 있어도 된다.(자동 inline 처리)
+	virtual ~Animal() {}
 
-	void Move();
-	void MakeSound();
+	virtual void Move();	// Move는 가상함수다.
+	virtual void MakeSound();
 	void Eat();
 	void Sleep();
 	void ShowInfo();
@@ -62,7 +63,6 @@ protected:
 	int Age = 0;
 	
 	float Energy = 1.0f;	// 0.0f ~ 1.0f : 1.0f일때 100% 
-
 
 };
 

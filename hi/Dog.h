@@ -5,6 +5,8 @@ class Dog : public Animal // Elephant는 Animal을 모두 상속받았다.
 {
 public:
 	void howl();
+	virtual void Move() override;
+	virtual void MakeSound() override;
 
 public:
 	// 생성자, 소멸자는 상속의 대상이 아니다.
@@ -14,4 +16,5 @@ public:
 	{
 
 	}
+	virtual ~Dog() {};
 };

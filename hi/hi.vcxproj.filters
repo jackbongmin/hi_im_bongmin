@@ -22,6 +22,12 @@
     <Filter Include="리소스 파일\몬스터 시리즈">
       <UniqueIdentifier>{23914c1c-5a42-43d6-8970-fea71478f55e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="리소스 파일\Day">
+      <UniqueIdentifier>{eec5b061-c7fd-432e-a0d2-71b8a91a5243}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="리소스 파일\모양">
+      <UniqueIdentifier>{0e033b6d-c7b9-4692-974e-ed8b1e5ca4f9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="hi.cpp">
@@ -34,21 +40,6 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="Practice.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="D0910.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="D0911.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="D0912.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="D0914.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="D0915.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="D0916.cpp">
@@ -84,6 +75,27 @@
     <ClCompile Include="Orc.cpp">
       <Filter>리소스 파일\몬스터 시리즈</Filter>
     </ClCompile>
+    <ClCompile Include="D0910.cpp">
+      <Filter>리소스 파일\Day</Filter>
+    </ClCompile>
+    <ClCompile Include="D0911.cpp">
+      <Filter>리소스 파일\Day</Filter>
+    </ClCompile>
+    <ClCompile Include="D0912.cpp">
+      <Filter>리소스 파일\Day</Filter>
+    </ClCompile>
+    <ClCompile Include="D0914.cpp">
+      <Filter>리소스 파일\Day</Filter>
+    </ClCompile>
+    <ClCompile Include="D0915.cpp">
+      <Filter>리소스 파일\Day</Filter>
+    </ClCompile>
+    <ClCompile Include="D0917.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Shape.cpp">
+      <Filter>리소스 파일\모양</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TestMath.h">
@@ -93,21 +105,6 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Practice.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="D0910.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="D0911.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="D0912.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="D0914.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="D0915.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Position.h">
@@ -145,6 +142,42 @@
     </ClInclude>
     <ClInclude Include="Skeleton.h">
       <Filter>리소스 파일\몬스터 시리즈</Filter>
+    </ClInclude>
+    <ClInclude Include="D0910.h">
+      <Filter>리소스 파일\Day</Filter>
+    </ClInclude>
+    <ClInclude Include="D0911.h">
+      <Filter>리소스 파일\Day</Filter>
+    </ClInclude>
+    <ClInclude Include="D0912.h">
+      <Filter>리소스 파일\Day</Filter>
+    </ClInclude>
+    <ClInclude Include="D0914.h">
+      <Filter>리소스 파일\Day</Filter>
+    </ClInclude>
+    <ClInclude Include="D0915.h">
+      <Filter>리소스 파일\Day</Filter>
+    </ClInclude>
+    <ClInclude Include="D0917.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="TestSample.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Shape.h">
+      <Filter>리소스 파일\모양</Filter>
+    </ClInclude>
+    <ClInclude Include="IFlyable.h">
+      <Filter>리소스 파일\동물 시리즈</Filter>
+    </ClInclude>
+    <ClInclude Include="ISwimable.h">
+      <Filter>리소스 파일\동물 시리즈</Filter>
+    </ClInclude>
+    <ClInclude Include="IBattleable.h">
+      <Filter>리소스 파일\동물 시리즈</Filter>
+    </ClInclude>
+    <ClInclude Include="IcanBattle.h">
+      <Filter>리소스 파일\동물 시리즈</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
