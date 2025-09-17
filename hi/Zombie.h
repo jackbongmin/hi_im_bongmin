@@ -8,7 +8,8 @@ public:
 	void RottingGrasp();
 
 public:
-	Zombie() = default;
+	Zombie()
+		: Monster("Á»ºñ") {}
 	Zombie(const char* InName)
 		: Monster(InName)
 	{

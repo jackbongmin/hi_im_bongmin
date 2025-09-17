@@ -8,10 +8,14 @@ public:
 	void BonePierce();
 
 public:
-	Skeleton() = default;
-	Skeleton(const char* InName)
-		: Monster(InName)
+	Skeleton()
+		: Monster("½ºÄÌ·¹Åæ", 30.0f, 8.0f)
 	{
-		Health = 75.0f;
+		DropGold = 15;
+	}
+	Skeleton(const char* InName)
+		: Monster(InName, 30.0f, 8.0f)
+	{
+		DropGold = 15;
 	}
 };

@@ -10,6 +10,10 @@
 #include "Monster.h"
 #include "Player.h"
 #include "Test.h"
+#include "Goblin.h"
+#include "Orc.h"
+#include "Skeleton.h"
+#include "Zombie.h"
 
 //int main()
 //{
@@ -257,6 +261,9 @@ void PrintMaze(Position& position)
 			}
 			else
 			{
+
+			}
+			{
 				// Critical Error. Map Data is Wrong.
 			}
 		}
@@ -390,23 +397,47 @@ void MoveEventProcess(Player& player)
 
 void BattleEvent(Player& player)
 {
-    Monster enemy;
+	Monster* pMonster = nullptr;
+
+	int i = rand() % 4;
+	
+	switch (i)
+	{
+	case 0:
+		pMonster = new Goblin();
+		printf("고블린을 만났습니다!\n");
+		break;
+	case 1:
+		pMonster = new Orc();
+		break;
+	case 2:
+		pMonster = new Skeleton();
+		break;
+	case 3:
+		pMonster = new Zombie();
+		break;
+	default:
+		pMonster = new Goblin();
+		break;
+	}
+
+   // Monster enemy;
     printf("Battle Start!\n");
 
-    while (player.IsAlive() && enemy.IsAlive())
+    while (player.IsAlive() && pMonster->IsAlive())
     {
         // Player attacks Enemy
-		player.ApplyAttack(&enemy);
-        if (!enemy.IsAlive())
+		player.ApplyAttack(pMonster);
+        if (!pMonster->IsAlive())
         {
             printf("Enemy defeated!\n");
-			player.AddGold(enemy.GetDropGold());
-			printf("You gained %d gold.\n", enemy.GetDropGold());
+			player.AddGold(pMonster->GetDropGold());
+			printf("You gained %d gold.\n", pMonster->GetDropGold());
             break;
         }
 
         // Enemy attacks Player
-		enemy.ApplyAttack(&player);
+		pMonster->ApplyAttack(&player);
         if (!player.IsAlive())
         {
             printf("Player defeated!\n");

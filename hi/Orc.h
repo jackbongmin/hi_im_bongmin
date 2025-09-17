@@ -8,11 +8,15 @@ public:
 	void BrutalSmash();
 
 public:
-	Orc() = default;
-	Orc(const char* InName)
-		: Monster(InName)
+	Orc()
+		: Monster("ø¿≈©", 75.0f, 5.0f)
 	{
-		Health = 150.0f;
+		DropGold = 30;
+	}
+	Orc(const char* InName)
+		: Monster(InName, 75.0f, 5.0f)
+	{
+		DropGold = 30;
 	}
 };
 
