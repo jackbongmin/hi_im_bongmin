@@ -28,7 +28,7 @@ void Elephant::MakeSound()
 	printf("[%s] : »Ñ¤Ì¿ì¿ì¤Ì¿ì¤Ì¤·\n", Name.c_str());
 }
 
-void Elephant::Attack(ICanBattle* InTarget)
+void Elephant::ApplyAttack(ICanBattle* InTarget)
 {
 	InTarget->TakeDamage(AttackPower);
 }

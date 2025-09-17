@@ -9,7 +9,7 @@ public:
 	virtual void Move() override;
 	virtual void MakeSound() override;
 
-	virtual void Attack(ICanBattle* InTarget) override;
+	virtual void ApplyAttack(ICanBattle* InTarget) override;
 	virtual void TakeDamage(float InDamage) override;
 
 

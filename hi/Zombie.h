@@ -9,7 +9,7 @@ public:
 
 public:
 	Zombie() = default;
-	Zombie(std::string InName)
+	Zombie(const char* InName)
 		: Monster(InName)
 	{
 	}

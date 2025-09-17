@@ -9,7 +9,7 @@ public:
 
 public:
 	Goblin() = default;
-	Goblin(std::string InName)
+	Goblin(const char* InName)
 		: Monster(InName)
 	{
 		Health = 75.0f;

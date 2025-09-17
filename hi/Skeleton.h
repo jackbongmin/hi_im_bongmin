@@ -9,7 +9,7 @@ public:
 
 public:
 	Skeleton() = default;
-	Skeleton(std::string InName)
+	Skeleton(const char* InName)
 		: Monster(InName)
 	{
 		Health = 75.0f;

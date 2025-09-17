@@ -159,127 +159,127 @@ struct Position1
 
 };
 
-//ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
-enum MazeTile
-{
-	Path = 0,
-	Wall = 1,
-	Start = 2,
-	End = 3
-};
-
-enum MoveDirection
-{
-	DirNone = 0,
-	DirUp = 1 << 0,
-	DirDown = 1 << 1,
-	DirLeft = 1 << 2,
-	DirRight = 1 << 3
-};
-
-
-const int MazeHeight = 10;
-const int MazeWidth = 20;
-
-const int Maze[MazeHeight][MazeWidth] =
-{
-	{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
-	{1,2,0,0,0,1,0,0,0,0,1,0,0,1,0,0,0,1,0,1},
-	{1,1,1,1,0,1,0,1,1,0,1,0,1,1,0,1,0,1,0,1},
-	{1,0,0,1,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,1},
-	{1,0,1,1,1,1,0,1,1,1,0,1,1,1,0,1,1,1,0,1},
-	{1,0,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0,1},
-	{1,1,1,1,0,1,1,1,0,1,1,1,0,1,1,1,0,1,1,1},
-	{1,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,3,1},
-	{1,0,1,1,1,1,0,1,1,1,0,1,1,1,0,1,1,1,0,1},
-	{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}
-};
-
-
-void D0912_P1();
-
-// 미로문제(몬스터 만남)
-void D0912_P2_1();
-
-/// 미로를 출력하는 함수
-void PrintMaze1(int PlayerX, int PlayerY);
-
-/// 플레이어의 시작위치를 받아오는 함수
-void FindStartPosition1(int& OutStartX, int& OutStartY);
-
-/// 플레이어의 현재 위치에서 가능한 이동 경로를 출력하고 모든 경로를 합친 비트 플레그를 반환합니다.
-int PrintAvailableMoves1(int PlayerX, int PlayerY);
-
-/// 해당위치가 벽인지 확인하는 함수
-bool IsWall1(int X, int Y);
-
-/// 해당위치가 도착점인지 확인하는 함수
-bool IsEnd1(int X, int Y);
-
-/// 입력처리를 하는 함수, 최종적으로 결정된 이동 방향 리턴
-MoveDirection GetMoveInput1(int MoveFlags);
-
-void BattleStart(int& PlayerHP);
-
-int PlayerAttack();
-
-int ComputerAttack();
-
-void HPHeal(int& PlayerHP);
-
+////ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+//enum MazeTile
+//{
+//	Path = 0,
+//	Wall = 1,
+//	Start = 2,
+//	End = 3
+//};
+//
+//enum MoveDirection
+//{
+//	DirNone = 0,
+//	DirUp = 1 << 0,
+//	DirDown = 1 << 1,
+//	DirLeft = 1 << 2,
+//	DirRight = 1 << 3
+//};
+//
+//
+//const int MazeHeight = 10;
+//const int MazeWidth = 20;
+//
+//const int Maze[MazeHeight][MazeWidth] =
+//{
+//	{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
+//	{1,2,0,0,0,1,0,0,0,0,1,0,0,1,0,0,0,1,0,1},
+//	{1,1,1,1,0,1,0,1,1,0,1,0,1,1,0,1,0,1,0,1},
+//	{1,0,0,1,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,1},
+//	{1,0,1,1,1,1,0,1,1,1,0,1,1,1,0,1,1,1,0,1},
+//	{1,0,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0,1},
+//	{1,1,1,1,0,1,1,1,0,1,1,1,0,1,1,1,0,1,1,1},
+//	{1,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,3,1},
+//	{1,0,1,1,1,1,0,1,1,1,0,1,1,1,0,1,1,1,0,1},
+//	{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}
+//};
+//
+//
+//void D0912_P1();
+//
+//// 미로문제(몬스터 만남)
+//void D0912_P2_1();
+//
+///// 미로를 출력하는 함수
+//void PrintMaze1(int PlayerX, int PlayerY);
+//
+///// 플레이어의 시작위치를 받아오는 함수
+//void FindStartPosition1(int& OutStartX, int& OutStartY);
+//
+///// 플레이어의 현재 위치에서 가능한 이동 경로를 출력하고 모든 경로를 합친 비트 플레그를 반환합니다.
+//int PrintAvailableMoves1(int PlayerX, int PlayerY);
+//
+///// 해당위치가 벽인지 확인하는 함수
+//bool IsWall1(int X, int Y);
+//
+///// 해당위치가 도착점인지 확인하는 함수
+//bool IsEnd1(int X, int Y);
+//
+///// 입력처리를 하는 함수, 최종적으로 결정된 이동 방향 리턴
+//MoveDirection GetMoveInput1(int MoveFlags);
+//
+//void BattleStart(int& PlayerHP);
+//
+//int PlayerAttack();
+//
+//int ComputerAttack();
+//
+//void HPHeal(int& PlayerHP);
+//
 
 //ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
-struct MazePosition
-{
-	int x = 0;
-	int y = 0;
+//struct MazePosition
+//{
+//	int x = 0;
+//	int y = 0;
+//
+//	MazePosition(){}
+//	MazePosition(int i, int j)
+//	{
+//		x = i;
+//		y = j;
+//	}
+//};
 
-	MazePosition(){}
-	MazePosition(int i, int j)
-	{
-		x = i;
-		y = j;
-	}
-};
-
-struct Player
-{
-	MazePosition pos;
-	int HP = 100;
-
-	Player(int StartX, int StartY, int HPValue)
-	{
-		pos.x = StartX;
-		pos.y = StartY;
-		HP = HPValue;
-	}
-};
-
-// 미로문제(구조체 활용)
-void D0912_P2_2();
-
-/// 미로를 출력하는 함수
-void PrintMaze2(int PlayerX, int PlayerY);
-
-/// 플레이어의 시작위치를 받아오는 함수
-void FindStartPosition2(int& OutStartX, int& OutStartY);
-
-/// 플레이어의 현재 위치에서 가능한 이동 경로를 출력하고 모든 경로를 합친 비트 플레그를 반환합니다.
-int PrintAvailableMoves2(int PlayerX, int PlayerY);
-
-/// 해당위치가 벽인지 확인하는 함수
-bool IsWall2(int X, int Y);
-
-/// 해당위치가 도착점인지 확인하는 함수
-bool IsEnd2(int X, int Y);
-
-/// 입력처리를 하는 함수, 최종적으로 결정된 이동 방향 리턴
-MoveDirection GetMoveInput2(int MoveFlags);
-
-void BattleStart2(Player& Jongmin);
-
-int PlayerAttack2();
-
-int ComputerAttack2();
-
-void HPHeal2(int& PlayerHP);
+//struct Player
+//{
+//	MazePosition pos;
+//	int HP = 100;
+//
+//	Player(int StartX, int StartY, int HPValue)
+//	{
+//		pos.x = StartX;
+//		pos.y = StartY;
+//		HP = HPValue;
+//	}
+//};
+//
+//// 미로문제(구조체 활용)
+//void D0912_P2_2();
+//
+///// 미로를 출력하는 함수
+//void PrintMaze2(int PlayerX, int PlayerY);
+//
+///// 플레이어의 시작위치를 받아오는 함수
+//void FindStartPosition2(int& OutStartX, int& OutStartY);
+//
+///// 플레이어의 현재 위치에서 가능한 이동 경로를 출력하고 모든 경로를 합친 비트 플레그를 반환합니다.
+//int PrintAvailableMoves2(int PlayerX, int PlayerY);
+//
+///// 해당위치가 벽인지 확인하는 함수
+//bool IsWall2(int X, int Y);
+//
+///// 해당위치가 도착점인지 확인하는 함수
+//bool IsEnd2(int X, int Y);
+//
+///// 입력처리를 하는 함수, 최종적으로 결정된 이동 방향 리턴
+//MoveDirection GetMoveInput2(int MoveFlags);
+//
+//void BattleStart2(Player& Jongmin);
+//
+//int PlayerAttack2();
+//
+//int ComputerAttack2();
+//
+//void HPHeal2(int& PlayerHP);

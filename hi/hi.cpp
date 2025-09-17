@@ -20,17 +20,25 @@
 #include "D0916.h"
 #include "D0917.h"
 #include "Position.h"
+#include <stdint.h>
+#include "MazeEscape.h"
+#include "PlayerData.h"
+#include "EnemyData.h"
+#include "Monster.h"
+#include "Player.h"
 
 int main() // 앤트리 포인트(코드가 시작되는곳) / main함수는 반드시 하나만 있어야함
 {
 	//Day0916 day0916;
 	//day0916.TestAnimal();
 
-	D0917 day0917;
+	//D0917 day0917;
 	//day0917.TestPolymorphism();
 	//day0917.TestVirtualFunction();
 	//day0917.TestPractice1();
-	day0917.TestAbstractClass();
+	//day0917.TestAbstractClass();
 	
+	MazeEscape_Start();
+
 	return 0;
 }

@@ -1,24 +1,20 @@
 #pragma once
-#include<string>
-
-class Monster
+#include "Actor.h"
+class Monster : public Actor
 {
 public:
-	inline const std::string& GetName() const { return Name; }
-	inline const float GetHealth() const { return Health; }
-	inline const float GetAttackPower() const { return AttackPower; }
-
-	Monster() = default;
-	Monster(std::string InName)
-		: Name(InName)
+	Monster()
+		:Actor("∏ÛΩ∫≈Õ", 30.0f, 5.0f) {}
+	Monster(const char* InName)
+		:Actor(InName, 30.0f, 5.0f) {}
+	Monster(const char* InName, float InHealth, float InAttackPower)
+		: Actor(InName, InHealth, InAttackPower)
 	{
 	}
 
-	float Attack();
+	inline int GetDropGold() const { return DropGold; }
 
 protected:
-	std::string Name;
-	float Health = 100.0f;
-	float AttackPower = 10.0f;
+	int DropGold = 10;
 };
 

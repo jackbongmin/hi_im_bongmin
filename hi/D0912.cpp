@@ -162,567 +162,567 @@ void D0912_P1()
 
 // ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 
-void D0912_P2_1()
-{
-	int PlayerX = 0;
-	int PlayerY = 0;
-	int PlayerHP = 100;
-	
-	FindStartPosition1(PlayerX, PlayerY);
-
-	srand(time(0));
-
-	printf("~~ 미로 탈출 게임 ~~\n");
-
-	while (true)
-	{		
-		PrintMaze1(PlayerX, PlayerY);
-
-		if (IsEnd1(PlayerX, PlayerY))
-		{
-			printf("축하합니다! 미로를 탈출했습니다!\n");
-			break;
-		}
-
-		int MoveFlags = PrintAvailableMoves1(PlayerX, PlayerY);
-		MoveDirection Direction = GetMoveInput1(MoveFlags);
-		switch (Direction)
-		{
-		case DirUp:
-			PlayerY--;
-			break;
-		case DirDown:
-			PlayerY++;
-			break;
-		case DirLeft:
-			PlayerX--;
-			break;
-		case DirRight:
-			PlayerX++;
-			break;
-		case DirNone:
-		default:
-			// 있을 수 없음
-			break;
-		}
-
-		int DoEvent = rand() % 100;
-		if (DoEvent < 20)
-		{
-			printf("몬스터를 만났습니다.\n\n");
-			BattleStart(PlayerHP);
-		}
-		else if (DoEvent < 30)
-		{
-			printf("HP가 회복되었습니.\n\n");
-			HPHeal(PlayerHP);
-		}
-		else
-		{
-			printf("아무일도 일어나지 않았다.\n\n");
-		}
-		if (PlayerHP <= 0)
-		{
-			break;
-		}
-	}
-}
-
-
-// 미로를 출력하는 함수
-void PrintMaze1(int PlayerX, int PlayerY)
-{
-	for (int y = 0; y < MazeHeight; y++)
-	{
-		for (int x = 0; x < MazeWidth; x++)
-		{
-			if (PlayerX == x && PlayerY == y)
-			{
-				printf("P ");
-			}
-			else if (Maze[y][x] == Wall)
-			{
-				printf("# ");
-			}
-			else if (Maze[y][x] == Path)
-			{
-				printf(". ");
-			}
-			else if (Maze[y][x] == Start)
-			{
-				printf("S ");
-			}
-			else if (Maze[y][x] == End)
-			{
-				printf("E ");
-			}
-			else
-			{
-				// 절대 들어오면 안되는 곳 == 맵 데이터가 잘못된 것
-			}
-		}
-		printf("\n");
-	}
-
-
-}
-
-// 플레이어 시작위치를 받아오는 함수
-void FindStartPosition1(int& OutStartX, int& OutStartY)
-{
-	for (int y = 0; y < MazeHeight; y++)
-	{
-		for (int x = 0; x < MazeWidth; x++)
-		{
-			if (Maze[y][x] == Start)
-			{
-				OutStartX = x;
-				OutStartY = y;
-				return;
-			}
-		}
-	}
-	OutStartX = 0;
-	OutStartY = 0;
-}
-
-// 플레이어의 현재 위치에서 가능한 이동 경로를 출력하고 모든 경로를 합친 비트 플레그를 반환합니다.
-int PrintAvailableMoves1(int PlayerX, int PlayerY)
-{
-	int MoveFlags = DirNone;
-
-	printf("이동할 수 있는 방향을 선택하세요 (w:위 a:왼쪽 s:아래쪽 d:오른쪽):\n");
-	if (!IsWall1(PlayerX, PlayerY - 1))
-	{
-		printf("W(↑) ");
-		MoveFlags |= DirUp;
-	}
-	if (!IsWall1(PlayerX, PlayerY + 1))
-	{
-		printf("S(↓) ");
-		MoveFlags |= DirDown;
-	}
-	if (!IsWall1(PlayerX - 1, PlayerY))
-	{
-		printf("A(←) ");
-		MoveFlags |= DirLeft;
-	}
-	if (!IsWall1(PlayerX + 1, PlayerY))
-	{
-		printf("D(→) ");
-		MoveFlags |= DirRight;
-	}
-	printf("\n");
-
-	return MoveFlags;
-
-}
-
-// 해당위치가 벽인지 확인하는 함수
-bool IsWall1(int X, int Y)
-{
-	bool isWall = false;
-	if (Y < 0 || Y >= MazeHeight ||
-		X < 0 || X >= MazeWidth ||
-		Maze[Y][X] == Wall)
-		isWall = true;
-	return isWall;
-}
-
-// 해당위치가 도착점인지 확인하는 함수
-bool IsEnd1(int X, int Y)
-{
-	return Maze[Y][X] == End;
-}
-
-// 입력처리를 하는 함수, 최종적으로 결정된 이동 방향 리턴
-MoveDirection GetMoveInput1(int MoveFlags)
-{
-	char InputChar = 0;
-	MoveDirection Direction = DirNone;
-
-	while (true)
-	{
-		printf("방향을 입력하세요 : ");
-		std::cin >> InputChar;
-		printf("\n");
-
-		if ((InputChar == 'w' || InputChar == 'W')
-			&& (MoveFlags & DirUp) /*!= 0*/)
-		{
-			Direction = DirUp;
-			break;
-		}
-		if ((InputChar == 's' || InputChar == 'S')
-			&& (MoveFlags & DirDown) /*!= 0*/)
-		{
-			Direction = DirDown;
-			break;
-		}
-		if ((InputChar == 'a' || InputChar == 'A')
-			&& (MoveFlags & DirLeft) /*!= 0*/)
-		{
-			Direction = DirLeft;
-			break;
-		}
-		if ((InputChar == 'd' || InputChar == 'D')
-			&& (MoveFlags & DirRight) /*!= 0*/)
-		{
-			Direction = DirRight;
-			break;
-		}
-
-		printf("잘못된 입력입니다. 이동할 수 있는 방향 중에서 선택하세요.\n");
-	}
-
-	return Direction;
-
-}
-
-void BattleStart(int& PlayerHP)
-{
-	int ComputerHP = 50;
-	printf("전투를 시작합니다.\n\n");
-
-	while (PlayerHP > 0 && ComputerHP > 0)
-	{
-		printf("플레이어가 선제 공격합니다.\n\n");
-		int Damage1 = PlayerAttack();
-		printf("%d 데미지!\n", Damage1);
-		ComputerHP -= Damage1;
-
-		printf("플레이어 HP : [%d] / 몬스터 HP : [%d]\n\n", PlayerHP, ComputerHP);
-
-		if (ComputerHP <= 0)
-		{
-			printf("※ 승   리 ※\n몬스터를 처치했습니다!\n\n");
-			break;
-		}
-
-		printf("몬스터가 반격합니다.\n\n");
-		int Damage2 = ComputerAttack();
-		printf("%d 데미지!\n", Damage2);
-		PlayerHP -= Damage2;
-
-		printf("플레이어 HP : [%d] / 몬스터 HP : [%d]\n\n", PlayerHP, ComputerHP);
-
-		if (PlayerHP <= 0)
-		{
-			printf("※ 게 임 오 버 ※\n플레이어가 사망했습니다.\n\n");
-			break;
-		}
-	}
-}
-
-int PlayerAttack()
-{
-	int Damage = rand() % 11 + 5;
-	if (rand() % 10 == 0)
-	{
-		Damage *= 2;
-		printf("크리티컬 히트!\n");
-	}
-		return Damage;
-}
-
-int ComputerAttack()
-{
-	int Damage = rand() % 11 + 5;
-	if (rand() % 10 == 0)
-	{
-		Damage *= 2;
-		printf("크리티컬 히트!\n");
-	}
-		return Damage;
-}
-
-void HPHeal(int& PlayerHP)
-{
-	PlayerHP = 100;
-}
-
-
+//void D0912_P2_1()
+//{
+//	int PlayerX = 0;
+//	int PlayerY = 0;
+//	int PlayerHP = 100;
+//	
+//	FindStartPosition1(PlayerX, PlayerY);
+//
+//	srand(time(0));
+//
+//	printf("~~ 미로 탈출 게임 ~~\n");
+//
+//	while (true)
+//	{		
+//		PrintMaze1(PlayerX, PlayerY);
+//
+//		if (IsEnd1(PlayerX, PlayerY))
+//		{
+//			printf("축하합니다! 미로를 탈출했습니다!\n");
+//			break;
+//		}
+//
+//		int MoveFlags = PrintAvailableMoves1(PlayerX, PlayerY);
+//		MoveDirection Direction = GetMoveInput1(MoveFlags);
+//		switch (Direction)
+//		{
+//		case DirUp:
+//			PlayerY--;
+//			break;
+//		case DirDown:
+//			PlayerY++;
+//			break;
+//		case DirLeft:
+//			PlayerX--;
+//			break;
+//		case DirRight:
+//			PlayerX++;
+//			break;
+//		case DirNone:
+//		default:
+//			// 있을 수 없음
+//			break;
+//		}
+//
+//		int DoEvent = rand() % 100;
+//		if (DoEvent < 20)
+//		{
+//			printf("몬스터를 만났습니다.\n\n");
+//			BattleStart(PlayerHP);
+//		}
+//		else if (DoEvent < 30)
+//		{
+//			printf("HP가 회복되었습니.\n\n");
+//			HPHeal(PlayerHP);
+//		}
+//		else
+//		{
+//			printf("아무일도 일어나지 않았다.\n\n");
+//		}
+//		if (PlayerHP <= 0)
+//		{
+//			break;
+//		}
+//	}
+//}
+//
+//
+//// 미로를 출력하는 함수
+//void PrintMaze1(int PlayerX, int PlayerY)
+//{
+//	for (int y = 0; y < MazeHeight; y++)
+//	{
+//		for (int x = 0; x < MazeWidth; x++)
+//		{
+//			if (PlayerX == x && PlayerY == y)
+//			{
+//				printf("P ");
+//			}
+//			else if (Maze[y][x] == Wall)
+//			{
+//				printf("# ");
+//			}
+//			else if (Maze[y][x] == Path)
+//			{
+//				printf(". ");
+//			}
+//			else if (Maze[y][x] == Start)
+//			{
+//				printf("S ");
+//			}
+//			else if (Maze[y][x] == End)
+//			{
+//				printf("E ");
+//			}
+//			else
+//			{
+//				// 절대 들어오면 안되는 곳 == 맵 데이터가 잘못된 것
+//			}
+//		}
+//		printf("\n");
+//	}
+//
+//
+//}
+//
+//// 플레이어 시작위치를 받아오는 함수
+//void FindStartPosition1(int& OutStartX, int& OutStartY)
+//{
+//	for (int y = 0; y < MazeHeight; y++)
+//	{
+//		for (int x = 0; x < MazeWidth; x++)
+//		{
+//			if (Maze[y][x] == Start)
+//			{
+//				OutStartX = x;
+//				OutStartY = y;
+//				return;
+//			}
+//		}
+//	}
+//	OutStartX = 0;
+//	OutStartY = 0;
+//}
+//
+//// 플레이어의 현재 위치에서 가능한 이동 경로를 출력하고 모든 경로를 합친 비트 플레그를 반환합니다.
+//int PrintAvailableMoves1(int PlayerX, int PlayerY)
+//{
+//	int MoveFlags = DirNone;
+//
+//	printf("이동할 수 있는 방향을 선택하세요 (w:위 a:왼쪽 s:아래쪽 d:오른쪽):\n");
+//	if (!IsWall1(PlayerX, PlayerY - 1))
+//	{
+//		printf("W(↑) ");
+//		MoveFlags |= DirUp;
+//	}
+//	if (!IsWall1(PlayerX, PlayerY + 1))
+//	{
+//		printf("S(↓) ");
+//		MoveFlags |= DirDown;
+//	}
+//	if (!IsWall1(PlayerX - 1, PlayerY))
+//	{
+//		printf("A(←) ");
+//		MoveFlags |= DirLeft;
+//	}
+//	if (!IsWall1(PlayerX + 1, PlayerY))
+//	{
+//		printf("D(→) ");
+//		MoveFlags |= DirRight;
+//	}
+//	printf("\n");
+//
+//	return MoveFlags;
+//
+//}
+//
+//// 해당위치가 벽인지 확인하는 함수
+//bool IsWall1(int X, int Y)
+//{
+//	bool isWall = false;
+//	if (Y < 0 || Y >= MazeHeight ||
+//		X < 0 || X >= MazeWidth ||
+//		Maze[Y][X] == Wall)
+//		isWall = true;
+//	return isWall;
+//}
+//
+//// 해당위치가 도착점인지 확인하는 함수
+//bool IsEnd1(int X, int Y)
+//{
+//	return Maze[Y][X] == End;
+//}
+//
+//// 입력처리를 하는 함수, 최종적으로 결정된 이동 방향 리턴
+//MoveDirection GetMoveInput1(int MoveFlags)
+//{
+//	char InputChar = 0;
+//	MoveDirection Direction = DirNone;
+//
+//	while (true)
+//	{
+//		printf("방향을 입력하세요 : ");
+//		std::cin >> InputChar;
+//		printf("\n");
+//
+//		if ((InputChar == 'w' || InputChar == 'W')
+//			&& (MoveFlags & DirUp) /*!= 0*/)
+//		{
+//			Direction = DirUp;
+//			break;
+//		}
+//		if ((InputChar == 's' || InputChar == 'S')
+//			&& (MoveFlags & DirDown) /*!= 0*/)
+//		{
+//			Direction = DirDown;
+//			break;
+//		}
+//		if ((InputChar == 'a' || InputChar == 'A')
+//			&& (MoveFlags & DirLeft) /*!= 0*/)
+//		{
+//			Direction = DirLeft;
+//			break;
+//		}
+//		if ((InputChar == 'd' || InputChar == 'D')
+//			&& (MoveFlags & DirRight) /*!= 0*/)
+//		{
+//			Direction = DirRight;
+//			break;
+//		}
+//
+//		printf("잘못된 입력입니다. 이동할 수 있는 방향 중에서 선택하세요.\n");
+//	}
+//
+//	return Direction;
+//
+//}
+//
+//void BattleStart(int& PlayerHP)
+//{
+//	int ComputerHP = 50;
+//	printf("전투를 시작합니다.\n\n");
+//
+//	while (PlayerHP > 0 && ComputerHP > 0)
+//	{
+//		printf("플레이어가 선제 공격합니다.\n\n");
+//		int Damage1 = PlayerAttack();
+//		printf("%d 데미지!\n", Damage1);
+//		ComputerHP -= Damage1;
+//
+//		printf("플레이어 HP : [%d] / 몬스터 HP : [%d]\n\n", PlayerHP, ComputerHP);
+//
+//		if (ComputerHP <= 0)
+//		{
+//			printf("※ 승   리 ※\n몬스터를 처치했습니다!\n\n");
+//			break;
+//		}
+//
+//		printf("몬스터가 반격합니다.\n\n");
+//		int Damage2 = ComputerAttack();
+//		printf("%d 데미지!\n", Damage2);
+//		PlayerHP -= Damage2;
+//
+//		printf("플레이어 HP : [%d] / 몬스터 HP : [%d]\n\n", PlayerHP, ComputerHP);
+//
+//		if (PlayerHP <= 0)
+//		{
+//			printf("※ 게 임 오 버 ※\n플레이어가 사망했습니다.\n\n");
+//			break;
+//		}
+//	}
+//}
+//
+//int PlayerAttack()
+//{
+//	int Damage = rand() % 11 + 5;
+//	if (rand() % 10 == 0)
+//	{
+//		Damage *= 2;
+//		printf("크리티컬 히트!\n");
+//	}
+//		return Damage;
+//}
+//
+//int ComputerAttack()
+//{
+//	int Damage = rand() % 11 + 5;
+//	if (rand() % 10 == 0)
+//	{
+//		Damage *= 2;
+//		printf("크리티컬 히트!\n");
+//	}
+//		return Damage;
+//}
+//
+//void HPHeal(int& PlayerHP)
+//{
+//	PlayerHP = 100;
+//}
+//
+//
 
 //ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 
 
 
-void D0912_P2_2()
-{
-	int StartX = 0;
-	int StartY = 0;
-
-	FindStartPosition2(StartX, StartY);
-	Player Jongmin(StartX, StartY, 100);
-
-	srand(time(0));
-
-	printf("~~ 미로 탈출 게임 ~~\n");
-
-	while (true)
-	{
-		PrintMaze2(Jongmin.pos.x, Jongmin.pos.y);
-
-		if (IsEnd2(Jongmin.pos.x, Jongmin.pos.y))
-		{
-			printf("축하합니다! 미로를 탈출했습니다!\n");
-			break;
-		}
-
-		int MoveFlags = PrintAvailableMoves2(Jongmin.pos.x, Jongmin.pos.y);
-		MoveDirection Direction = GetMoveInput2(MoveFlags);
-		switch (Direction)
-		{
-		case DirUp:
-			Jongmin.pos.y--;
-			break;
-		case DirDown:
-			Jongmin.pos.y++;
-			break;
-		case DirLeft:
-			Jongmin.pos.x--;
-			break;
-		case DirRight:
-			Jongmin.pos.x++;
-			break;
-		case DirNone:
-		default:
-			// 있을 수 없음
-			break;
-		}
-
-		int DoEvent = rand() % 100;
-		if (DoEvent < 20)
-		{
-			printf("몬스터를 만났습니다.\n\n");
-			BattleStart2(Jongmin);
-		}
-		else if (DoEvent < 30)
-		{
-			printf("HP가 회복되었습니다.\n\n");
-			HPHeal2(Jongmin.HP);
-		}
-		else
-		{
-			printf("아무일도 일어나지 않았다.\n\n");
-		}
-		if (Jongmin.HP <= 0)
-		{
-			break;
-		}
-	}
-
-}
-
-// 미로를 출력하는 함수
-void PrintMaze2(int PlayerX, int PlayerY)
-{
-	for (int y = 0; y < MazeHeight; y++)
-	{
-		for (int x = 0; x < MazeWidth; x++)
-		{
-			if (PlayerX == x && PlayerY == y)
-			{
-				printf("P ");
-			}
-			else if (Maze[y][x] == Wall)
-			{
-				printf("# ");
-			}
-			else if (Maze[y][x] == Path)
-			{
-				printf(". ");
-			}
-			else if (Maze[y][x] == Start)
-			{
-				printf("S ");
-			}
-			else if (Maze[y][x] == End)
-			{
-				printf("E ");
-			}
-			else
-			{
-				// 절대 들어오면 안되는 곳 == 맵 데이터가 잘못된 것
-			}
-		}
-		printf("\n");
-	}
-
-
-}
-
-// 플레이어 시작위치를 받아오는 함수
-void FindStartPosition2(int& OutStartX, int& OutStartY)
-{
-	for (int y = 0; y < MazeHeight; y++)
-	{
-		for (int x = 0; x < MazeWidth; x++)
-		{
-			if (Maze[y][x] == Start)
-			{
-				OutStartX = x;
-				OutStartY = y;
-				return;
-			}
-		}
-	}
-	OutStartX = 0;
-	OutStartY = 0;
-}
-
-// 플레이어의 현재 위치에서 가능한 이동 경로를 출력하고 모든 경로를 합친 비트 플레그를 반환합니다.
-int PrintAvailableMoves2(int PlayerX, int PlayerY)
-{
-	int MoveFlags = DirNone;
-
-	printf("이동할 수 있는 방향을 선택하세요 (w:위 a:왼쪽 s:아래쪽 d:오른쪽):\n");
-	if (!IsWall2(PlayerX, PlayerY - 1))
-	{
-		printf("W(↑) ");
-		MoveFlags |= DirUp;
-	}
-	if (!IsWall2(PlayerX, PlayerY + 1))
-	{
-		printf("S(↓) ");
-		MoveFlags |= DirDown;
-	}
-	if (!IsWall2(PlayerX - 1, PlayerY))
-	{
-		printf("A(←) ");
-		MoveFlags |= DirLeft;
-	}
-	if (!IsWall2(PlayerX + 1, PlayerY))
-	{
-		printf("D(→) ");
-		MoveFlags |= DirRight;
-	}
-	printf("\n");
-
-	return MoveFlags;
-
-}
-
-// 해당위치가 벽인지 확인하는 함수
-bool IsWall2(int X, int Y)
-{
-	bool isWall = false;
-	if (Y < 0 || Y >= MazeHeight ||
-		X < 0 || X >= MazeWidth ||
-		Maze[Y][X] == Wall)
-		isWall = true;
-	return isWall;
-}
-
-// 해당위치가 도착점인지 확인하는 함수
-bool IsEnd2(int X, int Y)
-{
-	return Maze[Y][X] == End;
-}
-
-// 입력처리를 하는 함수, 최종적으로 결정된 이동 방향 리턴
-MoveDirection GetMoveInput2(int MoveFlags)
-{
-	char InputChar = 0;
-	MoveDirection Direction = DirNone;
-
-	while (true)
-	{
-		printf("방향을 입력하세요 : ");
-		std::cin >> InputChar;
-		printf("\n");
-
-		if ((InputChar == 'w' || InputChar == 'W')
-			&& (MoveFlags & DirUp) /*!= 0*/)
-		{
-			Direction = DirUp;
-			break;
-		}
-		if ((InputChar == 's' || InputChar == 'S')
-			&& (MoveFlags & DirDown) /*!= 0*/)
-		{
-			Direction = DirDown;
-			break;
-		}
-		if ((InputChar == 'a' || InputChar == 'A')
-			&& (MoveFlags & DirLeft) /*!= 0*/)
-		{
-			Direction = DirLeft;
-			break;
-		}
-		if ((InputChar == 'd' || InputChar == 'D')
-			&& (MoveFlags & DirRight) /*!= 0*/)
-		{
-			Direction = DirRight;
-			break;
-		}
-
-		printf("잘못된 입력입니다. 이동할 수 있는 방향 중에서 선택하세요.\n");
-	}
-
-	return Direction;
-
-}
-
-void BattleStart2(Player& Jongmin)
-{
-	int ComputerHP = 50;
-	printf("전투를 시작합니다.\n\n");
-
-	while (Jongmin.HP > 0 && ComputerHP > 0)
-	{
-		printf("플레이어가 선제 공격합니다.\n\n");
-		int Damage1 = PlayerAttack2();
-		printf("%d 데미지!\n", Damage1);
-		ComputerHP -= Damage1;
-
-		printf("플레이어 HP : [%d] / 몬스터 HP : [%d]\n\n", Jongmin.HP, ComputerHP);
-
-		if (ComputerHP <= 0)
-		{
-			printf("※ 승   리 ※\n몬스터를 처치했습니다!\n\n");
-			break;
-		}
-
-		printf("몬스터가 반격합니다.\n\n");
-		int Damage2 = ComputerAttack2();
-		printf("%d 데미지!\n", Damage2);
-		Jongmin.HP -= Damage2;
-
-		printf("플레이어 HP : [%d] / 몬스터 HP : [%d]\n\n", Jongmin.HP, ComputerHP);
-
-		if (Jongmin.HP <= 0)
-		{
-			printf("※ 게 임 오 버 ※\n플레이어가 사망했습니다.\n\n");
-			break;
-		}
-	}
-}
-
-int PlayerAttack2()
-{
-	int Damage = rand() % 11 + 5;
-	if (rand() % 10 == 0)
-	{
-		Damage *= 2;
-		printf("크리티컬 히트!\n");
-	}
-	return Damage;
-}
-
-int ComputerAttack2()
-{
-	int Damage = rand() % 11 + 5;
-
-	if (rand() % 10 == 0)
-	{
-		Damage *= 2;
-		printf("크리티컬 히트!\n");
-	}
-	return Damage;
-}
-
-void HPHeal2(int& PlayerHP)
-{
-	PlayerHP = 100;
-}
+//void D0912_P2_2()
+//{
+//	int StartX = 0;
+//	int StartY = 0;
+//
+//	FindStartPosition2(StartX, StartY);
+//	Player Jongmin(StartX, StartY, 100);
+//
+//	srand(time(0));
+//
+//	printf("~~ 미로 탈출 게임 ~~\n");
+//
+//	while (true)
+//	{
+//		PrintMaze2(Jongmin.pos.x, Jongmin.pos.y);
+//
+//		if (IsEnd2(Jongmin.pos.x, Jongmin.pos.y))
+//		{
+//			printf("축하합니다! 미로를 탈출했습니다!\n");
+//			break;
+//		}
+//
+//		int MoveFlags = PrintAvailableMoves2(Jongmin.pos.x, Jongmin.pos.y);
+//		MoveDirection Direction = GetMoveInput2(MoveFlags);
+//		switch (Direction)
+//		{
+//		case DirUp:
+//			Jongmin.pos.y--;
+//			break;
+//		case DirDown:
+//			Jongmin.pos.y++;
+//			break;
+//		case DirLeft:
+//			Jongmin.pos.x--;
+//			break;
+//		case DirRight:
+//			Jongmin.pos.x++;
+//			break;
+//		case DirNone:
+//		default:
+//			// 있을 수 없음
+//			break;
+//		}
+//
+//		int DoEvent = rand() % 100;
+//		if (DoEvent < 20)
+//		{
+//			printf("몬스터를 만났습니다.\n\n");
+//			BattleStart2(Jongmin);
+//		}
+//		else if (DoEvent < 30)
+//		{
+//			printf("HP가 회복되었습니다.\n\n");
+//			HPHeal2(Jongmin.HP);
+//		}
+//		else
+//		{
+//			printf("아무일도 일어나지 않았다.\n\n");
+//		}
+//		if (Jongmin.HP <= 0)
+//		{
+//			break;
+//		}
+//	}
+//
+////}
+//
+//// 미로를 출력하는 함수
+//void PrintMaze2(int PlayerX, int PlayerY)
+//{
+//	for (int y = 0; y < MazeHeight; y++)
+//	{
+//		for (int x = 0; x < MazeWidth; x++)
+//		{
+//			if (PlayerX == x && PlayerY == y)
+//			{
+//				printf("P ");
+//			}
+//			else if (Maze[y][x] == Wall)
+//			{
+//				printf("# ");
+//			}
+//			else if (Maze[y][x] == Path)
+//			{
+//				printf(". ");
+//			}
+//			else if (Maze[y][x] == Start)
+//			{
+//				printf("S ");
+//			}
+//			else if (Maze[y][x] == End)
+//			{
+//				printf("E ");
+//			}
+//			else
+//			{
+//				// 절대 들어오면 안되는 곳 == 맵 데이터가 잘못된 것
+//			}
+//		}
+//		printf("\n");
+//	}
+//
+//
+//}
+//
+//// 플레이어 시작위치를 받아오는 함수
+//void FindStartPosition2(int& OutStartX, int& OutStartY)
+//{
+//	for (int y = 0; y < MazeHeight; y++)
+//	{
+//		for (int x = 0; x < MazeWidth; x++)
+//		{
+//			if (Maze[y][x] == Start)
+//			{
+//				OutStartX = x;
+//				OutStartY = y;
+//				return;
+//			}
+//		}
+//	}
+//	OutStartX = 0;
+//	OutStartY = 0;
+//}
+//
+//// 플레이어의 현재 위치에서 가능한 이동 경로를 출력하고 모든 경로를 합친 비트 플레그를 반환합니다.
+//int PrintAvailableMoves2(int PlayerX, int PlayerY)
+//{
+//	int MoveFlags = DirNone;
+//
+//	printf("이동할 수 있는 방향을 선택하세요 (w:위 a:왼쪽 s:아래쪽 d:오른쪽):\n");
+//	if (!IsWall2(PlayerX, PlayerY - 1))
+//	{
+//		printf("W(↑) ");
+//		MoveFlags |= DirUp;
+//	}
+//	if (!IsWall2(PlayerX, PlayerY + 1))
+//	{
+//		printf("S(↓) ");
+//		MoveFlags |= DirDown;
+//	}
+//	if (!IsWall2(PlayerX - 1, PlayerY))
+//	{
+//		printf("A(←) ");
+//		MoveFlags |= DirLeft;
+//	}
+//	if (!IsWall2(PlayerX + 1, PlayerY))
+//	{
+//		printf("D(→) ");
+//		MoveFlags |= DirRight;
+//	}
+//	printf("\n");
+//
+//	return MoveFlags;
+//
+//}
+//
+//// 해당위치가 벽인지 확인하는 함수
+//bool IsWall2(int X, int Y)
+//{
+//	bool isWall = false;
+//	if (Y < 0 || Y >= MazeHeight ||
+//		X < 0 || X >= MazeWidth ||
+//		Maze[Y][X] == Wall)
+//		isWall = true;
+//	return isWall;
+//}
+//
+//// 해당위치가 도착점인지 확인하는 함수
+//bool IsEnd2(int X, int Y)
+//{
+//	return Maze[Y][X] == End;
+//}
+//
+//// 입력처리를 하는 함수, 최종적으로 결정된 이동 방향 리턴
+//MoveDirection GetMoveInput2(int MoveFlags)
+//{
+//	char InputChar = 0;
+//	MoveDirection Direction = DirNone;
+//
+//	while (true)
+//	{
+//		printf("방향을 입력하세요 : ");
+//		std::cin >> InputChar;
+//		printf("\n");
+//
+//		if ((InputChar == 'w' || InputChar == 'W')
+//			&& (MoveFlags & DirUp) /*!= 0*/)
+//		{
+//			Direction = DirUp;
+//			break;
+//		}
+//		if ((InputChar == 's' || InputChar == 'S')
+//			&& (MoveFlags & DirDown) /*!= 0*/)
+//		{
+//			Direction = DirDown;
+//			break;
+//		}
+//		if ((InputChar == 'a' || InputChar == 'A')
+//			&& (MoveFlags & DirLeft) /*!= 0*/)
+//		{
+//			Direction = DirLeft;
+//			break;
+//		}
+//		if ((InputChar == 'd' || InputChar == 'D')
+//			&& (MoveFlags & DirRight) /*!= 0*/)
+//		{
+//			Direction = DirRight;
+//			break;
+//		}
+//
+//		printf("잘못된 입력입니다. 이동할 수 있는 방향 중에서 선택하세요.\n");
+//	}
+//
+//	return Direction;
+//
+//}
+//
+//void BattleStart2(Player& Jongmin)
+//{
+//	int ComputerHP = 50;
+//	printf("전투를 시작합니다.\n\n");
+//
+//	while (Jongmin.HP > 0 && ComputerHP > 0)
+//	{
+//		printf("플레이어가 선제 공격합니다.\n\n");
+//		int Damage1 = PlayerAttack2();
+//		printf("%d 데미지!\n", Damage1);
+//		ComputerHP -= Damage1;
+//
+//		printf("플레이어 HP : [%d] / 몬스터 HP : [%d]\n\n", Jongmin.HP, ComputerHP);
+//
+//		if (ComputerHP <= 0)
+//		{
+//			printf("※ 승   리 ※\n몬스터를 처치했습니다!\n\n");
+//			break;
+//		}
+//
+//		printf("몬스터가 반격합니다.\n\n");
+//		int Damage2 = ComputerAttack2();
+//		printf("%d 데미지!\n", Damage2);
+//		Jongmin.HP -= Damage2;
+//
+//		printf("플레이어 HP : [%d] / 몬스터 HP : [%d]\n\n", Jongmin.HP, ComputerHP);
+//
+//		if (Jongmin.HP <= 0)
+//		{
+//			printf("※ 게 임 오 버 ※\n플레이어가 사망했습니다.\n\n");
+//			break;
+//		}
+//	}
+//}
+//
+//int PlayerAttack2()
+//{
+//	int Damage = rand() % 11 + 5;
+//	if (rand() % 10 == 0)
+//	{
+//		Damage *= 2;
+//		printf("크리티컬 히트!\n");
+//	}
+//	return Damage;
+//}
+//
+//int ComputerAttack2()
+//{
+//	int Damage = rand() % 11 + 5;
+//
+//	if (rand() % 10 == 0)
+//	{
+//		Damage *= 2;
+//		printf("크리티컬 히트!\n");
+//	}
+//	return Damage;
+//}
+//
+//void HPHeal2(int& PlayerHP)
+//{
+//	PlayerHP = 100;
+//}

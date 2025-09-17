@@ -9,7 +9,7 @@ public:
 
 public:
 	Orc() = default;
-	Orc(std::string InName)
+	Orc(const char* InName)
 		: Monster(InName)
 	{
 		Health = 150.0f;

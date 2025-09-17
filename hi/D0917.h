@@ -1,4 +1,6 @@
 #pragma once
+#include <type_traits>
+
 class D0917
 {
 public:
@@ -28,6 +30,11 @@ enum class PlayerState : uint8_t
 	Flying = 1 << 6
 };
 
+// PlayerState의 원래 타입을 StateType이라고 하자고 정하는 것
+// using StateType = uint8_t;
+// #include <type_traits> 필요
+using StateType = std::underlying_type_t<PlayerState>;
+
 inline PlayerState operator|(PlayerState Left, PlayerState Right)
 {
 	return static_cast<PlayerState>(static_cast<int>(Left) | static_cast<int>(Right));
@@ -37,3 +44,20 @@ inline PlayerState operator&(PlayerState Left, PlayerState Right)
 {
 	return static_cast<PlayerState>(static_cast<int>(Left) & static_cast<int>(Right));
 };
+
+inline PlayerState operator~(PlayerState Value)
+{
+	return static_cast<PlayerState>(~static_cast<int>(Value));
+}
+
+inline PlayerState& operator|=(PlayerState& Left, PlayerState Right)
+{
+	Left = Left | Right;
+	return Left;
+}
+
+inline PlayerState& operator&=(PlayerState& Left, PlayerState Right)
+{
+	Left = Left & Right;
+	return Left;
+}

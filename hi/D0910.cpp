@@ -273,17 +273,17 @@ void D0910_String()
 
 
 
-	// 함수로 풀이시
-	char Target = 'e';
-	int Index = FindCharIndex(HelloString, Target);
-	if (Index >= 0)
-	{
-		printf("[%c]는 %d번 인덱스에 있습니다.\n", Target, Index);
-	}
-	else
-	{
-		printf("[%c]는 찾을 수 없습니다.\n", Target);
-	}
+	//// 함수로 풀이시
+	//char Target = 'e';
+	//int Index = FindCharIndex(HelloString, Target);
+	//if (Index >= 0)
+	//{
+	//	printf("[%c]는 %d번 인덱스에 있습니다.\n", Target, Index);
+	//}
+	//else
+	//{
+	//	printf("[%c]는 찾을 수 없습니다.\n", Target);
+	//}
 
 	/*
 	 실습
@@ -352,44 +352,44 @@ void D0910_String()
 	printf("Source5 : {%s}\n", Source5);
 	printf("MyAtoI : %d\n\n", MyAtoI(Source5));
 
-	/*
-	실습
-	6. 문자열을 입력받아 실수를 리턴하는 함수 만들기
-		float MyAtoF(const char* Source);
-	*/
+	///*
+	//실습
+	//6. 문자열을 입력받아 실수를 리턴하는 함수 만들기
+	//	float MyAtoF(const char* Source);
+	//*/
 
-	printf("실습6\n");
-	char Source6[] = "123.456";
-	MyAtoF(Source6);
-	printf("Source6 : {%s}\n", Source6);
-	printf("MyAtoF : %d\n\n", MyAtoI(Source6));
-	
+	//printf("실습6\n");
+	//char Source6[] = "123.456";
+	//MyAtoF(Source6);
+	//printf("Source6 : {%s}\n", Source6);
+	//printf("MyAtoF : %d\n\n", MyAtoI(Source6));
+	//
 
 
 }
 
 
-// 함수로 풀이시
-int FindCharIndex(const char* TargetString, const char TargetCharacter)
-{
-	int Index = 0;
-	bool IsFind = false;
-	while (TargetString[Index] != '\0')
-	{
-		if (TargetString[Index] == TargetCharacter)
-		{
-			IsFind = true;
-			break;
-		}
-		Index++;
-	}
-
-	if (!IsFind)
-	{
-		Index = -1;
-	}
-	return Index;
-}
+//// 함수로 풀이시
+//int FindCharIndex(const char* TargetString, const char TargetCharacter)
+//{
+//	int Index = 0;
+//	bool IsFind = false;
+//	while (TargetString[Index] != '\0')
+//	{
+//		if (TargetString[Index] == TargetCharacter)
+//		{
+//			IsFind = true;
+//			break;
+//		}
+//		Index++;
+//	}
+//
+//	if (!IsFind)
+//	{
+//		Index = -1;
+//	}
+//	return Index;
+//}
 
 // 실습1
 int MyStringLenth(const char* Target)
@@ -477,38 +477,38 @@ int MyAtoI(const char* Source5)
 	return Sign * Result;
 }
 
-//실습6
-float MyAtoF(const char* Source6)
-{
-	float Result = 0.0f;
-	int PointPosition = FindCharIndex(Source6, '.');
-	if (PointPosition >= 0)
-	{
-		// 점을 찾았다.
-		char Integral[32];
-		MyStringCopy(Source6, Integral);
-		Integral[PointPosition] = '\0';
-		Result = static_cast<float>(MyAtoI(Integral));
-
-		char Fractional[32];
-		float frac = 0.1f;
-		MyStringCopy(Source6 + PointPosition + 1, Fractional);
-		int Index = 0;
-		while (Fractional[Index] != '\0')
-		{
-			Result += (Fractional[Index] - '0') * frac;
-			Index++;
-			frac *= 0.1f;
-		}
-	}
-	else
-	{
-		// 점을 못찾았다.
-		Result = static_cast<float>(MyAtoI(Source6));
-	}
-
-	return Result;
-}
+////실습6
+//float MyAtoF(const char* Source6)
+//{
+//	float Result = 0.0f;
+//	int PointPosition = FindCharIndex(Source6, '.');
+//	if (PointPosition >= 0)
+//	{
+//		// 점을 찾았다.
+//		char Integral[32];
+//		MyStringCopy(Source6, Integral);
+//		Integral[PointPosition] = '\0';
+//		Result = static_cast<float>(MyAtoI(Integral));
+//
+//		char Fractional[32];
+//		float frac = 0.1f;
+//		MyStringCopy(Source6 + PointPosition + 1, Fractional);
+//		int Index = 0;
+//		while (Fractional[Index] != '\0')
+//		{
+//			Result += (Fractional[Index] - '0') * frac;
+//			Index++;
+//			frac *= 0.1f;
+//		}
+//	}
+//	else
+//	{
+//		// 점을 못찾았다.
+//		Result = static_cast<float>(MyAtoI(Source6));
+//	}
+//
+//	return Result;
+//}
 
 void D0910_Parsing()
 {
@@ -520,21 +520,21 @@ void D0910_Parsing()
 	std::cin.getline(InputString, Size);
 	printf("입력된 문장은 [%s]입니다.\n\n", InputString);
 
-	/*
-	간단실습
-	, 뒤에 있는 영어 알파벳은 모두 대문자이어야 한다.
-	입력문장 예시 : "Hello,World!"
-	출력문장 예시 : "Hello,WOLRD!"
-	*/
+	///*
+	//간단실습
+	//, 뒤에 있는 영어 알파벳은 모두 대문자이어야 한다.
+	//입력문장 예시 : "Hello,World!"
+	//출력문장 예시 : "Hello,WOLRD!"
+	//*/
 
 
-	printf("간단실습\n");
-	printf("문장을 입력하세요 : ");
-	const int Size1 = 32;
-	char InputString1[32];
-	std::cin.getline(InputString1, Size1);
-	SimplerParser(InputString1, ',');
-	printf("입력된 문장은 [%s]입니다.\n\n", InputString1);
+	//printf("간단실습\n");
+	//printf("문장을 입력하세요 : ");
+	//const int Size1 = 32;
+	//char InputString1[32];
+	//std::cin.getline(InputString1, Size1);
+	//SimplerParser(InputString1, ',');
+	//printf("입력된 문장은 [%s]입니다.\n\n", InputString1);
 
 	// #include <direct.h> 추가
 	char Working[256];
@@ -547,21 +547,21 @@ void D0910_Parsing()
 	ReadFile();
 
 }
-
-void SimplerParser(char* Source, const char Delimiter)
-{
-	int CommaIndex = FindCharIndex(Source, Delimiter);
-	char* AfterComma = Source + CommaIndex + 1;
-	int ToUpper = 'a' - 'A';
-	while (*(AfterComma) != '\0')
-	{
-		if (*(AfterComma) >= 'a' && *(AfterComma) <= 'z')
-		{
-			*(AfterComma) -= ToUpper;
-		}
-		AfterComma++;
-	}
-}
+//
+//void SimplerParser(char* Source, const char Delimiter)
+//{
+//	int CommaIndex = FindCharIndex(Source, Delimiter);
+//	char* AfterComma = Source + CommaIndex + 1;
+//	int ToUpper = 'a' - 'A';
+//	while (*(AfterComma) != '\0')
+//	{
+//		if (*(AfterComma) >= 'a' && *(AfterComma) <= 'z')
+//		{
+//			*(AfterComma) -= ToUpper;
+//		}
+//		AfterComma++;
+//	}
+//}
 
 void ReadFile()
 {

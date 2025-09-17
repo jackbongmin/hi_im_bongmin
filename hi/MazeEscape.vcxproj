@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{9a262e33-7872-49f4-bcef-6c935f05d514}</ProjectGuid>
-    <RootNamespace>hi</RootNamespace>
+    <ProjectGuid>{dd848b30-7327-4200-ac2f-b21dcf1dc229}</ProjectGuid>
+    <RootNamespace>MazeEscape</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -124,70 +124,31 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Actor.cpp" />
-    <ClCompile Include="Animal.cpp" />
-    <ClCompile Include="Car.cpp" />
-    <ClCompile Include="D0910.cpp" />
-    <ClCompile Include="D0911.cpp" />
-    <ClCompile Include="D0912.cpp" />
-    <ClCompile Include="D0914.cpp" />
-    <ClCompile Include="D0915.cpp" />
-    <ClCompile Include="D0916.cpp" />
-    <ClCompile Include="D0917.cpp" />
-    <ClCompile Include="Dog.cpp" />
-    <ClCompile Include="Eagle.cpp" />
-    <ClCompile Include="Elephant.cpp" />
     <ClCompile Include="Goblin.cpp" />
-    <ClCompile Include="hi.cpp" />
     <ClCompile Include="MazeEscape.cpp" />
     <ClCompile Include="MazePlayer.cpp" />
-    <ClCompile Include="Monster123.cpp" />
     <ClCompile Include="Monster.cpp" />
+    <ClCompile Include="Monster1.cpp" />
     <ClCompile Include="Orc.cpp" />
     <ClCompile Include="Player.cpp" />
-    <ClCompile Include="Practice.cpp" />
-    <ClCompile Include="SaveData.cpp" />
-    <ClCompile Include="Shape.cpp" />
     <ClCompile Include="Skeleton.cpp" />
     <ClCompile Include="Test.cpp" />
-    <ClCompile Include="TestMath.cpp" />
     <ClCompile Include="Zombie.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Actor.h" />
-    <ClInclude Include="Animal.h" />
-    <ClInclude Include="Car.h" />
-    <ClInclude Include="D0910.h" />
-    <ClInclude Include="D0911.h" />
-    <ClInclude Include="D0912.h" />
-    <ClInclude Include="D0914.h" />
-    <ClInclude Include="D0915.h" />
-    <ClInclude Include="D0916.h" />
-    <ClInclude Include="D0917.h" />
-    <ClInclude Include="Dog.h" />
-    <ClInclude Include="Eagle.h" />
-    <ClInclude Include="Elephant.h" />
     <ClInclude Include="EnemyData.h" />
     <ClInclude Include="Goblin.h" />
-    <ClInclude Include="IBattleable.h" />
-    <ClInclude Include="IcanBattle.h" />
-    <ClInclude Include="IFlyable.h" />
-    <ClInclude Include="ISwimable.h" />
     <ClInclude Include="MazeEscape.h" />
     <ClInclude Include="MazePlayer.h" />
-    <ClInclude Include="Monster123.h" />
     <ClInclude Include="Monster.h" />
+    <ClInclude Include="Monster1.h" />
     <ClInclude Include="Orc.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="PlayerData.h" />
     <ClInclude Include="Position.h" />
-    <ClInclude Include="Position1111.h" />
-    <ClInclude Include="Practice.h" />
-    <ClInclude Include="SaveData.h" />
-    <ClInclude Include="Shape.h" />
     <ClInclude Include="Skeleton.h" />
     <ClInclude Include="Test.h" />
-    <ClInclude Include="TestMath.h" />
-    <ClInclude Include="TestSample.h" />
     <ClInclude Include="Zombie.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

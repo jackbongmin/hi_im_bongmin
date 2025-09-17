@@ -72,7 +72,7 @@ void D0910_p4();
 
 void D0910_String();
 
-int FindCharIndex(const char* TargetString, const char TargetCharacter);
+//int FindCharIndex(const char* TargetString, const char TargetCharacter);
 
 int MyStringLenth(const char* Target);
 
@@ -84,11 +84,11 @@ int MyStringCompare(const char* String1, const char* String2);
 
 int MyAtoI(const char* Source);
 
-float MyAtoF(const char* Source);
+//float MyAtoF(const char* Source);
 
 void D0910_Parsing();
 
-void SimplerParser(char* Source, const char Delimiter);
+//void SimplerParser(char* Source, const char Delimiter);
 
 void ReadFile();
 

@@ -28,24 +28,21 @@
     <Filter Include="리소스 파일\모양">
       <UniqueIdentifier>{0e033b6d-c7b9-4692-974e-ed8b1e5ca4f9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="리소스 파일\Maze">
+      <UniqueIdentifier>{322fea11-e020-4060-8863-b5b9b5b9ad18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="리소스 파일\Maze\객체">
+      <UniqueIdentifier>{2e598ecd-1211-414f-aeb1-9dd3d054e596}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="리소스 파일\잡">
+      <UniqueIdentifier>{2accfd79-cc42-419c-a189-faf161fd1fbb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="hi.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="TestMath.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="SaveData.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Practice.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="D0916.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Car.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="Animal.cpp">
@@ -59,21 +56,6 @@
     </ClCompile>
     <ClCompile Include="Dog.cpp">
       <Filter>리소스 파일\동물 시리즈</Filter>
-    </ClCompile>
-    <ClCompile Include="Monster.cpp">
-      <Filter>리소스 파일\몬스터 시리즈</Filter>
-    </ClCompile>
-    <ClCompile Include="Skeleton.cpp">
-      <Filter>리소스 파일\몬스터 시리즈</Filter>
-    </ClCompile>
-    <ClCompile Include="Zombie.cpp">
-      <Filter>리소스 파일\몬스터 시리즈</Filter>
-    </ClCompile>
-    <ClCompile Include="Goblin.cpp">
-      <Filter>리소스 파일\몬스터 시리즈</Filter>
-    </ClCompile>
-    <ClCompile Include="Orc.cpp">
-      <Filter>리소스 파일\몬스터 시리즈</Filter>
     </ClCompile>
     <ClCompile Include="D0910.cpp">
       <Filter>리소스 파일\Day</Filter>
@@ -96,24 +78,54 @@
     <ClCompile Include="Shape.cpp">
       <Filter>리소스 파일\모양</Filter>
     </ClCompile>
+    <ClCompile Include="Test.cpp">
+      <Filter>리소스 파일\Maze</Filter>
+    </ClCompile>
+    <ClCompile Include="MazeEscape.cpp">
+      <Filter>리소스 파일\Maze</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor.cpp">
+      <Filter>리소스 파일\Maze\객체</Filter>
+    </ClCompile>
+    <ClCompile Include="Goblin.cpp">
+      <Filter>리소스 파일\Maze\객체</Filter>
+    </ClCompile>
+    <ClCompile Include="Monster123.cpp">
+      <Filter>리소스 파일\Maze\객체</Filter>
+    </ClCompile>
+    <ClCompile Include="Monster.cpp">
+      <Filter>리소스 파일\Maze\객체</Filter>
+    </ClCompile>
+    <ClCompile Include="Orc.cpp">
+      <Filter>리소스 파일\Maze\객체</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>리소스 파일\Maze\객체</Filter>
+    </ClCompile>
+    <ClCompile Include="Skeleton.cpp">
+      <Filter>리소스 파일\Maze\객체</Filter>
+    </ClCompile>
+    <ClCompile Include="Zombie.cpp">
+      <Filter>리소스 파일\Maze\객체</Filter>
+    </ClCompile>
+    <ClCompile Include="MazePlayer.cpp">
+      <Filter>리소스 파일\Maze\객체</Filter>
+    </ClCompile>
+    <ClCompile Include="TestMath.cpp">
+      <Filter>리소스 파일\잡</Filter>
+    </ClCompile>
+    <ClCompile Include="SaveData.cpp">
+      <Filter>리소스 파일\잡</Filter>
+    </ClCompile>
+    <ClCompile Include="Practice.cpp">
+      <Filter>리소스 파일\잡</Filter>
+    </ClCompile>
+    <ClCompile Include="Car.cpp">
+      <Filter>리소스 파일\잡</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="TestMath.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="SaveData.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="Practice.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="Position.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="D0916.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="Car.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Animal.h">
@@ -127,21 +139,6 @@
     </ClInclude>
     <ClInclude Include="Dog.h">
       <Filter>리소스 파일\동물 시리즈</Filter>
-    </ClInclude>
-    <ClInclude Include="Monster.h">
-      <Filter>리소스 파일\몬스터 시리즈</Filter>
-    </ClInclude>
-    <ClInclude Include="Orc.h">
-      <Filter>리소스 파일\몬스터 시리즈</Filter>
-    </ClInclude>
-    <ClInclude Include="Goblin.h">
-      <Filter>리소스 파일\몬스터 시리즈</Filter>
-    </ClInclude>
-    <ClInclude Include="Zombie.h">
-      <Filter>리소스 파일\몬스터 시리즈</Filter>
-    </ClInclude>
-    <ClInclude Include="Skeleton.h">
-      <Filter>리소스 파일\몬스터 시리즈</Filter>
     </ClInclude>
     <ClInclude Include="D0910.h">
       <Filter>리소스 파일\Day</Filter>
@@ -161,9 +158,6 @@
     <ClInclude Include="D0917.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="TestSample.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="Shape.h">
       <Filter>리소스 파일\모양</Filter>
     </ClInclude>
@@ -178,6 +172,66 @@
     </ClInclude>
     <ClInclude Include="IcanBattle.h">
       <Filter>리소스 파일\동물 시리즈</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerData.h">
+      <Filter>리소스 파일\Maze</Filter>
+    </ClInclude>
+    <ClInclude Include="Position.h">
+      <Filter>리소스 파일\Maze</Filter>
+    </ClInclude>
+    <ClInclude Include="Test.h">
+      <Filter>리소스 파일\Maze</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyData.h">
+      <Filter>리소스 파일\Maze</Filter>
+    </ClInclude>
+    <ClInclude Include="MazeEscape.h">
+      <Filter>리소스 파일\Maze</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor.h">
+      <Filter>리소스 파일\Maze\객체</Filter>
+    </ClInclude>
+    <ClInclude Include="Goblin.h">
+      <Filter>리소스 파일\Maze\객체</Filter>
+    </ClInclude>
+    <ClInclude Include="Monster123.h">
+      <Filter>리소스 파일\Maze\객체</Filter>
+    </ClInclude>
+    <ClInclude Include="Monster.h">
+      <Filter>리소스 파일\Maze\객체</Filter>
+    </ClInclude>
+    <ClInclude Include="Orc.h">
+      <Filter>리소스 파일\Maze\객체</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>리소스 파일\Maze\객체</Filter>
+    </ClInclude>
+    <ClInclude Include="Skeleton.h">
+      <Filter>리소스 파일\Maze\객체</Filter>
+    </ClInclude>
+    <ClInclude Include="Zombie.h">
+      <Filter>리소스 파일\Maze\객체</Filter>
+    </ClInclude>
+    <ClInclude Include="MazePlayer.h">
+      <Filter>리소스 파일\Maze\객체</Filter>
+    </ClInclude>
+    <ClInclude Include="TestSample.h">
+      <Filter>리소스 파일\잡</Filter>
+    </ClInclude>
+    <ClInclude Include="TestMath.h">
+      <Filter>리소스 파일\잡</Filter>
+    </ClInclude>
+    <ClInclude Include="SaveData.h">
+      <Filter>리소스 파일\잡</Filter>
+    </ClInclude>
+    <ClInclude Include="Practice.h">
+      <Filter>리소스 파일\잡</Filter>
+    </ClInclude>
+    <ClInclude Include="Position1111.h">
+      <Filter>리소스 파일\잡</Filter>
+    </ClInclude>
+    <ClInclude Include="Car.h">
+      <Filter>리소스 파일\잡</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
