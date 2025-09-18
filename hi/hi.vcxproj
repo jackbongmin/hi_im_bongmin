@@ -133,11 +133,14 @@
     <ClCompile Include="D0915.cpp" />
     <ClCompile Include="D0916.cpp" />
     <ClCompile Include="D0917.cpp" />
+    <ClCompile Include="D0918.cpp" />
+    <ClCompile Include="DLinkedList.cpp" />
     <ClCompile Include="Dog.cpp" />
     <ClCompile Include="Eagle.cpp" />
     <ClCompile Include="Elephant.cpp" />
     <ClCompile Include="Goblin.cpp" />
     <ClCompile Include="hi.cpp" />
+    <ClCompile Include="LinkedList.cpp" />
     <ClCompile Include="MazeEscape.cpp" />
     <ClCompile Include="MazePlayer.cpp" />
     <ClCompile Include="Monster123.cpp" />
@@ -163,6 +166,8 @@
     <ClInclude Include="D0915.h" />
     <ClInclude Include="D0916.h" />
     <ClInclude Include="D0917.h" />
+    <ClInclude Include="D0918.h" />
+    <ClInclude Include="DLinkedList.h" />
     <ClInclude Include="Dog.h" />
     <ClInclude Include="Eagle.h" />
     <ClInclude Include="Elephant.h" />
@@ -172,6 +177,7 @@
     <ClInclude Include="IcanBattle.h" />
     <ClInclude Include="IFlyable.h" />
     <ClInclude Include="ISwimable.h" />
+    <ClInclude Include="LinkedList.h" />
     <ClInclude Include="MazeEscape.h" />
     <ClInclude Include="MazePlayer.h" />
     <ClInclude Include="Monster123.h" />

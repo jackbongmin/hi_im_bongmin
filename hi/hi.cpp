@@ -19,6 +19,7 @@
 #include "D0915.h"
 #include "D0916.h"
 #include "D0917.h"
+#include "D0918.h"
 #include "Position.h"
 #include <stdint.h>
 #include "MazeEscape.h"
@@ -38,7 +39,12 @@ int main() // 앤트리 포인트(코드가 시작되는곳) / main함수는 반
 	//day0917.TestPractice1();
 	//day0917.TestAbstractClass();
 	
-	MazeEscape_Start();
+	//MazeEscape_Start();
+
+	D0918 d0918;
+	//d0918.TestSingleLinkedList();
+	d0918.TestDoubleLinkedList();
+	//d0918.Test0918();
 
 	return 0;
 }
