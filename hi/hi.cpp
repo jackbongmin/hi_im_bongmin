@@ -20,6 +20,7 @@
 #include "D0916.h"
 #include "D0917.h"
 #include "D0918.h"
+#include "D0919.h"
 #include "Position.h"
 #include <stdint.h>
 #include "MazeEscape.h"
@@ -27,6 +28,7 @@
 #include "EnemyData.h"
 #include "Monster.h"
 #include "Player.h"
+#include "Weekend0920.h"
 
 int main() // 앤트리 포인트(코드가 시작되는곳) / main함수는 반드시 하나만 있어야함
 {
@@ -41,10 +43,17 @@ int main() // 앤트리 포인트(코드가 시작되는곳) / main함수는 반
 	
 	//MazeEscape_Start();
 
-	D0918 d0918;
+	//D0918 d0918;
 	//d0918.TestSingleLinkedList();
-	d0918.TestDoubleLinkedList();
+	//d0918.TestDoubleLinkedList();
 	//d0918.Test0918();
+
+	D0919 d0919;
+	//d0919.TestStack();
+	//d0919.TestQueue();
+	d0919.TestArt();
+
+	//BattleShipStart();
 
 	return 0;
 }
