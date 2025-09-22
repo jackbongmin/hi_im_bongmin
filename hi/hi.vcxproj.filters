@@ -40,12 +40,12 @@
     <Filter Include="리소스 파일\자료구조">
       <UniqueIdentifier>{927011a5-9956-4621-a54f-69b509e24a79}</UniqueIdentifier>
     </Filter>
+    <Filter Include="리소스 파일\BattleShip">
+      <UniqueIdentifier>{74e43c07-8784-4b38-a974-11fe86f14eda}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="hi.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="D0916.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="Animal.cpp">
@@ -74,9 +74,6 @@
     </ClCompile>
     <ClCompile Include="D0915.cpp">
       <Filter>리소스 파일\Day</Filter>
-    </ClCompile>
-    <ClCompile Include="D0917.cpp">
-      <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="Shape.cpp">
       <Filter>리소스 파일\모양</Filter>
@@ -126,9 +123,6 @@
     <ClCompile Include="Car.cpp">
       <Filter>리소스 파일\잡</Filter>
     </ClCompile>
-    <ClCompile Include="D0918.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="LinkedList.cpp">
       <Filter>리소스 파일\자료구조</Filter>
     </ClCompile>
@@ -138,23 +132,47 @@
     <ClCompile Include="FixedStack.cpp">
       <Filter>리소스 파일\자료구조</Filter>
     </ClCompile>
-    <ClCompile Include="D0919.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="CircularQueue.cpp">
       <Filter>리소스 파일\자료구조</Filter>
     </ClCompile>
     <ClCompile Include="CircularQueue2.cpp">
       <Filter>리소스 파일\자료구조</Filter>
     </ClCompile>
-    <ClCompile Include="Weekend0920.cpp">
+    <ClCompile Include="D0922.cpp">
       <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerMap.cpp">
+      <Filter>리소스 파일\BattleShip</Filter>
+    </ClCompile>
+    <ClCompile Include="HiddenMap.cpp">
+      <Filter>리소스 파일\BattleShip</Filter>
+    </ClCompile>
+    <ClCompile Include="Ship.cpp">
+      <Filter>리소스 파일\BattleShip</Filter>
+    </ClCompile>
+    <ClCompile Include="ShipManager.cpp">
+      <Filter>리소스 파일\BattleShip</Filter>
+    </ClCompile>
+    <ClCompile Include="BattleShip.cpp">
+      <Filter>리소스 파일\BattleShip</Filter>
+    </ClCompile>
+    <ClCompile Include="BinarySearchTree.cpp">
+      <Filter>리소스 파일\자료구조</Filter>
+    </ClCompile>
+    <ClCompile Include="D0919.cpp">
+      <Filter>리소스 파일\Day</Filter>
+    </ClCompile>
+    <ClCompile Include="D0918.cpp">
+      <Filter>리소스 파일\Day</Filter>
+    </ClCompile>
+    <ClCompile Include="D0917.cpp">
+      <Filter>리소스 파일\Day</Filter>
+    </ClCompile>
+    <ClCompile Include="D0916.cpp">
+      <Filter>리소스 파일\Day</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="D0916.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="Animal.h">
       <Filter>리소스 파일\동물 시리즈</Filter>
     </ClInclude>
@@ -181,9 +199,6 @@
     </ClInclude>
     <ClInclude Include="D0915.h">
       <Filter>리소스 파일\Day</Filter>
-    </ClInclude>
-    <ClInclude Include="D0917.h">
-      <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Shape.h">
       <Filter>리소스 파일\모양</Filter>
@@ -260,9 +275,6 @@
     <ClInclude Include="Car.h">
       <Filter>리소스 파일\잡</Filter>
     </ClInclude>
-    <ClInclude Include="D0918.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="LinkedList.h">
       <Filter>리소스 파일\자료구조</Filter>
     </ClInclude>
@@ -272,17 +284,47 @@
     <ClInclude Include="FixedStack.h">
       <Filter>리소스 파일\자료구조</Filter>
     </ClInclude>
-    <ClInclude Include="D0919.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="CircularQueue.h">
       <Filter>리소스 파일\자료구조</Filter>
     </ClInclude>
     <ClInclude Include="CircularQueue2.h">
       <Filter>리소스 파일\자료구조</Filter>
     </ClInclude>
-    <ClInclude Include="Weekend0920.h">
+    <ClInclude Include="D0922.h">
       <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Map.h">
+      <Filter>리소스 파일\BattleShip</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerMap.h">
+      <Filter>리소스 파일\BattleShip</Filter>
+    </ClInclude>
+    <ClInclude Include="HiddenMap.h">
+      <Filter>리소스 파일\BattleShip</Filter>
+    </ClInclude>
+    <ClInclude Include="Ship.h">
+      <Filter>리소스 파일\BattleShip</Filter>
+    </ClInclude>
+    <ClInclude Include="ShipManager.h">
+      <Filter>리소스 파일\BattleShip</Filter>
+    </ClInclude>
+    <ClInclude Include="BattleShip.h">
+      <Filter>리소스 파일\BattleShip</Filter>
+    </ClInclude>
+    <ClInclude Include="BinarySearchTree.h">
+      <Filter>리소스 파일\자료구조</Filter>
+    </ClInclude>
+    <ClInclude Include="D0919.h">
+      <Filter>리소스 파일\Day</Filter>
+    </ClInclude>
+    <ClInclude Include="D0918.h">
+      <Filter>리소스 파일\Day</Filter>
+    </ClInclude>
+    <ClInclude Include="D0917.h">
+      <Filter>리소스 파일\Day</Filter>
+    </ClInclude>
+    <ClInclude Include="D0916.h">
+      <Filter>리소스 파일\Day</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

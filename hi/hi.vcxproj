@@ -125,6 +125,8 @@
   <ItemGroup>
     <ClCompile Include="Actor.cpp" />
     <ClCompile Include="Animal.cpp" />
+    <ClCompile Include="BattleShip.cpp" />
+    <ClCompile Include="BinarySearchTree.cpp" />
     <ClCompile Include="Car.cpp" />
     <ClCompile Include="CircularQueue.cpp" />
     <ClCompile Include="CircularQueue2.cpp" />
@@ -137,6 +139,7 @@
     <ClCompile Include="D0917.cpp" />
     <ClCompile Include="D0918.cpp" />
     <ClCompile Include="D0919.cpp" />
+    <ClCompile Include="D0922.cpp" />
     <ClCompile Include="DLinkedList.cpp" />
     <ClCompile Include="Dog.cpp" />
     <ClCompile Include="Eagle.cpp" />
@@ -144,6 +147,7 @@
     <ClCompile Include="FixedStack.cpp" />
     <ClCompile Include="Goblin.cpp" />
     <ClCompile Include="hi.cpp" />
+    <ClCompile Include="HiddenMap.cpp" />
     <ClCompile Include="LinkedList.cpp" />
     <ClCompile Include="MazeEscape.cpp" />
     <ClCompile Include="MazePlayer.cpp" />
@@ -151,18 +155,23 @@
     <ClCompile Include="Monster.cpp" />
     <ClCompile Include="Orc.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="PlayerMap.cpp" />
     <ClCompile Include="Practice.cpp" />
     <ClCompile Include="SaveData.cpp" />
     <ClCompile Include="Shape.cpp" />
+    <ClCompile Include="Ship.cpp" />
+    <ClCompile Include="ShipManager.cpp" />
     <ClCompile Include="Skeleton.cpp" />
     <ClCompile Include="Test.cpp" />
     <ClCompile Include="TestMath.cpp" />
-    <ClCompile Include="Weekend0920.cpp" />
     <ClCompile Include="Zombie.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Actor.h" />
     <ClInclude Include="Animal.h" />
+    <ClInclude Include="BattleShip.h" />
+    <ClInclude Include="BinarySearchTree.h" />
+    <ClInclude Include="Map.h" />
     <ClInclude Include="Car.h" />
     <ClInclude Include="CircularQueue.h" />
     <ClInclude Include="CircularQueue2.h" />
@@ -175,6 +184,7 @@
     <ClInclude Include="D0917.h" />
     <ClInclude Include="D0918.h" />
     <ClInclude Include="D0919.h" />
+    <ClInclude Include="D0922.h" />
     <ClInclude Include="DLinkedList.h" />
     <ClInclude Include="Dog.h" />
     <ClInclude Include="Eagle.h" />
@@ -182,6 +192,7 @@
     <ClInclude Include="EnemyData.h" />
     <ClInclude Include="FixedStack.h" />
     <ClInclude Include="Goblin.h" />
+    <ClInclude Include="HiddenMap.h" />
     <ClInclude Include="IBattleable.h" />
     <ClInclude Include="IcanBattle.h" />
     <ClInclude Include="IFlyable.h" />
@@ -194,16 +205,18 @@
     <ClInclude Include="Orc.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="PlayerData.h" />
+    <ClInclude Include="PlayerMap.h" />
     <ClInclude Include="Position.h" />
     <ClInclude Include="Position1111.h" />
     <ClInclude Include="Practice.h" />
     <ClInclude Include="SaveData.h" />
     <ClInclude Include="Shape.h" />
+    <ClInclude Include="Ship.h" />
+    <ClInclude Include="ShipManager.h" />
     <ClInclude Include="Skeleton.h" />
     <ClInclude Include="Test.h" />
     <ClInclude Include="TestMath.h" />
     <ClInclude Include="TestSample.h" />
-    <ClInclude Include="Weekend0920.h" />
     <ClInclude Include="Zombie.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
