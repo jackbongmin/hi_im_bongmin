@@ -171,6 +171,12 @@
     <ClCompile Include="D0916.cpp">
       <Filter>리소스 파일\Day</Filter>
     </ClCompile>
+    <ClCompile Include="D0923.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Calcurator.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Animal.h">
@@ -325,6 +331,15 @@
     </ClInclude>
     <ClInclude Include="D0916.h">
       <Filter>리소스 파일\Day</Filter>
+    </ClInclude>
+    <ClInclude Include="Coordinate.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="D0923.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Calcurator.h">
+      <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

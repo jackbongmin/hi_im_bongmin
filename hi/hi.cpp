@@ -29,14 +29,16 @@
 #include "Monster.h"
 #include "Player.h"
 #include "D0922.h"
+#include "D0923.h"
 
 
 int main() // 앤트리 포인트(코드가 시작되는곳) / main함수는 반드시 하나만 있어야함
 {
 
-	D0922 d0922;
+	D0923 d0923;
 	//d0922.TestBattleShip();
-	d0922.TestTree();
+	d0923.TestVectorPractice();
+
 
 	return 0;
 }

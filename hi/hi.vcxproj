@@ -102,6 +102,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -127,6 +128,7 @@
     <ClCompile Include="Animal.cpp" />
     <ClCompile Include="BattleShip.cpp" />
     <ClCompile Include="BinarySearchTree.cpp" />
+    <ClCompile Include="Calcurator.cpp" />
     <ClCompile Include="Car.cpp" />
     <ClCompile Include="CircularQueue.cpp" />
     <ClCompile Include="CircularQueue2.cpp" />
@@ -140,6 +142,7 @@
     <ClCompile Include="D0918.cpp" />
     <ClCompile Include="D0919.cpp" />
     <ClCompile Include="D0922.cpp" />
+    <ClCompile Include="D0923.cpp" />
     <ClCompile Include="DLinkedList.cpp" />
     <ClCompile Include="Dog.cpp" />
     <ClCompile Include="Eagle.cpp" />
@@ -171,6 +174,9 @@
     <ClInclude Include="Animal.h" />
     <ClInclude Include="BattleShip.h" />
     <ClInclude Include="BinarySearchTree.h" />
+    <ClInclude Include="Calcurator.h" />
+    <ClInclude Include="Coordinate.h" />
+    <ClInclude Include="D0923.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="Car.h" />
     <ClInclude Include="CircularQueue.h" />
