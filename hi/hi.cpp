@@ -30,14 +30,60 @@
 #include "Player.h"
 #include "D0922.h"
 #include "D0923.h"
+#include "D0924.h"
+#include "UFO.h"
 
 
 int main() // 앤트리 포인트(코드가 시작되는곳) / main함수는 반드시 하나만 있어야함
 {
 
-	D0923 d0923;
+	D0924 d0924;
+	d0924.TestMap();
 	//d0922.TestBattleShip();
-	d0923.TestVectorPractice();
+	//d0924.TestSetPractice();
+
+	printf("               __\n");
+	printf("              (__)\n");
+	printf("               ||\n");
+	printf("            .------.          \n");
+	printf("         .-'        `-.       \n");
+	printf("       .'_     _     _ `.     \n");
+	printf("      / [_]   [ ]   [_] \\    \n");
+	printf("   __|  [_]   [_]   [_]  |__   \n");
+	printf(" /    \\                 /     \\  \n");
+	printf("I      `. ._________. .'       I\n");
+	printf("\\                             /\n");
+	printf(" '-'-----------------------'-' \n");
+	printf("    I_I       I_I       I_I       \n");
+
+
+	printf("           /^\\           \n");
+	printf("          /   \\          \n");
+	printf("         /  o  \\         \n");
+	printf("        /   o   \\        \n");
+	printf("       /    o    \\       \n");
+	printf("      |-_________-|      \n");
+	printf("      |           |      \n");
+	printf("      |   __      |      \n");
+	printf("     /|  [  ]     |\\      \n");
+	printf("    / |  [  ]     | \\      \n");
+	printf("   /__|  [__]     |__\\   \n");
+	printf("       \\         /        \n");
+	printf("        \\       /         \n");
+	printf("        /=======\\        \n");
+	printf("       /=========\\       \n");
+	printf("      /===========\\      \n");
+	printf("        ||  ||  ||        \n");
+	printf("        VV  VV  VV        \n");
+	printf("       vvv  vv  vvv       \n");
+	printf("      vvvv  vv  vvvv        \n");
+
+
+	printf("   / ^ \\\n");
+	printf("  ( o_o)\n");
+	printf("  <)   )┘\n");
+	printf("   //\\\\\n");
+	printf("  []  []\n");
 
 
 	return 0;

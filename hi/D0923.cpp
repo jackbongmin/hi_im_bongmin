@@ -130,187 +130,184 @@ else
 int i = 0;
 }
 
-void D0923::TestVectorPractice()
-{
-	/*
-	실습
-	1. 정수 입력받고 출력하기
-	2. 최대, 최소 구하기
-	3. 정렬하기
-	4. 특정 값 찾기.
-	5. 중복 제거하기
-	6. 벡터 합치기
-	7. 문자열 뒤집기
-	8. 모든 요소 더하기
-	*/
-
-	// 1. 정수 입력받고 출력하기
-	printf("1. 정수 입력받고 출력하기\n\n");
-	std::vector<int> Practice1;
-	Practice1.reserve(10);
-	
-	constexpr int ExitNumber = -1;
-	int i = 0;
-
-	while (i != ExitNumber)
-	{
-		printf("숫자를 입력하세요(-1이면 종료) : ");
-		std::cin >> i;
-		if (i != ExitNumber)
-		{
-		Practice1.push_back(i);
-		}
-	}
-
-	printf("Practice : ");
-	for (auto iter = Practice1.begin(); iter != Practice1.end(); iter++)
-	{
-		printf("%d ", *iter);
-	}
-	printf("\n");
-	printf("\n");
-
-	// 2. 최대 최소 구하기
-	printf("2. 최대 최소 구하기\n\n");
-
-	std::vector<int> Practice2 = { 10,20,30,40,50 };
-	Practice2.reserve(5);
-
-	int MaxNumber_0923 = INT_MIN;
-	int MinNumber_0923 = INT_MAX;
-	
-	for (auto iter = Practice2.begin(); iter != Practice2.end(); iter++)
-	{
-		if (MaxNumber_0923 < *iter)
-		{
-			MaxNumber_0923 = *iter;
-		}
-		if (MinNumber_0923 > *iter)
-		{
-			MinNumber_0923 = *iter;
-		}
-	}
-	printf("Practice2 : ");
-	for (auto iter = Practice2.begin(); iter != Practice2.end(); iter++)
-	{
-		printf("%d ", *iter);
-	}
-	printf("\n");
-	printf("최대값 : %d, 최소값 : %d\n", MaxNumber_0923, MinNumber_0923);
-	printf("\n");
-
-
-	// 3. 정렬하기
-	printf("3. 정렬하기\n\n");
-
-	std::vector<int> Practice3 = { 5, 1, 3, 2, 4 };
-	Practice3.reserve(5);
-	
-	printf("Practice3 : 5 1 3 2 4\n");
-
-	std::sort(Practice3.begin(), Practice3.end());
-	printf("Practice3_sort : ");
-	for (auto iter = Practice3.begin(); iter != Practice3.end(); iter++)
-	{
-		printf("%d ", *iter);
-	}
-	printf("\n");
-	printf("\n");
-
-
-
-	// 4. 특정 값 찾기
-	printf("4. 특정 값 찾기\n\n");
-
-	std::vector<int> Practice4 = { 1,2,3,4,5 };
-	Practice4.reserve(5);
-
-	printf("찾을 값을 입력하시오 : ");
-	int SearchNumber_0923 = 0;
-	std::cin >> SearchNumber_0923;
-
-	int index_0923 = 0;
-	bool Found_0923 = false;
-	for (auto iter = Practice4.begin(); iter != Practice4.end(); iter++, index_0923++)
-	{
-		if (SearchNumber_0923 == *iter)
-		{
-			printf("찾는 값은 %d번째에 있습니다.\n", index_0923+1);
-			Found_0923 = true;
-			break;
-		}
-	}
-	if(!Found_0923)
-	{
-		printf("입력하신 값이 없습니다.");
-		return;
-	}
-
-	// 5. 중복값 제거
-	printf("5. 중복값 제거하기\n\n");
-
-	std::vector<int> Practice5 = { 10,20,30,30,40,50,30,40 };
-	std::vector<int> Result5;
-	Result5.reserve(Practice5.size());
-
-	for (int n : Practice5)
-	{
-		auto iter = std::find(Result5.begin(), Result5.end(), n);
-		if(iter == Result5.end())
-		{
-			Result5.push_back(n);
-		}
-	}
-	//Practice5 = Result5;
-	std::sort(Practice5.begin(), Practice5.end());					// unique를 쓰기 위해서는 정렬되어 있어야 한다.
-	auto last = std::unique(Practice5.begin(), Practice5.end());	// 중복되는 값들은 뒤로 보내고 중복되기 전 마지막을 리턴
-	Practice5.erase(last, Practice5.end());							// 중복되던 부분들을 실제로 삭제
-
-	printf("중복제거 결과 : ");
-	for (int n : Practice5)
-	{
-		printf("$d", n);
-	}
-	printf("\n\n");
-
-
-	// 6. 벡터 합치기
-	printf("6. 벡터 합치기\n\n");
-
-	std::vector<int> Practice6_1 = { 10,20,30 };
-	std::vector<int> Practice6_2 = { 100,200,300 };
-	std::vector<int> Result6(Practice6_1);
-
-	for (int n : Practice6_2)
-	{
-		Result6.push_back(n);
-	}
-
-
-
-	// 7. 문자열 뒤집기
-	printf("7. 문자열 뒤집기\n\n");
-
-	printf("문자열을 입력하세요 : ");
-	std::string InputWord;
-	std::cin >> InputWord;
-	std::vector<char> chars(InputWord.begin(), InputWord.end());
-	printf("뒤집힌 결과 : ");
-	for (auto rIter = chars.rbegin(); rIter != chars.rend(); rIter++)
-	{
-		printf("%c", *rIter);
-	}
-	printf("\n\n");
-
-	//std::reverse(chars.begin(), chars.end());
-
-	// 8. 모든 요소 더하기
-	printf("8. 모든 요소 더하기기\n\n");
-
-	std::vector<int> Practice8;
-	Practice8.reserve(5);
-
-
-
-	
-}	
+//void D0923::TestVectorPractice()
+//{
+//	/*
+//	실습
+//	1. 정수 입력받고 출력하기
+//	2. 최대, 최소 구하기
+//	3. 정렬하기
+//	4. 특정 값 찾기.
+//	5. 중복 제거하기
+//	6. 벡터 합치기
+//	7. 문자열 뒤집기
+//	8. 모든 요소 더하기
+//	*/
+//
+//	// 1. 정수 입력받고 출력하기
+//	printf("1. 정수 입력받고 출력하기\n\n");
+//	std::vector<int> Practice1;
+//	Practice1.reserve(10);
+//	
+//	constexpr int ExitNumber = -1;
+//	int i = 0;
+//
+//	while (i != ExitNumber)
+//	{
+//		printf("숫자를 입력하세요(-1이면 종료) : ");
+//		std::cin >> i;
+//		if (i != ExitNumber)
+//		{
+//		Practice1.push_back(i);
+//		}
+//	}
+//
+//	printf("Practice : ");
+//	for (auto iter = Practice1.begin(); iter != Practice1.end(); iter++)
+//	{
+//		printf("%d ", *iter);
+//	}
+//	printf("\n");
+//	printf("\n");
+//
+//	// 2. 최대 최소 구하기
+//	printf("2. 최대 최소 구하기\n\n");
+//
+//	std::vector<int> Practice2 = { 10,20,30,40,50 };
+//	Practice2.reserve(5);
+//
+//	int MaxNumber_0923 = INT_MIN;
+//	int MinNumber_0923 = INT_MAX;
+//	
+//	for (auto iter = Practice2.begin(); iter != Practice2.end(); iter++)
+//	{
+//		if (MaxNumber_0923 < *iter)
+//		{
+//			MaxNumber_0923 = *iter;
+//		}
+//		if (MinNumber_0923 > *iter)
+//		{
+//			MinNumber_0923 = *iter;
+//		}
+//	}
+//	printf("Practice2 : ");
+//	for (auto iter = Practice2.begin(); iter != Practice2.end(); iter++)
+//	{
+//		printf("%d ", *iter);
+//	}
+//	printf("\n");
+//	printf("최대값 : %d, 최소값 : %d\n", MaxNumber_0923, MinNumber_0923);
+//	printf("\n");
+//
+//
+//	// 3. 정렬하기
+//	printf("3. 정렬하기\n\n");
+//
+//	std::vector<int> Practice3 = { 5, 1, 3, 2, 4 };
+//	Practice3.reserve(5);
+//	
+//	printf("Practice3 : 5 1 3 2 4\n");
+//
+//	std::sort(Practice3.begin(), Practice3.end());
+//	printf("Practice3_sort : ");
+//	for (auto iter = Practice3.begin(); iter != Practice3.end(); iter++)
+//	{
+//		printf("%d ", *iter);
+//	}
+//	printf("\n");
+//	printf("\n");
+//
+//
+//
+//	// 4. 특정 값 찾기
+//	printf("4. 특정 값 찾기\n\n");
+//
+//	std::vector<int> Practice4 = { 1,2,3,4,5 };
+//	Practice4.reserve(5);
+//
+//	printf("찾을 값을 입력하시오 : ");
+//	int SearchNumber_0923 = 0;
+//	std::cin >> SearchNumber_0923;
+//
+//	int index_0923 = 0;
+//	bool Found_0923 = false;
+//	for (auto iter = Practice4.begin(); iter != Practice4.end(); iter++, index_0923++)
+//	{
+//		if (SearchNumber_0923 == *iter)
+//		{
+//			printf("찾는 값은 %d번째에 있습니다.\n", index_0923+1);
+//			Found_0923 = true;
+//			break;
+//		}
+//	}
+//	if(!Found_0923)
+//	{
+//		printf("입력하신 값이 없습니다.");
+//		return;
+//	}
+//
+//	// 5. 중복값 제거
+//	printf("5. 중복값 제거하기\n\n");
+//
+//	std::vector<int> Practice5 = { 10,20,30,30,40,50,30,40 };
+//	std::vector<int> Result5;
+//	Result5.reserve(Practice5.size());
+//
+//	for (int n : Practice5)
+//	{
+//		auto iter = std::find(Result5.begin(), Result5.end(), n);
+//		if(iter == Result5.end())
+//		{
+//			Result5.push_back(n);
+//		}
+//	}
+//	//Practice5 = Result5;
+//	std::sort(Practice5.begin(), Practice5.end());					// unique를 쓰기 위해서는 정렬되어 있어야 한다.
+//	auto last = std::unique(Practice5.begin(), Practice5.end());	// 중복되는 값들은 뒤로 보내고 중복되기 전 마지막을 리턴
+//	Practice5.erase(last, Practice5.end());							// 중복되던 부분들을 실제로 삭제
+//
+//	printf("중복제거 결과 : ");
+//	for (int n : Practice5)
+//	{
+//		printf("$d", n);
+//	}
+//	printf("\n\n");
+//
+//
+//	// 6. 벡터 합치기
+//	printf("6. 벡터 합치기\n\n");
+//
+//	std::vector<int> Practice6_1 = { 10,20,30 };
+//	std::vector<int> Practice6_2 = { 100,200,300 };
+//	std::vector<int> Result6(Practice6_1);
+//
+//	for (int n : Practice6_2)
+//	{
+//		Result6.push_back(n);
+//	}
+//
+//
+//
+//	// 7. 문자열 뒤집기
+//	printf("7. 문자열 뒤집기\n\n");
+//
+//	printf("문자열을 입력하세요 : ");
+//	std::string InputWord;
+//	std::cin >> InputWord;
+//	std::vector<char> chars(InputWord.begin(), InputWord.end());
+//	printf("뒤집힌 결과 : ");
+//	for (auto rIter = chars.rbegin(); rIter != chars.rend(); rIter++)
+//	{
+//		printf("%c", *rIter);
+//	}
+//	printf("\n\n");
+//
+//	//std::reverse(chars.begin(), chars.end());
+//
+//	// 8. 모든 요소 더하기
+//	printf("8. 모든 요소 더하기기\n\n");
+//
+//	std::vector<int> Practice8;
+//	Practice8.reserve(5);
+//	
+// }	

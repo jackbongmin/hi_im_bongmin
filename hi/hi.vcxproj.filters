@@ -177,6 +177,9 @@
     <ClCompile Include="Calcurator.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="D0924.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Animal.h">
@@ -339,6 +342,12 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Calcurator.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="D0924.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="UFO.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

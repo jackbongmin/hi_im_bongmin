@@ -143,6 +143,7 @@
     <ClCompile Include="D0919.cpp" />
     <ClCompile Include="D0922.cpp" />
     <ClCompile Include="D0923.cpp" />
+    <ClCompile Include="D0924.cpp" />
     <ClCompile Include="DLinkedList.cpp" />
     <ClCompile Include="Dog.cpp" />
     <ClCompile Include="Eagle.cpp" />
@@ -177,6 +178,7 @@
     <ClInclude Include="Calcurator.h" />
     <ClInclude Include="Coordinate.h" />
     <ClInclude Include="D0923.h" />
+    <ClInclude Include="D0924.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="Car.h" />
     <ClInclude Include="CircularQueue.h" />
@@ -224,6 +226,7 @@
     <ClInclude Include="TestMath.h" />
     <ClInclude Include="TestSample.h" />
     <ClInclude Include="Zombie.h" />
+    <ClInclude Include="UFO.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
